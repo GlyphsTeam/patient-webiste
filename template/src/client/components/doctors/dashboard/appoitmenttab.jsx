@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import {
   IMG01,
@@ -18,7 +18,7 @@ const AppointmentTab = () => {
           <div className="card-body">
             <div className="table-responsive">
               <table className="table table-hover table-center mb-0">
-                <thead style={{borderBottom:"none"}}>
+                <thead style={{ borderBottom: "none" }}>
                   <tr>
                     <th>Patient Name</th>
                     <th>Appt Date</th>
@@ -28,7 +28,7 @@ const AppointmentTab = () => {
                     <th />
                   </tr>
                 </thead>
-                <tbody style={{borderTop:"none"}}>
+                <tbody style={{ borderTop: "none" }}>
                   <tr>
                     <td>
                       <h2 className="table-avatar">
@@ -36,7 +36,7 @@ const AppointmentTab = () => {
                           to="/doctor/patient-profile"
                           className="avatar avatar-sm me-2"
                         >
-                          <img
+                          <LazyLoadImage
                             className="avatar-img rounded-circle"
                             src={IMG01}
                             alt="User Image"
@@ -56,10 +56,10 @@ const AppointmentTab = () => {
                     <td className="text-center">$300</td>
                     <td className="text-end">
                       <div className="table-action">
-                        <Link to="#" className="btn btn-sm bg-info-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-info-light" style={{ marginRight: "5px" }}>
                           <i className="far fa-eye" /> View
                         </Link>
-                        <Link to="#" className="btn btn-sm bg-success-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-success-light" style={{ marginRight: "5px" }}>
                           <i className="fas fa-check" /> Accept
                         </Link>
                         <Link to="#" className="btn btn-sm bg-danger-light" >
@@ -75,7 +75,7 @@ const AppointmentTab = () => {
                           to="/doctor/patient-profile"
                           className="avatar avatar-sm me-2"
                         >
-                          <img
+                          <LazyLoadImage
                             className="avatar-img rounded-circle"
                             src={IMG02}
                             alt="User Image"
@@ -95,10 +95,10 @@ const AppointmentTab = () => {
                     <td className="text-center">$100</td>
                     <td className="text-end">
                       <div className="table-action">
-                        <Link to="#" className="btn btn-sm bg-info-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-info-light" style={{ marginRight: "5px" }}>
                           <i className="far fa-eye" /> View
                         </Link>
-                        <Link to="#" className="btn btn-sm bg-success-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-success-light" style={{ marginRight: "5px" }}>
                           <i className="fas fa-check" /> Accept
                         </Link>
                         <Link to="#" className="btn btn-sm bg-danger-light" >
@@ -114,7 +114,7 @@ const AppointmentTab = () => {
                           to="/doctor/patient-profile"
                           className="avatar avatar-sm me-2"
                         >
-                          <img
+                          <LazyLoadImage
                             className="avatar-img rounded-circle"
                             src={IMG03}
                             alt="User Image"
@@ -134,10 +134,10 @@ const AppointmentTab = () => {
                     <td className="text-center">$75</td>
                     <td className="text-end">
                       <div className="table-action">
-                        <Link to="#" className="btn btn-sm bg-info-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-info-light" style={{ marginRight: "5px" }}>
                           <i className="far fa-eye" /> View
                         </Link>
-                        <Link to="#" className="btn btn-sm bg-success-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-success-light" style={{ marginRight: "5px" }}>
                           <i className="fas fa-check" /> Accept
                         </Link>
                         <Link to="#" className="btn btn-sm bg-danger-light" >
@@ -153,7 +153,7 @@ const AppointmentTab = () => {
                           to="/doctor/patient-profile"
                           className="avatar avatar-sm me-2"
                         >
-                          <img
+                          <LazyLoadImage
                             className="avatar-img rounded-circle"
                             src={patient9}
                             alt="User Image"
@@ -173,10 +173,10 @@ const AppointmentTab = () => {
                     <td className="text-center">$350</td>
                     <td className="text-end">
                       <div className="table-action">
-                        <Link to="#" className="btn btn-sm bg-info-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-info-light" style={{ marginRight: "5px" }}>
                           <i className="far fa-eye" /> View
                         </Link>
-                        <Link to="#" className="btn btn-sm bg-success-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-success-light" style={{ marginRight: "5px" }}>
                           <i className="fas fa-check" /> Accept
                         </Link>
                         <Link to="#" className="btn btn-sm bg-danger-light" >
@@ -192,7 +192,7 @@ const AppointmentTab = () => {
                           to="/doctor/patient-profile"
                           className="avatar avatar-sm me-2"
                         >
-                          <img
+                          <LazyLoadImage
                             className="avatar-img rounded-circle"
                             src={patient10}
                             alt="User Image"
@@ -212,10 +212,10 @@ const AppointmentTab = () => {
                     <td className="text-center">$175</td>
                     <td className="text-end">
                       <div className="table-action">
-                        <Link to="#" className="btn btn-sm bg-info-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-info-light" style={{ marginRight: "5px" }}>
                           <i className="far fa-eye" /> View
                         </Link>
-                        <Link to="#" className="btn btn-sm bg-success-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-success-light" style={{ marginRight: "5px" }}>
                           <i className="fas fa-check" /> Accept
                         </Link>
                         <Link to="#" className="btn btn-sm bg-danger-light" >
@@ -231,7 +231,7 @@ const AppointmentTab = () => {
                           to="/doctor/patient-profile"
                           className="avatar avatar-sm me-2"
                         >
-                          <img
+                          <LazyLoadImage
                             className="avatar-img rounded-circle"
                             src={patient11}
                             alt="User Image"
@@ -251,10 +251,10 @@ const AppointmentTab = () => {
                     <td className="text-center">$450</td>
                     <td className="text-end">
                       <div className="table-action">
-                        <Link to="#" className="btn btn-sm bg-info-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-info-light" style={{ marginRight: "5px" }}>
                           <i className="far fa-eye" /> View
                         </Link>
-                        <Link to="#" className="btn btn-sm bg-success-light" style={{marginRight:"5px"}}>
+                        <Link to="#" className="btn btn-sm bg-success-light" style={{ marginRight: "5px" }}>
                           <i className="fas fa-check" /> Accept
                         </Link>
                         <Link to="#" className="btn btn-sm bg-danger-light" >

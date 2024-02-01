@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import IMG01 from "../assets/images/doctors/doctor-thumb-02.jpg";
 import Dropdown from "react-bootstrap/Dropdown";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 // import { useEffect } from "react";
 
 const TopHeader = (props) => {
@@ -78,9 +79,8 @@ const TopHeader = (props) => {
         !pathnames.includes("paediatrichome") && (
           <header className="header">
             <nav
-              className={`navbar navbar-expand-lg header-nav ${
-                pathnames.includes("home1") ? "nav-transparent" : ""
-              }`}
+              className={`navbar navbar-expand-lg header-nav ${pathnames.includes("home1") ? "nav-transparent" : ""
+                }`}
             >
               <div className="navbar-header">
                 <Link
@@ -95,13 +95,13 @@ const TopHeader = (props) => {
                   </span>
                 </Link>
                 <Link to="/index-2" className="navbar-brand logo">
-                  <img src={logo} className="img-fluid" alt="Logo" />
+                  <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
                 </Link>
               </div>
               <div className="main-menu-wrapper">
                 <div className="menu-header">
                   <Link to="/index-2" className="menu-logo">
-                    <img src={logo} className="img-fluid" alt="Logo" />
+                    <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
                   </Link>
                   <Link
                     to="#0"
@@ -114,25 +114,24 @@ const TopHeader = (props) => {
                 </div>
                 <ul className="main-nav">
                   <li
-                    className={`has-submenu ${
-                      pathnames.includes("home") ||
-                      pathnames.includes("home2") ||
-                      pathnames.includes("home3") ||
-                      pathnames.includes("cardiohome") ||
-                      pathnames.includes("homeslider1") ||
-                      pathnames.includes("home4") ||
-                      pathnames.includes("homeslider2") ||
-                      pathnames.includes("home6") ||
-                      (pathnames.includes("home7") &&
-                        !pathnames.includes("home10")) ||
-                      pathnames.includes("home11") ||
-                      pathnames.includes("home12") ||
-                      pathnames.includes("home13") ||
-                      pathnames.includes("home14") ||
-                      pathnames.includes("paediatrichome")
+                    className={`has-submenu ${pathnames.includes("home") ||
+                        pathnames.includes("home2") ||
+                        pathnames.includes("home3") ||
+                        pathnames.includes("cardiohome") ||
+                        pathnames.includes("homeslider1") ||
+                        pathnames.includes("home4") ||
+                        pathnames.includes("homeslider2") ||
+                        pathnames.includes("home6") ||
+                        (pathnames.includes("home7") &&
+                          !pathnames.includes("home10")) ||
+                        pathnames.includes("home11") ||
+                        pathnames.includes("home12") ||
+                        pathnames.includes("home13") ||
+                        pathnames.includes("home14") ||
+                        pathnames.includes("paediatrichome")
                         ? "active"
                         : ""
-                    }`}
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "home" ? "subdrop" : ""}
@@ -147,20 +146,20 @@ const TopHeader = (props) => {
                         <li
                           className={
                             pathnames.includes("home") &&
-                            !pathnames.includes("home2") &&
-                            !pathnames.includes("home3") &&
-                            !pathnames.includes("cardiohome") &&
-                            !pathnames.includes("homeslider1") &&
-                            !pathnames.includes("home4") &&
-                            !pathnames.includes("homeslider2") &&
-                            !pathnames.includes("home6") &&
-                            !pathnames.includes("home7") &&
-                            !pathnames.includes("home10") &&
-                            !pathnames.includes("home11") &&
-                            !pathnames.includes("home12") &&
-                            !pathnames.includes("home13") &&
-                            !pathnames.includes("home14") &&
-                            !pathnames.includes("paediatrichome")
+                              !pathnames.includes("home2") &&
+                              !pathnames.includes("home3") &&
+                              !pathnames.includes("cardiohome") &&
+                              !pathnames.includes("homeslider1") &&
+                              !pathnames.includes("home4") &&
+                              !pathnames.includes("homeslider2") &&
+                              !pathnames.includes("home6") &&
+                              !pathnames.includes("home7") &&
+                              !pathnames.includes("home10") &&
+                              !pathnames.includes("home11") &&
+                              !pathnames.includes("home12") &&
+                              !pathnames.includes("home13") &&
+                              !pathnames.includes("home14") &&
+                              !pathnames.includes("paediatrichome")
                               ? "active"
                               : ""
                           }
@@ -267,9 +266,8 @@ const TopHeader = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/doctor") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/doctor") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "doctors" ? "subdrop" : ""}
@@ -418,9 +416,8 @@ const TopHeader = (props) => {
                   </li>
 
                   <li
-                    className={`has-submenu ${
-                      url.includes("/patient") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/patient") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "patients" ? "subdrop" : ""}
@@ -435,13 +432,12 @@ const TopHeader = (props) => {
                     {isSideMenu == "patients" ? (
                       <ul className={`submenu`}>
                         <li
-                          className={`has-submenu ${
-                            pathnames.includes("doctor") &&
-                            !pathnames.includes("doctor-profile") &&
-                            !pathnames.includes("search-doctor")
+                          className={`has-submenu ${pathnames.includes("doctor") &&
+                              !pathnames.includes("doctor-profile") &&
+                              !pathnames.includes("search-doctor")
                               ? "active"
                               : ""
-                          }`}
+                            }`}
                         >
                           <Link to="#0">Doctors</Link>
                           <ul className="submenu">
@@ -515,7 +511,7 @@ const TopHeader = (props) => {
                         <li
                           className={
                             pathnames.includes("booking") &&
-                            !pathnames.includes("booking-success")
+                              !pathnames.includes("booking-success")
                               ? "active"
                               : ""
                           }
@@ -592,7 +588,7 @@ const TopHeader = (props) => {
                         <li
                           className={
                             pathnames.includes("profile") &&
-                            !pathnames.includes("doctor-profile")
+                              !pathnames.includes("doctor-profile")
                               ? "active"
                               : ""
                           }
@@ -624,9 +620,8 @@ const TopHeader = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/Pharmacy") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/Pharmacy") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "pharmacy" ? "subdrop" : ""}
@@ -720,9 +715,8 @@ const TopHeader = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/pages") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/pages") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "pages" ? "subdrop" : ""}
@@ -735,9 +729,8 @@ const TopHeader = (props) => {
                     {isSideMenu == "pages" ? (
                       <ul className={`submenu`}>
                         <li
-                          className={`${
-                            pathnames.includes("/voice-call") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/voice-call") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/voice-call"
@@ -747,9 +740,8 @@ const TopHeader = (props) => {
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/video-call") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/video-call") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/video-call"
@@ -772,9 +764,8 @@ const TopHeader = (props) => {
                         </li>
 
                         <li
-                          className={`${
-                            pathnames.includes("/calendar") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/calendar") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/calendar"
@@ -784,29 +775,26 @@ const TopHeader = (props) => {
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/onboarding-email")
+                          className={`${pathnames.includes("/onboarding-email")
                               ? "active"
                               : ""
-                          }`}
+                            }`}
                         >
                           <Link to="/pages/onboarding-email">
                             Doctor Onboarding
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/patient-email") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/patient-email") ? "active" : ""
+                            }`}
                         >
                           <Link to="/pages/patient-email">
                             Patient Onboarding
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/component") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/component") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/component"
@@ -817,9 +805,8 @@ const TopHeader = (props) => {
                         </li>
 
                         <li
-                          className={`has-submenu ${
-                            pathnames.includes("/invoice-view") ? "active" : ""
-                          }`}
+                          className={`has-submenu ${pathnames.includes("/invoice-view") ? "active" : ""
+                            }`}
                         >
                           <Link to="#0">Invoices</Link>
                           <ul className="submenu">
@@ -850,9 +837,8 @@ const TopHeader = (props) => {
                           </ul>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/blank-page") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/blank-page") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/blank-page"
@@ -884,9 +870,8 @@ const TopHeader = (props) => {
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames === "/forgot-password" ? "active" : ""
-                          }`}
+                          className={`${pathnames === "/forgot-password" ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/forgot-password"
@@ -901,9 +886,8 @@ const TopHeader = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/blog") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/blog") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "blog" ? "subdrop" : ""}
@@ -1004,11 +988,11 @@ const TopHeader = (props) => {
                 </li>
 
                 {props.location.pathname === "/pages/voice-call" ||
-                props.location.pathname === "/pages/video-call" ? (
+                  props.location.pathname === "/pages/video-call" ? (
                   <>
                     <Dropdown className="user-drop nav-item dropdown has-arrow logged-item">
                       <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        <img
+                        <LazyLoadImage
                           className="rounded-circle"
                           src={IMG01}
                           width="31"
@@ -1019,7 +1003,7 @@ const TopHeader = (props) => {
                       <Dropdown.Menu>
                         <div className="user-header">
                           <div className="avatar avatar-sm">
-                            <img
+                            <LazyLoadImage
                               src={IMG01}
                               alt="User"
                               className="avatar-img rounded-circle"

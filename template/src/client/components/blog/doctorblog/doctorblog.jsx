@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 //images
 import {
@@ -28,6 +27,8 @@ import {
 import Footer from "../../footer.jsx";
 import Header from "../../header.jsx";
 import StickyBox from "react-sticky-box";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const Doctorblog = (props) => {
   return (
@@ -66,7 +67,7 @@ const Doctorblog = (props) => {
                     <div className="widget-profile pro-widget-content">
                       <div className="profile-info-widget">
                         <Link to="#" className="booking-doc-img">
-                          <img src={IMG02} alt="User Image" />
+                          <LazyLoadImage src={IMG02} alt="User Image" />
                         </Link>
                         <div className="profile-det-info">
                           <h3>Dr. Darren Elder</h3>
@@ -191,7 +192,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={IMG01}
                               alt="Post Image"
@@ -203,7 +204,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={IMG08} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={IMG08} alt="Post Author" />{" "}
                                   <span>Dr. Ruby Perrin</span>
                                 </Link>
                               </div>
@@ -250,7 +251,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog2}
                               alt="Post Image"
@@ -262,7 +263,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={IMG02} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={IMG02} alt="Post Author" />{" "}
                                   <span>Dr. Darren Elder</span>
                                 </Link>
                               </div>
@@ -309,7 +310,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog3}
                               alt="Post Image"
@@ -321,7 +322,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb3} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb3} alt="Post Author" />{" "}
                                   <span>Dr. Deborah Angel</span>
                                 </Link>
                               </div>
@@ -368,7 +369,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog4}
                               alt="Post Image"
@@ -380,7 +381,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb4} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb4} alt="Post Author" />{" "}
                                   <span>Dr. Sofia Brient</span>
                                 </Link>
                               </div>
@@ -427,7 +428,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog5}
                               alt="Post Image"
@@ -439,7 +440,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb5} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb5} alt="Post Author" />{" "}
                                   <span>Dr. Marvin Campbell</span>
                                 </Link>
                               </div>
@@ -486,7 +487,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog6}
                               alt="Post Image"
@@ -498,7 +499,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb6} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb6} alt="Post Author" />{" "}
                                   <span>Dr. Katharine Berthold</span>
                                 </Link>
                               </div>
@@ -546,7 +547,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog7}
                               alt="Post Image"
@@ -558,7 +559,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb7} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb7} alt="Post Author" />{" "}
                                   <span>Dr. Linda Tobin</span>
                                 </Link>
                               </div>
@@ -605,7 +606,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog8}
                               alt="Post Image"
@@ -617,7 +618,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb8} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb8} alt="Post Author" />{" "}
                                   <span>Dr. Paul Richard </span>
                                 </Link>
                               </div>
@@ -664,7 +665,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog9}
                               alt="Post Image"
@@ -676,7 +677,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb9} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb9} alt="Post Author" />{" "}
                                   <span>Dr. John Gibbs</span>
                                 </Link>
                               </div>
@@ -723,7 +724,7 @@ const Doctorblog = (props) => {
                       <div className="blog grid-blog">
                         <div className="blog-image">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid"
                               src={blog10}
                               alt="Post Image"
@@ -735,7 +736,7 @@ const Doctorblog = (props) => {
                             <li>
                               <div className="post-author">
                                 <Link to="/patient/doctor-profile">
-                                  <img src={doctorthumb10} alt="Post Author" />{" "}
+                                  <LazyLoadImage src={doctorthumb10} alt="Post Author" />{" "}
                                   <span>Dr. Olga Barlow</span>
                                 </Link>
                               </div>

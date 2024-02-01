@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
+
 // import { Modal } from 'react-bootstrap';
 import {
   IMG01,
@@ -64,7 +65,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-away">
-                            <img
+                            <LazyLoadImage
                               src={IMG01}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -89,7 +90,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media d-flex read-chat active">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-online">
-                            <img
+                            <LazyLoadImage
                               src={IMG02}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -111,7 +112,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-away">
-                            <img
+                            <LazyLoadImage
                               src={IMG03}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -136,7 +137,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-online">
-                            <img
+                            <LazyLoadImage
                               src={IMG04}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -158,7 +159,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-offline">
-                            <img
+                            <LazyLoadImage
                               src={IMG04}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -180,7 +181,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-online">
-                            <img
+                            <LazyLoadImage
                               src={IMG05}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -202,7 +203,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-away">
-                            <img
+                            <LazyLoadImage
                               src={IMG06}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -227,7 +228,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-offline">
-                            <img
+                            <LazyLoadImage
                               src={IMG07}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -249,7 +250,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-online">
-                            <img
+                            <LazyLoadImage
                               src={IMG08}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -271,7 +272,7 @@ const DoctorChat = (props) => {
                       <Link to="#" className="media read-chat d-flex">
                         <div className="media-img-wrap">
                           <div className="avatar avatar-away">
-                            <img
+                            <LazyLoadImage
                               src={IMG09}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -302,7 +303,7 @@ const DoctorChat = (props) => {
                     <div className="media d-flex">
                       <div className="media-img-wrap flex-shrink-0">
                         <div className="avatar avatar-online">
-                          <img
+                          <LazyLoadImage
                             src={IMG01}
                             alt="User"
                             className="avatar-img rounded-circle"
@@ -355,7 +356,7 @@ const DoctorChat = (props) => {
                         </li>
                         <li className="media received d-flex">
                           <div className="avatar flex-shrink-0">
-                            <img
+                            <LazyLoadImage
                               src={IMG01}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -393,7 +394,7 @@ const DoctorChat = (props) => {
                               <div>
                                 <div className="chat-msg-attachments">
                                   <div className="chat-attachment">
-                                    <img src={IMG010} alt="Attachment" />
+                                    <LazyLoadImage src={IMG010} alt="Attachment" />
                                     <div className="chat-attach-caption">
                                       placeholder.jpg
                                     </div>
@@ -405,7 +406,7 @@ const DoctorChat = (props) => {
                                     </Link>
                                   </div>
                                   <div className="chat-attachment">
-                                    <img src={IMG09} alt="Attachment" />
+                                    <LazyLoadImage src={IMG09} alt="Attachment" />
                                     <div className="chat-attach-caption">
                                       placeholder.jpg
                                     </div>
@@ -461,7 +462,7 @@ const DoctorChat = (props) => {
                               <div>
                                 <div className="chat-msg-attachments">
                                   <div className="chat-attachment">
-                                    <img src={IMG011} alt="Attachment" />
+                                    <LazyLoadImage src={IMG011} alt="Attachment" />
                                     <div className="chat-attach-caption">
                                       placeholder.jpg
                                     </div>
@@ -486,7 +487,7 @@ const DoctorChat = (props) => {
                         </li>
                         <li className="media received d-flex">
                           <div className="avatar flex-shrink-0">
-                            <img
+                            <LazyLoadImage
                               src={IMG01}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -512,7 +513,7 @@ const DoctorChat = (props) => {
                         <li className="chat-date">Today</li>
                         <li className="media received d-flex">
                           <div className="avatar flex-shrink-0">
-                            <img
+                            <LazyLoadImage
                               src={IMG02}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -575,7 +576,7 @@ const DoctorChat = (props) => {
                         </li>
                         <li className="media received d-flex">
                           <div className="avatar flex-shrink-0">
-                            <img
+                            <LazyLoadImage
                               src={IMG01}
                               alt="User"
                               className="avatar-img rounded-circle"
@@ -630,7 +631,7 @@ const DoctorChat = (props) => {
                 <div className="call-wrapper">
                   <div className="call-inner">
                     <div className="call-user">
-                      <img alt="User" src={IMG01} className="call-avatar" />
+                      <LazyLoadImage alt="User" src={IMG01} className="call-avatar" />
                       <h4>Dr. Darren Elder</h4>
                       <span>Connecting...</span>
                     </div>
@@ -666,7 +667,7 @@ const DoctorChat = (props) => {
                 <div className="call-wrapper">
                   <div className="call-inner">
                     <div className="call-user">
-                      <img alt="User" src={IMG01} className="call-avatar" />
+                      <LazyLoadImage alt="User" src={IMG01} className="call-avatar" />
                       <h4>Dr. Darren Elder</h4>
                       <span>Connecting...</span>
                     </div>

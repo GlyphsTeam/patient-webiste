@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "../assets/images/logo.png";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const Footer = (props) => {
   //Aos
 
@@ -44,7 +44,7 @@ const Footer = (props) => {
                   <div className="col-lg-3 col-md-4">
                     <div className="footer-widget footer-about">
                       <div className="footer-logo">
-                        <img src={logo} alt="logo" />
+                        <LazyLoadImage src={logo} alt="logo" />
                       </div>
                       <div className="footer-about-content">
                         <p>

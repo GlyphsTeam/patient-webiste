@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 //images
 import {
   IMG01,
@@ -56,7 +57,7 @@ const BlogGrid = (props) => {
                   <div className="blog grid-blog">
                     <div className="blog-image">
                       <Link to="/blog/blog-details">
-                        <img className="img-fluid" src={IMG01} alt="Post" />
+                        <LazyLoadImage className="img-fluid" src={IMG01} alt="Post" />
                       </Link>
                     </div>
                     <div className="blog-content">
@@ -64,7 +65,7 @@ const BlogGrid = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG_th01} alt="Post Author" />
+                              <LazyLoadImage src={IMG_th01} alt="Post Author" />
                               <span>Dr. Ruby Perrin</span>
                             </Link>
                           </div>
@@ -90,7 +91,7 @@ const BlogGrid = (props) => {
                   <div className="blog grid-blog">
                     <div className="blog-image">
                       <Link to="/blog/blog-details">
-                        <img className="img-fluid" src={IMG02} alt="Post" />
+                        <LazyLoadImage className="img-fluid" src={IMG02} alt="Post" />
                       </Link>
                     </div>
                     <div className="blog-content">
@@ -98,7 +99,7 @@ const BlogGrid = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG_th02} alt="Post Author" />
+                              <LazyLoadImage src={IMG_th02} alt="Post Author" />
                               <span>Dr. Darren Elder</span>
                             </Link>
                           </div>
@@ -123,7 +124,7 @@ const BlogGrid = (props) => {
                   <div className="blog grid-blog">
                     <div className="blog-image">
                       <Link to="/blog/blog-details">
-                        <img className="img-fluid" src={IMG03} alt="Post" />
+                        <LazyLoadImage className="img-fluid" src={IMG03} alt="Post" />
                       </Link>
                     </div>
                     <div className="blog-content">
@@ -131,7 +132,7 @@ const BlogGrid = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG_th03} alt="Post Author" />
+                              <LazyLoadImage src={IMG_th03} alt="Post Author" />
                               <span>Dr. Deborah Angel</span>
                             </Link>
                           </div>
@@ -156,7 +157,7 @@ const BlogGrid = (props) => {
                   <div className="blog grid-blog">
                     <div className="blog-image">
                       <Link to="/blog/blog-details">
-                        <img className="img-fluid" src={IMG04} alt="Post" />
+                        <LazyLoadImage className="img-fluid" src={IMG04} alt="Post" />
                       </Link>
                     </div>
                     <div className="blog-content">
@@ -164,7 +165,7 @@ const BlogGrid = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG_th04} alt="Post Author" />
+                              <LazyLoadImage src={IMG_th04} alt="Post Author" />
                               <span>Dr. Sofia Brient</span>
                             </Link>
                           </div>
@@ -189,7 +190,7 @@ const BlogGrid = (props) => {
                   <div className="blog grid-blog">
                     <div className="blog-image">
                       <Link to="/blog/blog-details">
-                        <img className="img-fluid" src={IMG05} alt="Post" />
+                        <LazyLoadImage className="img-fluid" src={IMG05} alt="Post" />
                       </Link>
                     </div>
                     <div className="blog-content">
@@ -197,7 +198,7 @@ const BlogGrid = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG_th05} alt="Post Author" />
+                              <LazyLoadImage src={IMG_th05} alt="Post Author" />
                               <span>Dr. Marvin Campbell</span>
                             </Link>
                           </div>
@@ -222,7 +223,7 @@ const BlogGrid = (props) => {
                   <div className="blog grid-blog">
                     <div className="blog-image">
                       <Link to="/blog/blog-details">
-                        <img className="img-fluid" src={IMG06} alt="Post" />
+                        <LazyLoadImage className="img-fluid" src={IMG06} alt="Post" />
                       </Link>
                     </div>
                     <div className="blog-content">
@@ -230,7 +231,7 @@ const BlogGrid = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG_th06} alt="Post Author" />
+                              <LazyLoadImage src={IMG_th06} alt="Post Author" />
                               <span>Dr. Marvin Campbell</span>
                             </Link>
                           </div>

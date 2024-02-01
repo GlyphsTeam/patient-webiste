@@ -10,7 +10,7 @@ import CategoryWidget from "../categoryWidget";
 import TagsWidget from "../tagswidget";
 import Header from "../../header.jsx";
 import Footer from "../../footer.jsx";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const BlogDetails = (props) => {
   return (
     <div>
@@ -42,7 +42,7 @@ const BlogDetails = (props) => {
                 <div className="blog blog-single-post">
                   <div className="blog-image">
                     <Link to="#0">
-                      <img alt="" src={IMG01} className="img-fluid" />
+                      <LazyLoadImage alt="" src={IMG01} className="img-fluid" />
                     </Link>
                   </div>
                   <h3 className="blog-title">
@@ -54,7 +54,7 @@ const BlogDetails = (props) => {
                         <li>
                           <div className="post-author">
                             <Link to="/patient/doctor-profile">
-                              <img src={IMG02} alt="Post Author" />
+                              <LazyLoadImage src={IMG02} alt="Post Author" />
                               <span>Dr. Darren Elder</span>
                             </Link>
                           </div>
@@ -163,7 +163,7 @@ const BlogDetails = (props) => {
                       <div className="about-author-img">
                         <div className="author-img-wrap">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               className="img-fluid rounded-circle"
                               alt=""
                               src={IMG03}
@@ -197,7 +197,7 @@ const BlogDetails = (props) => {
                       <li>
                         <div className="comment">
                           <div className="comment-author">
-                            <img className="avatar" alt="" src={IMG04} />
+                            <LazyLoadImage className="avatar" alt="" src={IMG04} />
                           </div>
                           <div className="comment-block">
                             <span className="comment-by">
@@ -222,7 +222,7 @@ const BlogDetails = (props) => {
                           <li>
                             <div className="comment">
                               <div className="comment-author">
-                                <img className="avatar" alt="" src={IMG05} />
+                                <LazyLoadImage className="avatar" alt="" src={IMG05} />
                               </div>
                               <div className="comment-block">
                                 <span className="comment-by">
@@ -246,7 +246,7 @@ const BlogDetails = (props) => {
                           <li>
                             <div className="comment">
                               <div className="comment-author">
-                                <img className="avatar" alt="" src={IMG06} />
+                                <LazyLoadImage className="avatar" alt="" src={IMG06} />
                               </div>
                               <div className="comment-block">
                                 <span className="comment-by">
@@ -272,7 +272,7 @@ const BlogDetails = (props) => {
                       <li>
                         <div className="comment">
                           <div className="comment-author">
-                            <img className="avatar" alt="" src={IMG06} />
+                            <LazyLoadImage className="avatar" alt="" src={IMG06} />
                           </div>
                           <div className="comment-block">
                             <span className="comment-by">
@@ -291,7 +291,7 @@ const BlogDetails = (props) => {
                       <li>
                         <div className="comment">
                           <div className="comment-author">
-                            <img className="avatar" alt="" src={IMG07} />
+                            <LazyLoadImage className="avatar" alt="" src={IMG07} />
                           </div>
                           <div className="comment-block">
                             <span className="comment-by">

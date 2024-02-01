@@ -14,6 +14,7 @@ import Header from "../../header";
 import Footer from "../../footer";
 import DoctorSidebar from "../../doctors/sidebar/index.jsx";
 import { Modal } from "react-bootstrap";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Accounts = (props) => {
   const [show, setshow] = useState();
@@ -232,7 +233,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient}
                                                 alt="User Image"
@@ -290,7 +291,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient1}
                                                 alt="User Image"
@@ -347,7 +348,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient2}
                                                 alt="User Image"
@@ -405,7 +406,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient3}
                                                 alt="User Image"
@@ -462,7 +463,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient4}
                                                 alt="User Image"
@@ -520,7 +521,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient5}
                                                 alt="User Image"
@@ -600,7 +601,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient}
                                                 alt="User Image"
@@ -658,7 +659,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient1}
                                                 alt="User Image"
@@ -715,7 +716,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient2}
                                                 alt="User Image"
@@ -773,7 +774,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient3}
                                                 alt="User Image"
@@ -830,7 +831,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient4}
                                                 alt="User Image"
@@ -888,7 +889,7 @@ const Accounts = (props) => {
                                               to="/doctor/patient-profile"
                                               className="avatar avatar-sm me-2"
                                             >
-                                              <img
+                                              <LazyLoadImage
                                                 className="avatar-img rounded-circle"
                                                 src={patient5}
                                                 alt="User Image"
@@ -1051,7 +1052,7 @@ const Accounts = (props) => {
                 id="request_amount"
                 className="form-control"
                 maxLength={6}
-                // oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              // oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
               />
               <span className="help-block" />
             </div>

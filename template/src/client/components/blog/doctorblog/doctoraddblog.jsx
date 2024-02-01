@@ -6,6 +6,7 @@ import { IMG02, img_1, img_2, img_3 } from "./img.jsx";
 import Footer from "../../footer.jsx";
 import Header from "../../header.jsx";
 import StickyBox from "react-sticky-box";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Doctoraddblog = (props) => {
   return (
@@ -45,7 +46,7 @@ const Doctoraddblog = (props) => {
                     <div className="widget-profile pro-widget-content">
                       <div className="profile-info-widget">
                         <Link to="#" className="booking-doc-img">
-                          <img src={IMG02} alt="User Image" />
+                          <LazyLoadImage src={IMG02} alt="User Image" />
                         </Link>
                         <div className="profile-det-info">
                           <h3>Dr. Darren Elder</h3>
@@ -310,17 +311,17 @@ const Doctoraddblog = (props) => {
                                 <ul className="upload-wrap">
                                   <li>
                                     <div className=" upload-images">
-                                      <img alt="Blog Image" src={img_1} />
+                                      <LazyLoadImage alt="Blog Image" src={img_1} />
                                     </div>
                                   </li>
                                   <li>
                                     <div className=" upload-images">
-                                      <img alt="Blog Image" src={img_2} />
+                                      <LazyLoadImage alt="Blog Image" src={img_2} />
                                     </div>
                                   </li>
                                   <li>
                                     <div className=" upload-images">
-                                      <img alt="Blog Image" src={img_3} />
+                                      <LazyLoadImage alt="Blog Image" src={img_3} />
                                     </div>
                                   </li>
                                 </ul>

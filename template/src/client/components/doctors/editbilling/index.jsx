@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import { IMG01 } from "./img";
 import Header from "../../header";
@@ -43,7 +43,7 @@ const EditBilling = (props) => {
                       <div className="pro-widget-content">
                         <div className="profile-info-widget">
                           <Link to="#" className="booking-doc-img">
-                            <img src={IMG01} alt="User Image" />
+                            <LazyLoadImage src={IMG01} alt="User Image" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>

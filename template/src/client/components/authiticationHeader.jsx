@@ -1,4 +1,3 @@
-import React from "react";
 import {
   flag01,
   flag02,
@@ -18,6 +17,7 @@ import {
   logo,
 } from "./imagepath";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const AuthenticationHeader = () => {
   return (
     <>
@@ -33,13 +33,13 @@ const AuthenticationHeader = () => {
               </span>
             </Link>
             <Link to="/index" className="navbar-brand logo">
-              <img src={logo} className="img-fluid" alt="Logo" />
+              <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
             </Link>
           </div>
           <div className="main-menu-wrapper">
             <div className="menu-header">
               <Link to="/index" className="menu-logo">
-                <img src={logo} className="img-fluid" alt="Logo" />
+                <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
               </Link>
               <Link id="menu_close" className="menu-close" to="#">
                 <i className="fas fa-times" />
@@ -58,7 +58,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_11}
                                   className="img-fluid "
                                   alt="img"
@@ -76,7 +76,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo ">
                             <div className="demo-img">
                               <Link to="/index-2" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_10}
                                   className="img-fluid"
                                   alt="img"
@@ -94,7 +94,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-3" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_09}
                                   className="img-fluid"
                                   alt="img"
@@ -112,7 +112,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-4" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_08}
                                   className="img-fluid"
                                   alt="img"
@@ -130,7 +130,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-5" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_07}
                                   className="img-fluid"
                                   alt="img"
@@ -148,7 +148,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-6" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_06}
                                   className="img-fluid"
                                   alt="img"
@@ -166,7 +166,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-7" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_05}
                                   className="img-fluid"
                                   alt="img"
@@ -184,7 +184,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-8" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_04}
                                   className="img-fluid"
                                   alt="img"
@@ -202,7 +202,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-9" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_03}
                                   className="img-fluid"
                                   alt="img"
@@ -220,7 +220,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-10" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_02}
                                   className="img-fluid"
                                   alt="img"
@@ -238,7 +238,7 @@ const AuthenticationHeader = () => {
                           <div className="single-demo">
                             <div className="demo-img">
                               <Link to="/index-11" className="inner-demo-img">
-                                <img
+                                <LazyLoadImage
                                   src={home_01}
                                   className="img-fluid"
                                   alt="img"
@@ -563,21 +563,21 @@ const AuthenticationHeader = () => {
                     role="button"
                     aria-expanded="false"
                   >
-                    <img src={flag01} alt="" height={20} className="flag-img" />{" "}
+                    <LazyLoadImage src={flag01} alt="" height={20} className="flag-img" />{" "}
                     <span>English</span>
                   </Link>
                   <div className="dropdown-menu">
                     <Link to="#" className="dropdown-item">
-                      <img src={flag01} alt="" height={16} /> English
+                      <LazyLoadImage src={flag01} alt="" height={16} /> English
                     </Link>
                     <Link to="#" className="dropdown-item">
-                      <img src={flag02} alt="" height={16} /> French
+                      <LazyLoadImage src={flag02} alt="" height={16} /> French
                     </Link>
                     <Link to="#" className="dropdown-item">
-                      <img src={flag03} alt="" height={16} /> Spanish
+                      <LazyLoadImage src={flag03} alt="" height={16} /> Spanish
                     </Link>
                     <Link to="#" className="dropdown-item">
-                      <img src={flag05} alt="" height={16} /> German
+                      <LazyLoadImage src={flag05} alt="" height={16} /> German
                     </Link>
                   </div>
                 </div>
@@ -594,21 +594,21 @@ const AuthenticationHeader = () => {
                   role="button"
                   aria-expanded="false"
                 >
-                  <img src={flag01} alt="" height={20} className="flag-img" />{" "}
+                  <LazyLoadImage src={flag01} alt="" height={20} className="flag-img" />{" "}
                   <span>English</span>
                 </Link>
                 <div className="dropdown-menu">
                   <Link to="#" className="dropdown-item">
-                    <img src={flag01} alt="" height={16} /> English
+                    <LazyLoadImage src={flag01} alt="" height={16} /> English
                   </Link>
                   <Link to="#" className="dropdown-item">
-                    <img src={flag02} alt="" height={16} /> French
+                    <LazyLoadImage src={flag02} alt="" height={16} /> French
                   </Link>
                   <Link to="#" className="dropdown-item">
-                    <img src={flag03} alt="" height={16} /> Spanish
+                    <LazyLoadImage src={flag03} alt="" height={16} /> Spanish
                   </Link>
                   <Link to="#" className="dropdown-item">
-                    <img src={flag05} alt="" height={16} /> German
+                    <LazyLoadImage src={flag05} alt="" height={16} /> German
                   </Link>
                 </div>
               </div>

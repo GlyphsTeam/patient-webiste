@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import {
   IMG01,
@@ -63,7 +63,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG01} alt="User" />
+                            <LazyLoadImage src={IMG01} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -110,7 +110,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG02} alt="User" />
+                            <LazyLoadImage src={IMG02} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -157,7 +157,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG03} alt="User" />
+                            <LazyLoadImage src={IMG03} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -204,7 +204,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG012} alt="User" />
+                            <LazyLoadImage src={IMG012} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -250,7 +250,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG04} alt="User" />
+                            <LazyLoadImage src={IMG04} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -296,7 +296,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG05} alt="User" />
+                            <LazyLoadImage src={IMG05} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -342,7 +342,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG06} alt="User" />
+                            <LazyLoadImage src={IMG06} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -388,7 +388,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG07} alt="User" />
+                            <LazyLoadImage src={IMG07} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>
@@ -434,7 +434,7 @@ const MypPatient = (props) => {
                             to="/doctor/patient-profile"
                             className="booking-doc-img"
                           >
-                            <img src={IMG08} alt="User" />
+                            <LazyLoadImage src={IMG08} alt="User" />
                           </Link>
                           <div className="profile-det-info">
                             <h3>

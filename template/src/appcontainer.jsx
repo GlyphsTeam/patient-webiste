@@ -2,6 +2,7 @@
 import React, { lazy, useEffect, Suspense } from "react";
 import config from "config";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 const LoginContainer = lazy(() => import("./client/components/login/login.jsx"));
 const Register = lazy(() => import("./client/components/register/register.jsx"));
 const ForgotPassword = lazy(() => import("./client/components/forgot-password"));

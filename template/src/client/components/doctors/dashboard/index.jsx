@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import DoctorSidebar from "../sidebar";
 import { Link } from "react-router-dom";
 import Footer from "../../footer";
@@ -47,7 +47,7 @@ const DoctorDashboard = (props) => {
                               trackTransition="0s ease"
                             >
                               <div className="indicator-volume">
-                                <img
+                                <LazyLoadImage
                                   src={Icon01}
                                   className="img-fluid "
                                   alt="Patient"
@@ -88,7 +88,7 @@ const DoctorDashboard = (props) => {
                               trackTransition="0s ease"
                             >
                               <div className="indicator-volume">
-                                <img
+                                <LazyLoadImage
                                   src={Icon02}
                                   className="img-fluid"
                                   alt="Patient"
@@ -129,7 +129,7 @@ const DoctorDashboard = (props) => {
                               trackTransition="0s ease"
                             >
                               <div className="indicator-volume">
-                                <img
+                                <LazyLoadImage
                                   src={Icon03}
                                   className="img-fluid"
                                   alt="Patient"

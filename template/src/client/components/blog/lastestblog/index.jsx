@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   IMG_blog_th01,
   IMG_blog_th02,
@@ -8,7 +8,7 @@ import {
 } from ".././bloglist/img.jsx";
 //link
 import { Link } from "react-router-dom";
-
+import  React from "react";
 const LastestBlog = () => {
   return (
     <div className="card post-widget">
@@ -20,7 +20,7 @@ const LastestBlog = () => {
           <li>
             <div className="post-thumb">
               <Link to="/blog/blog-details">
-                <img className="img-fluid" src={IMG_blog_th01} alt="" />
+                <LazyLoadImage className="img-fluid" src={IMG_blog_th01} alt="" />
               </Link>
             </div>
             <div className="post-info">
@@ -35,7 +35,7 @@ const LastestBlog = () => {
           <li>
             <div className="post-thumb">
               <Link to="/blog/blog-details">
-                <img className="img-fluid" src={IMG_blog_th02} alt="" />
+                <LazyLoadImage className="img-fluid" src={IMG_blog_th02} alt="" />
               </Link>
             </div>
             <div className="post-info">
@@ -50,7 +50,7 @@ const LastestBlog = () => {
           <li>
             <div className="post-thumb">
               <Link to="/blog/blog-details">
-                <img className="img-fluid" src={IMG_blog_th03} alt="" />
+                <LazyLoadImage className="img-fluid" src={IMG_blog_th03} alt="" />
               </Link>
             </div>
             <div className="post-info">
@@ -65,7 +65,7 @@ const LastestBlog = () => {
           <li>
             <div className="post-thumb">
               <Link to="/blog/blog-details">
-                <img className="img-fluid" src={IMG_blog_th04} alt="" />
+                <LazyLoadImage className="img-fluid" src={IMG_blog_th04} alt="" />
               </Link>
             </div>
             <div className="post-info">
@@ -80,7 +80,7 @@ const LastestBlog = () => {
           <li>
             <div className="post-thumb">
               <Link to="/blog/blog-details">
-                <img className="img-fluid" src={IMG_blog_th05} alt="" />
+                <LazyLoadImage className="img-fluid" src={IMG_blog_th05} alt="" />
               </Link>
             </div>
             <div className="post-info">
