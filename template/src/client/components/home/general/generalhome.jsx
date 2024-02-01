@@ -21,7 +21,7 @@ function Generalhome(props) {
   if (props.location.pathname === "/index") {
     require("../../../assets/css/feather.css");
   }
- 
+
   return (
     <>
       <>
@@ -35,7 +35,9 @@ function Generalhome(props) {
           {/* /Specialities Section */}
           {/* Doctors Section */}
           <Doctor />
-      
+          {/* /Doctors Section */}
+    
+          {/* Work Section */}
           <Worksection />
           {/* /Work Section */}
           {/* Articles Section */}
@@ -46,7 +48,8 @@ function Generalhome(props) {
           {/* /App Section */}
           {/* FAQ Section */}
           <Faq />
-        
+          {/* /FAQ Section */}
+          {/* Testimonial Section */}
           <Testimonial />
           {/* /Testimonial Section */}
           {/* Partners Section */}

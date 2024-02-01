@@ -65,8 +65,7 @@ const Product = lazy(() => import("./client/components/Pharmacy/product"));
 const ProductDescription = lazy(() => import("./client/components/Pharmacy/productdescription"));
 const ProductCheckout = lazy(() => import("./client/components/Pharmacy/productcheckout"));
 const PayoutSuccess = lazy(() => import("./client/components/Pharmacy/payoutsuccess"));
-const AppUniversal = lazy(() => import("./admin/app-universal"));
-const PharmacyadminApp = lazy(() => import("./pharmacyadmin/app-universal"));
+
 const BlankPage = lazy(() => import("./client/components/pages/starter page/index"));
 const Pharmacyregister = lazy(() => import("./client/components/Pharmacy/pharmacyregister"));
 const Pharmacyregisterstepone = lazy(() => import("./client/components/Pharmacy/pharmacyregisterstepone"));
@@ -132,7 +131,6 @@ const HomecareHome = lazy(() => import("./client/components/home/HomecareHome/in
 const AppContainer = function (props) {
   // const config = "/react/template/";
   if (props) {
-    const url = props.location.pathname.split("/")[1];
 
     useEffect(() => {
       const handleMouseMove = (event) => {
@@ -203,21 +201,7 @@ const AppContainer = function (props) {
 
     return (
       <Suspense fallback={<p>Loading...</p>}>
-        <Router basename={`${config.publicPath}`}>
-          {" "}
-          {url === "admin" ? (
-            <div>
-              <Switch>
-                <Route path="/admin" component={AppUniversal} />
-              </Switch>
-            </div>
-          ) : url === "pharmacyadmin" ? (
-            <div>
-              <Switch>
-                <Route path="/pharmacyadmin" component={PharmacyadminApp} />
-              </Switch>
-            </div>
-          ) : (
+        <Router basename={`${config.publicPath}`}>        
             <div>
               <Switch>
                 <Route path="/patient/doctor-grid" exact component={DoctorGrid} />
@@ -631,7 +615,7 @@ const AppContainer = function (props) {
                 <Route path="/index-13" exact component={HomecareHome} />
               </Switch>
             </div>
-          )}
+  
         </Router>
       </Suspense>
     );

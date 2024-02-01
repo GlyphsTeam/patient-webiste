@@ -17,7 +17,6 @@ function Breadcrumbs() {
               </Breadcrumb.Item>
               <nav aria-label="breadcrumb" className="page-breadcrumb">
                 <ol className="breadcrumb">
-                  <Breadcrumb.Item to="/index" className="breadcrumb-item">Home</Breadcrumb.Item>
                   <Breadcrumb.Item active className="breadcrumb-item" aria-current="page">Dashboard</Breadcrumb.Item>
                 </ol>
               </nav>

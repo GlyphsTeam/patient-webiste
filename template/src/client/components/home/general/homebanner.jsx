@@ -37,8 +37,8 @@ function Homebanner() {
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                   </p>
-                  <Link to="/patient/doctor-grid" className="btn">
-                    Start Booking
+                  <Link to="/patient/booking1" className="btn">
+                    Start a Consult
                   </Link>
                   <div className="banner-arrow-img">
                     <img src={down_arrow_img} className="img-fluid" alt="" />
