@@ -3,6 +3,7 @@ import { client_07, client_08, client_09, healthcare } from "../../imagepath";
 // import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Testimonals = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const Testimonals = () => {
     <div>
       <div className="testimonial-section-ten need-to-know-section">
         <div className="floating-bg">
-          <img src={healthcare} />
+          <LazyLoadImage src={healthcare} />
         </div>
         <div className="container">
           <div className="row align-items-center">
@@ -52,7 +53,7 @@ const Testimonals = () => {
                   <div className="testimonial-card">
                     <div className="testimonial-user-details">
                       <div className="testimonial-user-img">
-                        <img src={client_07} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={client_07} className="img-fluid" alt="#" />
                       </div>
                       <div className="testimonial-user-name">
                         <h5>Martin Philips</h5>
@@ -77,7 +78,7 @@ const Testimonals = () => {
                   <div className="testimonial-card">
                     <div className="testimonial-user-details">
                       <div className="testimonial-user-img">
-                        <img src={client_08} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={client_08} className="img-fluid" alt="#" />
                       </div>
                       <div className="testimonial-user-name">
                         <h5>James Anderson</h5>
@@ -103,7 +104,7 @@ const Testimonals = () => {
                   <div className="testimonial-card">
                     <div className="testimonial-user-details">
                       <div className="testimonial-user-img">
-                        <img src={client_09} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={client_09} className="img-fluid" alt="#" />
                       </div>
                       <div className="testimonial-user-name">
                         <h5>Christina Louis</h5>

@@ -11,7 +11,7 @@ import TopHeader from "../topheader";
 import { Slider1, Slider2, Slider3 } from "./image.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const HomeSlider1 = (props) => {
   //Aos
 
@@ -35,7 +35,7 @@ const HomeSlider1 = (props) => {
           {/*- slider --*/}
           <Slider {...settings}>
             <div className="carousel-item active">
-              <img className="d-block w-100" src={Slider1} alt="First slide" />
+              <LazyLoadImage className="d-block w-100" src={Slider1} alt="First slide" />
               <div className="carousel-caption d-none d-md-block">
                 <span>We Provide Solution</span>
                 <h2>To stressless Life</h2>
@@ -48,7 +48,7 @@ const HomeSlider1 = (props) => {
               </div>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src={Slider2} alt="Second slide" />
+              <LazyLoadImage className="d-block w-100" src={Slider2} alt="Second slide" />
               <div className="carousel-caption d-none d-md-block">
                 <span>We Provide Solution</span>
                 <h2>Health Care Solution</h2>
@@ -59,7 +59,7 @@ const HomeSlider1 = (props) => {
               </div>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src={Slider3} alt="Third slide" />
+              <LazyLoadImage className="d-block w-100" src={Slider3} alt="Third slide" />
               <div className="carousel-caption d-none d-md-block">
                 <span>We Provide total</span>
                 <h2>Personalised care</h2>

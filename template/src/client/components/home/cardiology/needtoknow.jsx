@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const Needtoknow = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -18,7 +18,7 @@ const Needtoknow = () => {
     <div>
       <section className="need-to-know-section">
         <div className="floating-bg">
-          <img src={healthcare} alt="#" />
+          <LazyLoadImage src={healthcare} alt="#" />
         </div>
         <div className="container">
           <div className="row">
@@ -142,18 +142,18 @@ const Needtoknow = () => {
               <div className="gallery-box-block">
                 <div className="gallery-box-left">
                   <div className="box-detail mb-2 ">
-                    <img src={feature_13} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_13} className="img-fluid" alt="#" />
                   </div>
                   <div className="box-detail">
-                    <img src={feature_14} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_14} className="img-fluid" alt="#" />
                   </div>
                 </div>
                 <div className="gallery-box-right">
                   <div className="box-detail">
-                    <img src={feature_15} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_15} className="img-fluid" alt="#" />
                   </div>
                   <div className="box-detail">
-                    <img src={feature_16} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_16} className="img-fluid" alt="#" />
                   </div>
                 </div>
               </div>

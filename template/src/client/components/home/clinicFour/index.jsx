@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   clinic_big_img,
   features_clinic_02,
@@ -75,7 +75,7 @@ const Clinicfour = () => {
           <div className="row">
             <div className="col-lg-6 col-md-12">
               <div className="clinic-big-img aos" data-aos="fade-up">
-                <img src={clinic_big_img} alt="" className="img-fluid" />
+                <LazyLoadImage src={clinic_big_img} alt="" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
@@ -87,7 +87,7 @@ const Clinicfour = () => {
                   <div className="item ">
                     <div className="features-clinic-grid">
                       <div className="features-clinic-img">
-                        <img
+                        <LazyLoadImage
                           src={features_clinic_01}
                           alt=""
                           className="img-fluid"
@@ -101,7 +101,7 @@ const Clinicfour = () => {
                   <div className="item">
                     <div className="features-clinic-grid">
                       <div className="features-clinic-img">
-                        <img
+                        <LazyLoadImage
                           src={features_clinic_02}
                           alt=""
                           className="img-fluid"
@@ -115,7 +115,7 @@ const Clinicfour = () => {
                   <div className="item">
                     <div className="features-clinic-grid">
                       <div className="features-clinic-img">
-                        <img
+                        <LazyLoadImage
                           src={features_clinic_03}
                           alt=""
                           className="img-fluid"
@@ -129,7 +129,7 @@ const Clinicfour = () => {
                   <div className="item">
                     <div className="features-clinic-grid">
                       <div className="features-clinic-img">
-                        <img
+                        <LazyLoadImage
                           src={features_clinic_04}
                           alt=""
                           className="img-fluid"

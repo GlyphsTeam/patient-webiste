@@ -16,25 +16,13 @@ import "aos/dist/aos.css";
 import FeatherIcon from "feather-icons-react";
 import {
   Browser_categorie,
-  Home_12,
-  Home_13,
-  home_01,
-  home_02,
-  home_03,
-  home_04,
-  home_05,
-  home_06,
-  home_07,
-  home_08,
-  home_09,
-  home_10,
-  home_11,
   logo_03,
   logo_15,
   logo_svg,
   logo_white,
 } from "./imagepath";
 
+import "../assets/css/header.css"
 import Chart from "./patients/dashboard/chart";
 import Notification from "./patients/dashboard/notification";
 import { IMG07 } from "../components/patients/doctorprofile/img";
@@ -67,7 +55,7 @@ const Header = () => {
   const [isSideMenufour, setSideMenufour] = useState("");
   const [sideMenufive, setSideMenufive] = useState("");
   const [menu, setMenu] = useState(false);
-
+  const [showNav, setShowNav] = useState(false)
   // const [menu1, setMenu1] = useState(false);
   const toggleSidebarthree = (value) => {
     setSideMenuthree(value);
@@ -93,7 +81,10 @@ const Header = () => {
   const toggleSidebarbooking = (value) => {
     setSideBooking(value);
   };
-
+  const handlerShow = () => {
+    setShowNav(!showNav)
+  }
+  console.log("isSideMenu>>>>", isSideMenu)
   // const mobilemenus = () => {
   //   setMenu(!true);
   // };
@@ -144,28 +135,28 @@ const Header = () => {
       {!pathnames.includes("home1") && (
         <header
           className={`header ${pathnames.includes("/index-11")
-              ? "header-fixed header-fourteen header-sixteen"
-              : "" || pathnames.includes("/index-10")
-                ? "header-fixed header-fourteen header-fifteen"
-                : "" || pathnames.includes("/index-9")
-                  ? "header-fixed header-fourteen"
-                  : "" || pathnames.includes("/index-8")
-                    ? "header-fixed header-fourteen header-twelve header-thirteen"
-                    : "" || pathnames.includes("/index-7")
-                      ? "header-fixed header-fourteen header-twelve"
-                      : "" || pathnames.includes("/index-6")
-                        ? "header-trans header-eleven"
-                        : "" || pathnames.includes("/index-4")
-                          ? "header-trans custom"
-                          : "" || pathnames.includes("/index-5")
-                            ? "header header-fixed header-ten"
-                            : "" || pathnames.includes("home")
-                              ? "header-trans header-two"
-                              : "" || pathnames.includes("/index-13")
-                                ? "header header-custom header-fixed header-ten home-care-header"
-                                : "" || pathnames.includes("/Pharmacy-index")
-                                  ? "header header-one"
-                                  : "header-fixed header-one"
+            ? "header-fixed header-fourteen header-sixteen"
+            : "" || pathnames.includes("/index-10")
+              ? "header-fixed header-fourteen header-fifteen"
+              : "" || pathnames.includes("/index-9")
+                ? "header-fixed header-fourteen"
+                : "" || pathnames.includes("/index-8")
+                  ? "header-fixed header-fourteen header-twelve header-thirteen"
+                  : "" || pathnames.includes("/index-7")
+                    ? "header-fixed header-fourteen header-twelve"
+                    : "" || pathnames.includes("/index-6")
+                      ? "header-trans header-eleven"
+                      : "" || pathnames.includes("/index-4")
+                        ? "header-trans custom"
+                        : "" || pathnames.includes("/index-5")
+                          ? "header header-fixed header-ten"
+                          : "" || pathnames.includes("home")
+                            ? "header-trans header-two"
+                            : "" || pathnames.includes("/index-13")
+                              ? "header header-custom header-fixed header-ten home-care-header"
+                              : "" || pathnames.includes("/Pharmacy-index")
+                                ? "header header-one"
+                                : "header-fixed header-one"
             } `}
           style={
             pathnames.includes("/index-6") && navbar
@@ -278,10 +269,10 @@ const Header = () => {
                 >
                   <li
                     className={`has-submenu megamenu  ${pathnames.includes("index")
+                      ? "active"
+                      : "" || pathnames.includes("home")
                         ? "active"
-                        : "" || pathnames.includes("home")
-                          ? "active"
-                          : ""
+                        : ""
                       }`}
                   >
                     <Link
@@ -293,8 +284,8 @@ const Header = () => {
                     </Link>
                   </li>
                   <li
-                    className={`has-submenu ${url.includes("/doctor") ? "active" : ""
-                      }`}
+                    className={`has-submenu  ${pathnames.includes("/patient/doctor-grid") ? "active" : ""}
+                      `}
                   >
                     <Link
                       to="/patient/doctor-grid"
@@ -308,72 +299,7 @@ const Header = () => {
                       Doctors
                     </Link>
                   </li>
-                  <li
-                    className={`has-submenu ${url.includes("/patient") ? "active" : ""
-                      }`}
-                  >
-                    <Link
-                      to="#"
-                      className={isSideMenu == "patients" ? "subdrop" : ""}
-                      onMouseEnter={() =>
-                        toggleSidebar(
-                          isSideMenu == "patients" ? "submenu" : "patients"
-                        )
-                      }
-                    >
-                      Patients <i className="fas fa-chevron-down" />
-                    </Link>
-                    {isSideMenu == "patients" ? (
-                      <ul
-                        className={`${isSideMenu == "patients"
-                            ? "submenu d-block"
-                            : "submenu"
-                          }`}
-                      >
-                        <li
-                          className={
-                            pathnames.includes("dashboard") ? "active" : ""
-                          }
-                        >
-                          <Link
-                            to="/patient/dashboard"
-                            onClick={() => onhandleCloseMenu()}
-                          >
-                            Patient Dashboard
-                          </Link>
-                        </li>
-                        <li
-                          className={
-                            pathnames.includes("favourites") ? "active" : ""
-                          }
-                        >
-                          <Link
-                            to="/patient/favourites"
-                            onClick={() => onhandleCloseMenu()}
-                          >
-                            Favourites
-                          </Link>
-                        </li>
-                        <li
-                          className={
-                            pathnames.includes("profile") &&
-                              !pathnames.includes("doctor-profile")
-                              ? "active"
-                              : ""
-                          }
-                        >
-                          <Link
-                            to="/patient/profile"
-                            onClick={() => onhandleCloseMenu()}
-                          >
-                            Profile Settings
-                          </Link>
-                        </li>
-                      </ul>
-                    ) : (
-                      ""
-                    )}
-                  </li>
+
 
                   <li
                     className={`has-submenu ${url.includes("/pages") ? "active" : ""
@@ -499,8 +425,8 @@ const Header = () => {
                         </Link>
                         <div
                           className={`${change === true
-                              ? "togglesearch d-block"
-                              : "togglesearch d-none"
+                            ? "togglesearch d-block"
+                            : "togglesearch d-none"
                             }`}
                         >
                           <form action={`${config}/patient/search-doctor1`}>
@@ -638,8 +564,8 @@ const Header = () => {
 
                   <li
                     className={`${pathnames.includes("/index-7") || "/index-9"
-                        ? "login-in-fourteen"
-                        : "register-btn"
+                      ? "login-in-fourteen"
+                      : "register-btn"
                       }`}
                   >
                     <Link
@@ -664,15 +590,15 @@ const Header = () => {
                   </li>
                   <li
                     className={`${pathnames.includes("/index-7") || "/index-9"
-                        ? "login-in-fourteen"
-                        : "register-btn"
+                      ? "login-in-fourteen"
+                      : "register-btn"
                       }`}
                   >
                     <Link
                       to="/signup"
                       className={`${pathnames.includes("/index-7") || "/index-9"
-                          ? "btn btn-primary reg-btn reg-btn-fourteen"
-                          : "btn reg-btn"
+                        ? "btn btn-primary reg-btn reg-btn-fourteen"
+                        : "btn reg-btn"
                         }`}
                     >
                       <i className="me-2">
@@ -684,10 +610,63 @@ const Header = () => {
                 </ul>
               ) : null}
               {(!pathnames.includes("/patient/search-doctor1") &&
-                pathnames.includes("patient")) ||
-                (pathnames.includes("Pharmacy") &&
-                  !pathnames.includes("/Pharmacy/Pharmacy-index")) ? (
-                <>
+                pathnames.includes("patient"))
+                ? (
+                  <>
+                    <ul className="nav header-navbar-rht">
+                      <Chart />
+                      <Notification />
+                      <li className="nav-item dropdown has-arrow logged-item">
+                        <Link
+                          to="#"
+                          className="dropdown-toggle nav-link"
+                          data-bs-toggle="dropdown"
+                        >
+                          <span className="user-img">
+                            <LazyLoadImage
+                              className={`rounded-circle ${isSideMenu == "patients" ? "subdrop" : ""}`}
+                              onClick={() => handlerShow()}
+                              src={IMG07}
+                              width="31"
+                              alt="Darren Elder"
+                            />
+                          </span>
+                        </Link>
+                        <div className={`dropdown-menu dropdown-menu-end ${showNav === true ? "show" : ""}`}>
+                          <div className="user-header">
+                            <div className="avatar avatar-sm">
+                              <LazyLoadImage
+                                src={IMG07}
+                                alt="User Image"
+                                className="avatar-img rounded-circle"
+                              />
+                            </div>
+                            <div className="user-text">
+                              <h6>Richard Wilson</h6>
+                              <p className="text-muted mb-0">Patient</p>
+                            </div>
+                          </div>
+                          <Link className="dropdown-item" to="/patient/dashboard">
+                            Dashboard
+                          </Link>
+                          <Link className="dropdown-item" to="/patient/profile">
+                            Profile Settings
+                          </Link>
+                          <Link className="dropdown-item" to="/login">
+                            Logout
+                          </Link>
+                        </div>
+                      </li>
+                    </ul>
+                  </>
+                ) : pathnames.includes("doctor") &&
+                  !pathnames.includes("/doctor/doctor-register") &&
+                  !pathnames.includes("/patient/search-doctor1") &&
+                  !pathnames.includes("/pages/doctor-signup") &&
+                  !pathnames.includes("/doctor-blog") &&
+                  !pathnames.includes("/doctor-edit-blog") &&
+                  !pathnames.includes("/doctor-pending-blog") &&
+                  !pathnames.includes("/blog/doctor-add-blog") ? (
                   <ul className="nav header-navbar-rht">
                     <Chart />
                     <Notification />
@@ -699,8 +678,13 @@ const Header = () => {
                       >
                         <span className="user-img">
                           <LazyLoadImage
-                            className="rounded-circle"
-                            src={IMG07}
+                            className={`rounded-circle ${isSideMenu == "patients" ? "subdrop" : ""}`}
+                            onMouseEnter={() =>
+                              toggleSidebar(
+                                isSideMenu == "patients" ? "submenu" : "patients"
+                              )
+                            }
+                            src={IMG01}
                             width="31"
                             alt="Darren Elder"
                           />
@@ -710,14 +694,14 @@ const Header = () => {
                         <div className="user-header">
                           <div className="avatar avatar-sm">
                             <LazyLoadImage
-                              src={IMG07}
+                              src={IMG01}
                               alt="User Image"
                               className="avatar-img rounded-circle"
                             />
                           </div>
                           <div className="user-text">
-                            <h6>Richard Wilson</h6>
-                            <p className="text-muted mb-0">Patient</p>
+                            <h6>Darren Elde</h6>
+                            <p className="text-muted mb-0">Doctor</p>
                           </div>
                         </div>
                         <Link className="dropdown-item" to="/patient/dashboard">
@@ -732,60 +716,7 @@ const Header = () => {
                       </div>
                     </li>
                   </ul>
-                </>
-              ) : pathnames.includes("doctor") &&
-                !pathnames.includes("/doctor/doctor-register") &&
-                !pathnames.includes("/patient/search-doctor1") &&
-                !pathnames.includes("/pages/doctor-signup") &&
-                !pathnames.includes("/doctor-blog") &&
-                !pathnames.includes("/doctor-edit-blog") &&
-                !pathnames.includes("/doctor-pending-blog") &&
-                !pathnames.includes("/blog/doctor-add-blog") ? (
-                <ul className="nav header-navbar-rht">
-                  <Chart />
-                  <Notification />
-                  <li className="nav-item dropdown has-arrow logged-item">
-                    <Link
-                      to="#"
-                      className="dropdown-toggle nav-link"
-                      data-bs-toggle="dropdown"
-                    >
-                      <span className="user-img">
-                        <LazyLoadImage
-                          className="rounded-circle"
-                          src={IMG01}
-                          width="31"
-                          alt="Darren Elder"
-                        />
-                      </span>
-                    </Link>
-                    <div className="dropdown-menu dropdown-menu-end">
-                      <div className="user-header">
-                        <div className="avatar avatar-sm">
-                          <LazyLoadImage
-                            src={IMG01}
-                            alt="User Image"
-                            className="avatar-img rounded-circle"
-                          />
-                        </div>
-                        <div className="user-text">
-                          <h6>Darren Elde</h6>
-                          <p className="text-muted mb-0">Doctor</p>
-                        </div>
-                      </div>
-                      <Link className="dropdown-item" to="/patient/dashboard">
-                        Dashboard
-                      </Link>
-                      <Link className="dropdown-item" to="/patient/profile">
-                        Profile Settings
-                      </Link>
-                      <Link className="dropdown-item" to="/login">
-                        Logout
-                      </Link>
-                    </div>
-                  </li>
-                </ul>
-              ) : null}
+                ) : null}
               {pathnames.includes("/index-8") ? (
                 <ul className="nav header-navbar-rht">
                   <li className="login-link">

@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   IMG01,
   IMG02,
@@ -63,7 +63,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG01}
@@ -143,7 +143,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG02}
@@ -222,7 +222,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG03}
@@ -301,7 +301,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG04}
@@ -380,7 +380,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG05}
@@ -461,7 +461,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG06}
@@ -542,7 +542,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG07}
@@ -621,7 +621,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img
+                        <LazyLoadImage
                           className="img-fluid"
                           alt="User Image"
                           src={IMG08}

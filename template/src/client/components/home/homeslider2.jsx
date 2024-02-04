@@ -10,6 +10,7 @@ import { Slide1, Slide2, Doctor07, ImgPharmacy1, LabImage } from "./image.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HomeSlider2 = (props) => {
   const config = "/react/template";
@@ -37,10 +38,10 @@ const HomeSlider2 = (props) => {
           <div className="swiper-wrapper">
             <Slider {...settings}>
               <div className="swiper-slide">
-                <img src={Slide1} alt="" />
+                <LazyLoadImage src={Slide1} alt="" />
               </div>
               <div className="swiper-slide">
-                <img src={Slide2} alt="" />
+                <LazyLoadImage src={Slide2} alt="" />
               </div>
             </Slider>
           </div>
@@ -101,7 +102,7 @@ const HomeSlider2 = (props) => {
               <div className="row">
                 <div className="col-lg-4 mb-3">
                   <div className="card text-center doctor-book-card">
-                    <img src={Doctor07} alt="" className="img-fluid" />
+                    <LazyLoadImage src={Doctor07} alt="" className="img-fluid" />
                     <div className="doctor-book-card-content tile-card-content-1">
                       <div>
                         <h3 className="card-title mb-0">Visit a Doctor</h3>
@@ -118,7 +119,7 @@ const HomeSlider2 = (props) => {
                 </div>
                 <div className="col-lg-4 mb-3">
                   <div className="card text-center doctor-book-card">
-                    <img src={ImgPharmacy1} alt="" className="img-fluid" />
+                    <LazyLoadImage src={ImgPharmacy1} alt="" className="img-fluid" />
                     <div className="doctor-book-card-content tile-card-content-1">
                       <div>
                         <h3 className="card-title mb-0">Find a Pharmacy</h3>
@@ -135,7 +136,7 @@ const HomeSlider2 = (props) => {
                 </div>
                 <div className="col-lg-4 mb-3">
                   <div className="card text-center doctor-book-card">
-                    <img src={LabImage} alt="" className="img-fluid" />
+                    <LazyLoadImage src={LabImage} alt="" className="img-fluid" />
                     <div className="doctor-book-card-content tile-card-content-1">
                       <div>
                         <h3 className="card-title mb-0">Find a Lab</h3>

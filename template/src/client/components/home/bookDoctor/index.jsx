@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { IMG01, IMG02, IMG03, IMG04 } from "./img.jsx";
 //slider
 import { Link } from "react-router-dom";
@@ -73,7 +73,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img className="img-fluid" alt="User" src={IMG01} />
+                        <LazyLoadImage className="img-fluid" alt="User" src={IMG01} />
                       </Link>
                       <Link to="#" className="fav-btn">
                         <i className="far fa-bookmark"></i>
@@ -135,7 +135,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img className="img-fluid" alt="User" src={IMG02} />
+                        <LazyLoadImage className="img-fluid" alt="User" src={IMG02} />
                       </Link>
                       <Link to="#" className="fav-btn">
                         <i className="far fa-bookmark"></i>
@@ -197,7 +197,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img className="img-fluid" alt="User" src={IMG03} />
+                        <LazyLoadImage className="img-fluid" alt="User" src={IMG03} />
                       </Link>
                       <Link to="#" className="fav-btn">
                         <i className="far fa-bookmark"></i>
@@ -259,7 +259,7 @@ const HomeBookDoctor = () => {
                   <div className="profile-widget">
                     <div className="doc-img">
                       <Link to="/patient/doctor-profile">
-                        <img className="img-fluid" alt="User" src={IMG04} />
+                        <LazyLoadImage className="img-fluid" alt="User" src={IMG04} />
                       </Link>
                       <Link to="#" className="fav-btn">
                         <i className="far fa-bookmark"></i>

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   V_doctor_01,
   Veterinary_doctor_02,
@@ -58,8 +59,8 @@ const Ourdoctors = () => {
       {/* Our Doctors */}
       <div className="blog-section-fourteen our-doctor-twelve">
         <div className="floating-bg">
-          <img src={small_paw} alt="" />
-          <img src={big_paw} alt="" />
+          <LazyLoadImage src={small_paw} alt="" />
+          <LazyLoadImage src={big_paw} alt="" />
         </div>
         <div className="container">
           <div className="row">
@@ -86,7 +87,7 @@ const Ourdoctors = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/patient/doctor-profile">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={V_doctor_01}
                           alt="image"
                           className="img-fluid "
@@ -127,7 +128,7 @@ const Ourdoctors = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/patient/doctor-profile">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_doctor_02}
                           alt="image"
                           className="img-fluid "
@@ -170,7 +171,7 @@ const Ourdoctors = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/patient/doctor-profile">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_doctor_03}
                           alt="image"
                           className="img-fluid "
@@ -213,7 +214,7 @@ const Ourdoctors = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/patient/doctor-profile">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_doctor_04}
                           alt="image"
                           className="img-fluid "
@@ -254,7 +255,7 @@ const Ourdoctors = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/patient/doctor-profile">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={V_doctor_01}
                           alt="image"
                           className="img-fluid "

@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 // import HomeBlog from "./blog";
 import { Link } from "react-router-dom";
 import { BannerImg } from "./image.jsx";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import logo from "../../assets/images/logo.png";
 import clinic01 from "../../assets/images/clinic/clinic-1.jpg";
 import clinic02 from "../../assets/images/clinic/clinic-2.jpg";
@@ -347,7 +348,7 @@ const Home1 = (props) => {
                 </div>
               </div>
               <div className="col-lg-6">
-                <img src={doctorbannerimage} className="img-fluid dr-img" />
+                <LazyLoadImage src={doctorbannerimage} className="img-fluid dr-img" />
               </div>
             </div>
           </div>
@@ -357,8 +358,8 @@ const Home1 = (props) => {
         {/* Clinic Section */}
         <section className="clinics-section">
           <div className="shapes">
-            <img src={Shape1} className="img-fluid shape-1" />
-            <img src={Shape2} className="img-fluid shape-2" />
+            <LazyLoadImage src={Shape1} className="img-fluid shape-1" />
+            <LazyLoadImage src={Shape2} className="img-fluid shape-2" />
           </div>
           <div className="container">
             <div className="row">
@@ -384,10 +385,10 @@ const Home1 = (props) => {
                   <div className="clinic-item">
                     <div className="clinics-card">
                       <div className="clinics-img">
-                        <img src={clinic01} className="img-fluid" />
+                        <LazyLoadImage src={clinic01} className="img-fluid" />
                       </div>
                       <div className="clinics-info">
-                        <img src={Category1} className="img-fluid" />
+                        <LazyLoadImage src={Category1} className="img-fluid" />
                         <Link to="/index-3">
                           <span>UROLOGY</span>
                         </Link>
@@ -404,10 +405,10 @@ const Home1 = (props) => {
                   <div className="clinic-item">
                     <div className="clinics-card">
                       <div className="clinics-img">
-                        <img src={clinic02} className="img-fluid" />
+                        <LazyLoadImage src={clinic02} className="img-fluid" />
                       </div>
                       <div className="clinics-info">
-                        <img src={Category2} className="img-fluid" />
+                        <LazyLoadImage src={Category2} className="img-fluid" />
                         <Link to="#">
                           <span>Orthopedic</span>
                         </Link>
@@ -424,10 +425,10 @@ const Home1 = (props) => {
                   <div className="clinic-item">
                     <div className="clinics-card">
                       <div className="clinics-img">
-                        <img src={clinic04} className="img-fluid" />
+                        <LazyLoadImage src={clinic04} className="img-fluid" />
                       </div>
                       <div className="clinics-info">
-                        <img src={Category4} className="img-fluid" />
+                        <LazyLoadImage src={Category4} className="img-fluid" />
                         <Link to="#">
                           <span>Cardiologist</span>
                         </Link>
@@ -444,10 +445,10 @@ const Home1 = (props) => {
                   <div className="clinic-item">
                     <div className="clinics-card">
                       <div className="clinics-img">
-                        <img src={clinic03} className="img-fluid" />
+                        <LazyLoadImage src={clinic03} className="img-fluid" />
                       </div>
                       <div className="clinics-info">
-                        <img src={Category5} className="img-fluid" />
+                        <LazyLoadImage src={Category5} className="img-fluid" />
                         <Link to="/index-3">
                           <span>Dentist</span>
                         </Link>
@@ -464,10 +465,10 @@ const Home1 = (props) => {
                   <div className="clinic-item">
                     <div className="clinics-card">
                       <div className="clinics-img">
-                        <img src={clinic05} className="img-fluid" />
+                        <LazyLoadImage src={clinic05} className="img-fluid" />
                       </div>
                       <div className="clinics-info">
-                        <img src={Category3} className="img-fluid" />
+                        <LazyLoadImage src={Category3} className="img-fluid" />
                         <Link to="#">
                           <span>Neurology</span>
                         </Link>
@@ -484,10 +485,10 @@ const Home1 = (props) => {
                   <div className="clinic-item">
                     <div className="clinics-card">
                       <div className="clinics-img">
-                        <img src={clinic01} className="img-fluid" />
+                        <LazyLoadImage src={clinic01} className="img-fluid" />
                       </div>
                       <div className="clinics-info">
-                        <img src={Category4} className="img-fluid" />
+                        <LazyLoadImage src={Category4} className="img-fluid" />
                         <Link to="#">
                           <span>Cardiologist</span>
                         </Link>
@@ -508,8 +509,8 @@ const Home1 = (props) => {
         {/* /Browse by Specialities */}
         <section className="specialities-section">
           <div className="shapes">
-            <img src={Shape3} className="img-fluid shape-3" />
-            <img src={Shape4} className="img-fluid shape-4" />
+            <LazyLoadImage src={Shape3} className="img-fluid shape-3" />
+            <LazyLoadImage src={Shape4} className="img-fluid shape-4" />
           </div>
           <div className="container">
             <div className="row">
@@ -524,7 +525,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category1} className="img-fluid" />
+                    <LazyLoadImage src={Category1} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="/index-3">
@@ -542,7 +543,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category3} className="img-fluid" />
+                    <LazyLoadImage src={Category3} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -560,7 +561,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category2} className="img-fluid" />
+                    <LazyLoadImage src={Category2} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -578,7 +579,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category4} className="img-fluid" />
+                    <LazyLoadImage src={Category4} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -596,7 +597,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category1} className="img-fluid" />
+                    <LazyLoadImage src={Category1} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -614,7 +615,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category3} className="img-fluid" />
+                    <LazyLoadImage src={Category3} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -632,7 +633,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category2} className="img-fluid" />
+                    <LazyLoadImage src={Category2} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -650,7 +651,7 @@ const Home1 = (props) => {
               <div className="col-lg-3 col-md-6">
                 <div className="specialist-card d-flex">
                   <div className="specialist-img">
-                    <img src={Category4} className="img-fluid" />
+                    <LazyLoadImage src={Category4} className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">
@@ -692,7 +693,7 @@ const Home1 = (props) => {
                   <div className="our-doctors-card">
                     <div className="doctors-header">
                       <Link to="#">
-                        <img src={Doctor1} className="img-fluid" />
+                        <LazyLoadImage src={Doctor1} className="img-fluid" />
                       </Link>
                       <div className="img-overlay">
                         <span>$20 - $50</span>
@@ -753,7 +754,7 @@ const Home1 = (props) => {
                   <div className="our-doctors-card">
                     <div className="doctors-header">
                       <Link to="#">
-                        <img src={Doctor4} className="img-fluid" />
+                        <LazyLoadImage src={Doctor4} className="img-fluid" />
                       </Link>
                       <div className="img-overlay">
                         <span>$20 - $50</span>
@@ -814,7 +815,7 @@ const Home1 = (props) => {
                   <div className="our-doctors-card">
                     <div className="doctors-header">
                       <Link to="#">
-                        <img src={Doctor3} className="img-fluid" />
+                        <LazyLoadImage src={Doctor3} className="img-fluid" />
                       </Link>
                       <div className="img-overlay">
                         <span>$20 - $50</span>
@@ -875,7 +876,7 @@ const Home1 = (props) => {
                   <div className="our-doctors-card">
                     <div className="doctors-header">
                       <Link to="#">
-                        <img src={Doctor2} className="img-fluid" />
+                        <LazyLoadImage src={Doctor2} className="img-fluid" />
                       </Link>
                       <div className="img-overlay">
                         <span>$20 - $50</span>
@@ -955,7 +956,7 @@ const Home1 = (props) => {
               <OwlCarousel margin={10} {...availablesettings}>
                 <div className="item">
                   <div className="clinic-features">
-                    <img src={clinic06} className="img-fluid" />
+                    <LazyLoadImage src={clinic06} className="img-fluid" />
                   </div>
                   <div className="clinic-feature-overlay">
                     <Link to="#" className="img-overlay">
@@ -965,7 +966,7 @@ const Home1 = (props) => {
                 </div>
                 <div className="item">
                   <div className="clinic-features">
-                    <img src={clinic07} className="img-fluid" />
+                    <LazyLoadImage src={clinic07} className="img-fluid" />
                   </div>
                   <div className="clinic-feature-overlay">
                     <Link to="#" className="img-overlay">
@@ -975,7 +976,7 @@ const Home1 = (props) => {
                 </div>
                 <div className="item">
                   <div className="clinic-features">
-                    <img src={clinic08} className="img-fluid" />
+                    <LazyLoadImage src={clinic08} className="img-fluid" />
                   </div>
                   <div className="clinic-feature-overlay">
                     <Link to="#" className="img-overlay">
@@ -985,7 +986,7 @@ const Home1 = (props) => {
                 </div>
                 <div className="item">
                   <div className="clinic-features">
-                    <img src={clinic09} className="img-fluid" />
+                    <LazyLoadImage src={clinic09} className="img-fluid" />
                   </div>
                   <div className="clinic-feature-overlay">
                     <Link to="#" className="img-overlay">
@@ -995,7 +996,7 @@ const Home1 = (props) => {
                 </div>
                 <div className="item">
                   <div className="clinic-features">
-                    <img src={clinic10} className="img-fluid" />
+                    <LazyLoadImage src={clinic10} className="img-fluid" />
                   </div>
                   <div className="clinic-feature-overlay">
                     <Link to="#" className="img-overlay">
@@ -1028,10 +1029,10 @@ const Home1 = (props) => {
                   <div className="our-blogs">
                     <div className="blogs-img">
                       <Link to="/blog/blog-details">
-                        <img src={blog1} className="img-fluid" />
+                        <LazyLoadImage src={blog1} className="img-fluid" />
                       </Link>
                       <div className="blogs-overlay d-flex">
-                        <img src={DoctorThumb01} className="img-fluid" />
+                        <LazyLoadImage src={DoctorThumb01} className="img-fluid" />
                         <span className="blogs-writter">Dr. Ruby Perrin</span>
                       </div>
                     </div>
@@ -1059,10 +1060,10 @@ const Home1 = (props) => {
                   <div className="our-blogs">
                     <div className="blogs-img">
                       <Link to="/blog/blog-details">
-                        <img src={blog2} className="img-fluid" />
+                        <LazyLoadImage src={blog2} className="img-fluid" />
                       </Link>
                       <div className="blogs-overlay d-flex">
-                        <img src={DoctorThumb01} className="img-fluid" />
+                        <LazyLoadImage src={DoctorThumb01} className="img-fluid" />
                         <span className="blogs-writter">Dr. Ruby Perrin</span>
                       </div>
                     </div>
@@ -1090,10 +1091,10 @@ const Home1 = (props) => {
                   <div className="our-blogs">
                     <div className="blogs-img">
                       <Link to="/blog/blog-details">
-                        <img src={blog3} className="img-fluid" />
+                        <LazyLoadImage src={blog3} className="img-fluid" />
                       </Link>
                       <div className="blogs-overlay d-flex">
-                        <img src={DoctorThumb01} className="img-fluid" />
+                        <LazyLoadImage src={DoctorThumb01} className="img-fluid" />
                         <span className="blogs-writter">Dr. Ruby Perrin</span>
                       </div>
                     </div>
@@ -1121,10 +1122,10 @@ const Home1 = (props) => {
                   <div className="our-blogs">
                     <div className="blogs-img">
                       <Link to="/blog/blog-details">
-                        <img src={blog4} className="img-fluid" />
+                        <LazyLoadImage src={blog4} className="img-fluid" />
                       </Link>
                       <div className="blogs-overlay d-flex">
-                        <img src={DoctorThumb01} className="img-fluid" />
+                        <LazyLoadImage src={DoctorThumb01} className="img-fluid" />
                         <span className="blogs-writter">Dr. Ruby Perrin</span>
                       </div>
                     </div>
@@ -1163,7 +1164,7 @@ const Home1 = (props) => {
                   {/* Footer Widget */}
                   <div className="footer-widget footer-about">
                     <div className="footer-logo">
-                      <img src={footer3_logo} alt="logo" />
+                      <LazyLoadImage src={footer3_logo} alt="logo" />
                     </div>
                     <div className="footer-about-content">
                       <p>

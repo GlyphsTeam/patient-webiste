@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   ban_bg_01,
   ban_bg_02,
@@ -54,40 +55,40 @@ const Home6 = (props) => {
               </div>
               <div className="banner-users">
                 <h6>
-                  <img src={star} alt="img" />
+                  <LazyLoadImage src={star} alt="img" />
                   4.8 Well Experienced
                 </h6>
                 <ul>
                   <li>
-                    <img src={doctor_13} alt="img" />
+                    <LazyLoadImage src={doctor_13} alt="img" />
                   </li>
                   <li>
-                    <img src={doctor_14} alt="img" />
+                    <LazyLoadImage src={doctor_14} alt="img" />
                   </li>
                   <li>
-                    <img src={doctor_15} alt="img" />
+                    <LazyLoadImage src={doctor_15} alt="img" />
                   </li>
                   <li>
-                    <img src={doctor_16} alt="img" />
+                    <LazyLoadImage src={doctor_16} alt="img" />
                   </li>
                   <li>
-                    <img src={doctor_17} alt="img" />
+                    <LazyLoadImage src={doctor_17} alt="img" />
                   </li>
                   <li>
-                    <img src={doctor_18} alt="img" />
+                    <LazyLoadImage src={doctor_18} alt="img" />
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-6 aos" data-aos="fade-up">
-              <img src={banner_11} className="img-fluid dr-img" alt="" />
+              <LazyLoadImage src={banner_11} className="img-fluid dr-img" alt="" />
             </div>
           </div>
         </div>
         <div className="ban-bg">
-          <img src={ban_bg_01} className="img-fluid bg-01" alt="" />
-          <img src={ban_bg_02} className="img-fluid bg-02" alt="" />
-          <img src={eye} className="img-fluid bg-03" alt="" />
+          <LazyLoadImage src={ban_bg_01} className="img-fluid bg-01" alt="" />
+          <LazyLoadImage src={ban_bg_02} className="img-fluid bg-02" alt="" />
+          <LazyLoadImage src={eye} className="img-fluid bg-03" alt="" />
         </div>
       </section>
       <SpecialtiesHome6 />

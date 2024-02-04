@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   ecg,
   footerlogo,
@@ -25,9 +26,9 @@ const Footer = () => {
     <>
       <footer className="footer footer-one footer-ten">
         <div className="footer-ten-bg">
-          <img src={hexagon_group_4} alt="#" />
-          <img src={hexagon_group_5} alt="#" />
-          <img src={ecg} alt="#" />
+          <LazyLoadImage src={hexagon_group_4} alt="#" />
+          <LazyLoadImage src={hexagon_group_5} alt="#" />
+          <LazyLoadImage src={ecg} alt="#" />
         </div>
         <div className="footer-top aos" data-aos="fade-up">
           <div className="container">
@@ -36,7 +37,7 @@ const Footer = () => {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="footer-widget footer-about">
                     <div className="footer-logo">
-                      <img src={footerlogo} alt="logo" />
+                      <LazyLoadImage src={footerlogo} alt="logo" />
                     </div>
                     <div className="footer-about-content">
                       <p>
@@ -98,7 +99,7 @@ const Footer = () => {
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="footer-map">
-                    <img src={footermap} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={footermap} className="img-fluid" alt="#" />
                   </div>
                 </div>
               </div>

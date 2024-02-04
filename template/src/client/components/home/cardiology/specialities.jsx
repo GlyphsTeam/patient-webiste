@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   drugssvg,
   health,
@@ -19,7 +20,7 @@ const Specialities = () => {
     <div>
       <section className="specialities-section-one">
         <div className="floating-bg">
-          <img src={healthcare} alt="#" />
+          <LazyLoadImage src={healthcare} alt="#" />
         </div>
         <div className="container">
           <div className="row">
@@ -37,7 +38,7 @@ const Specialities = () => {
                 <div className="specialities-item">
                   <div className="specialities-img">
                     <div className="hexogen">
-                      <img src={healthcarelove} alt="#" />
+                      <LazyLoadImage src={healthcarelove} alt="#" />
                     </div>
                   </div>
                   <p>Personalized Health care</p>
@@ -47,7 +48,7 @@ const Specialities = () => {
                 <div className="specialities-item">
                   <div className="specialities-img">
                     <div className="hexogen">
-                      <img src={userdoctor} alt="#" />
+                      <LazyLoadImage src={userdoctor} alt="#" />
                     </div>
                   </div>
                   <p>World-Leading Experts</p>
@@ -57,7 +58,7 @@ const Specialities = () => {
                 <div className="specialities-item">
                   <div className="specialities-img">
                     <div className="hexogen">
-                      <img src={health} alt="#" />
+                      <LazyLoadImage src={health} alt="#" />
                     </div>
                   </div>
                   <p>Regularly Check Up</p>
@@ -67,7 +68,7 @@ const Specialities = () => {
                 <div className="specialities-item">
                   <div className="specialities-img">
                     <div className="hexogen">
-                      <img src={drugssvg} alt="#" />
+                      <LazyLoadImage src={drugssvg} alt="#" />
                     </div>
                   </div>
                   <p>Treatment For Complex Conditions</p>
@@ -77,7 +78,7 @@ const Specialities = () => {
                 <div className="specialities-item">
                   <div className="specialities-img">
                     <div className="hexogen">
-                      <img src={syringesvg} alt="#" />
+                      <LazyLoadImage src={syringesvg} alt="#" />
                     </div>
                   </div>
                   <p>Minimally Invasive Procedures</p>

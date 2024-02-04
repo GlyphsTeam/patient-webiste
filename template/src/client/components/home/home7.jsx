@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../header";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -53,8 +54,8 @@ const Home3 = (props) => {
       {/* Home Banner */}
       <section className="banner-section-fourteen banner-section-twelve">
         <div className="banner-section-twelve-bg">
-          <img src={home_12_banner_bg} alt="" />
-          <img src={home_12_banner_bg2} alt="" />
+          <LazyLoadImage src={home_12_banner_bg} alt="" />
+          <LazyLoadImage src={home_12_banner_bg2} alt="" />
         </div>
         <div className="container">
           <div className="row">
@@ -63,13 +64,13 @@ const Home3 = (props) => {
                 className="banner-img banner-img-twelve aos"
                 data-aos="fade-up"
               >
-                <img src={home_12_banner_1} className="img-fluid" alt="" />
-                <img src={home_12_banner_2} className="img-fluid" alt="" />
+                <LazyLoadImage src={home_12_banner_1} className="img-fluid" alt="" />
+                <LazyLoadImage src={home_12_banner_2} className="img-fluid" alt="" />
                 <div className="banner-banner-img-twelve-bg">
-                  <img src={dot_1} alt="" />
-                  <img src={dot_2} alt="" />
-                  <img src={ring_1} alt="" />
-                  <img src={ring_2} alt="" />
+                  <LazyLoadImage src={dot_1} alt="" />
+                  <LazyLoadImage src={dot_2} alt="" />
+                  <LazyLoadImage src={ring_1} alt="" />
+                  <LazyLoadImage src={ring_2} alt="" />
                 </div>
               </div>
             </div>
@@ -123,7 +124,7 @@ const Home3 = (props) => {
                     </div>
                   </div>
                   <div className="search-btn">
-                    <Link  to="/patient/booking1"className="btn btn-primary" type="submit">
+                    <Link to="/patient/booking1" className="btn btn-primary" type="submit">
                       Book Now
                     </Link>
                   </div>

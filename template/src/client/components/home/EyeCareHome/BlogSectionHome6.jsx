@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   doctor_thumb_01,
   doctor_thumb_02,
@@ -63,7 +63,7 @@ function BlogSectionHome6() {
           <div className="row">
             <div className="col-md-12 aos" data-aos="fade-up">
               <div className="section-heading text-center sec-heading-eye">
-                <img src={eye_icon} alt="" className="img-fluid" />
+                <LazyLoadImage src={eye_icon} alt="" className="img-fluid" />
                 <h2>
                   <span>Blog</span> Post
                 </h2>
@@ -77,7 +77,7 @@ function BlogSectionHome6() {
                 <div className="our-blogs">
                   <div className="blogs-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={eye_blog_01}
                         alt=""
                         className="img-fluid blog-inner-img"
@@ -85,7 +85,7 @@ function BlogSectionHome6() {
                     </Link>
                     <div className="blogs-overlay">
                       <div className="blog-name">
-                        <img
+                        <LazyLoadImage
                           src={doctor_thumb_01}
                           alt=""
                           className="img-fluid"
@@ -119,7 +119,7 @@ function BlogSectionHome6() {
                 <div className="our-blogs">
                   <div className="blogs-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={eye_blog_02}
                         alt=""
                         className="img-fluid blog-inner-img"
@@ -127,7 +127,7 @@ function BlogSectionHome6() {
                     </Link>
                     <div className="blogs-overlay">
                       <div className="blog-name">
-                        <img
+                        <LazyLoadImage
                           src={doctor_thumb_03}
                           alt=""
                           className="img-fluid"
@@ -159,7 +159,7 @@ function BlogSectionHome6() {
                 <div className="our-blogs">
                   <div className="blogs-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={eye_blog_03}
                         alt=""
                         className="img-fluid blog-inner-img"
@@ -167,7 +167,7 @@ function BlogSectionHome6() {
                     </Link>
                     <div className="blogs-overlay">
                       <div className="blog-name">
-                        <img
+                        <LazyLoadImage
                           src={doctor_thumb_02}
                           alt=""
                           className="img-fluid"
@@ -199,7 +199,7 @@ function BlogSectionHome6() {
                 <div className="our-blogs">
                   <div className="blogs-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={eye_blog_04}
                         alt=""
                         className="img-fluid blog-inner-img"
@@ -207,7 +207,7 @@ function BlogSectionHome6() {
                     </Link>
                     <div className="blogs-overlay">
                       <div className="blog-name">
-                        <img
+                        <LazyLoadImage
                           src={doctor_thumb_04}
                           alt=""
                           className="img-fluid"
@@ -239,7 +239,7 @@ function BlogSectionHome6() {
                 <div className="our-blogs">
                   <div className="blogs-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={eye_blog_04}
                         alt=""
                         className="img-fluid blog-inner-img"
@@ -247,7 +247,7 @@ function BlogSectionHome6() {
                     </Link>
                     <div className="blogs-overlay">
                       <div className="blog-name">
-                        <img
+                        <LazyLoadImage
                           src={doctor_thumb_05}
                           alt=""
                           className="img-fluid"

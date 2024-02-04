@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { facts1, facts2, facts3, facts4, facts5 } from "../image";
 import { Link } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const FactService = () => {
             <ul>
               <li>
                 <div className="facts-sixteen-img">
-                  <img src={facts5} alt="" />
+                  <LazyLoadImage src={facts5} alt="" />
                   <div className="facts-content-sixteen">
                     <div className="facts-content-one">
                       <h5>
@@ -45,7 +45,7 @@ const FactService = () => {
               </li>
               <li>
                 <div className="facts-sixteen-img">
-                  <img src={facts4} alt="" />
+                  <LazyLoadImage src={facts4} alt="" />
                   <div className="facts-content-sixteen">
                     <div className="facts-content-one">
                       <h5>
@@ -65,7 +65,7 @@ const FactService = () => {
               </li>
               <li>
                 <div className="facts-sixteen-img">
-                  <img src={facts3} alt="" />
+                  <LazyLoadImage src={facts3} alt="" />
                   <div className="facts-content-sixteen">
                     <div className="facts-content-one">
                       <h5>
@@ -85,7 +85,7 @@ const FactService = () => {
               </li>
               <li>
                 <div className="facts-sixteen-img">
-                  <img src={facts2} alt="" />
+                  <LazyLoadImage src={facts2} alt="" />
                   <div className="facts-content-sixteen">
                     <div className="facts-content-one">
                       <h5>
@@ -105,7 +105,7 @@ const FactService = () => {
               </li>
               <li>
                 <div className="facts-sixteen-img">
-                  <img src={facts1} alt="" />
+                  <LazyLoadImage src={facts1} alt="" />
                   <div className="facts-content-sixteen">
                     <div className="facts-content-one">
                       <h5>
@@ -125,7 +125,7 @@ const FactService = () => {
               </li>
               <li>
                 <div className="facts-sixteen-img">
-                  <img src={facts5} alt="" />
+                  <LazyLoadImage src={facts5} alt="" />
                   <div className="facts-content-sixteen">
                     <div className="facts-content-one">
                       <h5>

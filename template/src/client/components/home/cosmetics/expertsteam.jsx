@@ -1,10 +1,9 @@
-import React from "react";
 import { experts2, experts3 } from "../image";
 // import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const ExpertsTeam = () => {
   // const settings = {
   //   margin: 0,
@@ -62,7 +61,7 @@ const ExpertsTeam = () => {
             <OwlCarousel id="customer-testimonoals" {...settings}>
               <div className="test_imgs">
                 <div className="main-reviewimages">
-                  <img src={experts2} alt="" className="img-fluid" />
+                  <LazyLoadImage src={experts2} alt="" className="img-fluid" />
                 </div>
                 <div className="testimonal-contents">
                   <h5>Leslie Alexander</h5>
@@ -71,7 +70,7 @@ const ExpertsTeam = () => {
               </div>
               <div className="test_imgs">
                 <div className="main-reviewimages">
-                  <img src={experts3} alt="" className="img-fluid" />
+                  <LazyLoadImage src={experts3} alt="" className="img-fluid" />
                 </div>
                 <div className="testimonal-contents">
                   <h5>Leslie Alexander</h5>
@@ -80,7 +79,7 @@ const ExpertsTeam = () => {
               </div>
               <div className="test_imgs">
                 <div className="main-reviewimages">
-                  <img src={experts2} alt="" className="img-fluid" />
+                  <LazyLoadImage src={experts2} alt="" className="img-fluid" />
                 </div>
                 <div className="testimonal-contents">
                   <h5>Leslie Alexander</h5>
@@ -89,7 +88,7 @@ const ExpertsTeam = () => {
               </div>
               <div className="test_imgs">
                 <div className="main-reviewimages">
-                  <img src={experts2} alt="" className="img-fluid" />
+                  <LazyLoadImage src={experts2} alt="" className="img-fluid" />
                 </div>
                 <div className="testimonal-contents">
                   <h5>Leslie Alexander</h5>

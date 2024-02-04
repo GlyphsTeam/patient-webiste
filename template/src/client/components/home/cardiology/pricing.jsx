@@ -3,6 +3,7 @@ import { heartplus } from "../../imagepath";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const Pricing = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -49,7 +50,7 @@ const Pricing = () => {
                       </div>
                       <div className="pricing-tag">
                         <div>
-                          <img src={heartplus} alt="icon" />
+                          <LazyLoadImage src={heartplus} alt="icon" />
                         </div>
                       </div>
                     </div>

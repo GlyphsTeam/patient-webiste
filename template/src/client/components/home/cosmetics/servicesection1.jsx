@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -6,35 +6,35 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { discover1, discover2, discover3, discover4, discover5, servicesixteenicon } from "../image";
 
 const ServiceSection = () => {
-    const settings = {
-        items: 5,
-      loop: true,
-			margin: 10,
-			dots: true,
-			nav: false,
-			smartSpeed: 2000,
-			responsive: {
-				0: {
-					items: 1
-				},
-				500: {
-					items: 1
-				},
-				575: {
-					items: 2
-				},
-				768: {
-					items: 2
-				},
-				1000: {
-					items: 3
-				},
-				1300: {
-					items: 5
-				}
-			}
-      };
-      
+  const settings = {
+    items: 5,
+    loop: true,
+    margin: 10,
+    dots: true,
+    nav: false,
+    smartSpeed: 2000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1
+      },
+      575: {
+        items: 2
+      },
+      768: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1300: {
+        items: 5
+      }
+    }
+  };
+
   return (
     <section className="services-section-sixteen">
       <div className="container">
@@ -47,133 +47,133 @@ const ServiceSection = () => {
           </div>
         </div>
         <div className="discover-slider owl-theme">
-        <OwlCarousel {...settings}>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover5} alt="" />
+          <OwlCarousel {...settings}>
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover5} alt="" />
+              </div>
+              <Link to="#">Body</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Body</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover4} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover4} alt="" />
+              </div>
+              <Link to="#">Face</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Face</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover3} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover3} alt="" />
+              </div>
+              <Link to="#">Breast</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Breast</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover2} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover2} alt="" />
+              </div>
+              <Link to="#">Nose</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Nose</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover1} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover1} alt="" />
+              </div>
+              <Link to="#">Fillers</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Fillers</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover3} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover3} alt="" />
+              </div>
+              <Link to="#">Face</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Face</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover4} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover4} alt="" />
+              </div>
+              <Link to="#">Body</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Body</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover3} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover3} alt="" />
+              </div>
+              <Link to="#">Nose</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Nose</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover2} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover2} alt="" />
+              </div>
+              <Link to="#">Fillers</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Fillers</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover4} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover4} alt="" />
+              </div>
+              <Link to="#">Breast</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Breast</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-          <div className="discover-you-main">
-            <div className="discover-you-image">
-              <img src={discover2} alt="" />
+            <div className="discover-you-main">
+              <div className="discover-you-image">
+                <LazyLoadImage src={discover2} alt="" />
+              </div>
+              <Link to="#">Body</Link>
+              <p>Lorem Ipsum is simply dummy typesetting industry.</p>
+              <Link to="#" className="discov-innner">
+                Read More
+                <i className="fa-solid fa-chevron-right ms-2" />
+              </Link>
             </div>
-            <Link to="#">Body</Link>
-            <p>Lorem Ipsum is simply dummy typesetting industry.</p>
-            <Link to="#" className="discov-innner">
-              Read More
-              <i className="fa-solid fa-chevron-right ms-2" />
-            </Link>
-          </div>
-        </OwlCarousel>
+          </OwlCarousel>
         </div>
       </div>
       <div className="service-sixteen-icon">
-        <img src={servicesixteenicon} alt="" />
+        <LazyLoadImage src={servicesixteenicon} alt="" />
       </div>
     </section>
   );

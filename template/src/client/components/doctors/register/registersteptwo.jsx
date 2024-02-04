@@ -4,7 +4,7 @@ import Logo from "../../../assets/images/logo.png";
 import camera from "../../../assets/images/icons/camera.svg";
 import male from "../../../assets/images/icons/male.png";
 import female from "../../../assets/images/icons/female.png";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 
 const Registersteptwo = () => {
@@ -25,7 +25,7 @@ const Registersteptwo = () => {
                 <div className="inner-right-login">
                   <div className="login-header">
                     <div className="logo-icon">
-                      <img src={Logo} alt="" />
+                      <LazyLoadImage src={Logo} alt="" />
                     </div>
                     <div className="step-list">
                       <ul>
@@ -60,7 +60,7 @@ const Registersteptwo = () => {
                             />
                             <label htmlFor="test1">
                               <span className="gender-icon">
-                                <img src={male} alt="" />
+                                <LazyLoadImage src={male} alt="" />
                               </span>
                               <span>Male</span>
                             </label>
@@ -74,7 +74,7 @@ const Registersteptwo = () => {
                             />
                             <label htmlFor="test2">
                               <span className="gender-icon">
-                                <img src={female} alt="" />
+                                <LazyLoadImage src={female} alt="" />
                               </span>
                               <span>Female</span>
                             </label>
@@ -162,7 +162,7 @@ const Registersteptwo = () => {
                             <div className="col-12 col-md-6 d-flex">
                               <div className="profile-pic-upload d-flex flex-wrap justify-content-center">
                                 <div className="cam-col">
-                                  <img src={camera} alt="" />
+                                  <LazyLoadImage src={camera} alt="" />
                                 </div>
                                 <span className="text-center">
                                   Upload Rigth To sell Certigifcate
@@ -177,7 +177,7 @@ const Registersteptwo = () => {
                             <div className="col-12 col-md-6 d-flex">
                               <div className="profile-pic-upload d-flex flex-wrap justify-content-center">
                                 <div className="cam-col">
-                                  <img src={camera} alt="" />
+                                  <LazyLoadImage src={camera} alt="" />
                                 </div>
                                 <span className="text-center">
                                   Upload Photo ID
@@ -192,7 +192,7 @@ const Registersteptwo = () => {
                             <div className="col-12 col-md-6 d-flex">
                               <div className="profile-pic-upload d-flex flex-wrap justify-content-center">
                                 <div className="cam-col">
-                                  <img src={camera} alt="" />
+                                  <LazyLoadImage src={camera} alt="" />
                                 </div>
                                 <span className="text-center">
                                   Upload Clinical employment

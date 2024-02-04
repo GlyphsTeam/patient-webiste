@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Headerconsultation from "./headerconsultation";
 import { doctor02 } from "../pages/aboutus/img";
 import { Link } from "react-router-dom";
@@ -137,7 +137,7 @@ const Payment = () => {
                     <div className="booking-doctor-left">
                       <div className="booking-doctor-img">
                         <Link to="/patient/doctor-profile">
-                          <img src={doctor02} alt="" />
+                          <LazyLoadImage src={doctor02} alt="" />
                         </Link>
                       </div>
                       <div className="booking-doctor-info">

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   home_12_pricing_bg_3,
   home_12_pricing_bg_4,
@@ -35,9 +36,9 @@ const Pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="price-card-twelve">
                 <div className="price-bg">
-                  <img src={home_12_pricing_bg_4} alt="" />
-                  <img src={home_12_pricing_bg_5} alt="" />
-                  <img src={home_12_pricing_bg_3} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_4} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_5} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_3} alt="" />
                 </div>
                 <div className="price-content">
                   <div className="card-title">
@@ -79,9 +80,9 @@ const Pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="price-card-twelve active">
                 <div className="price-bg">
-                  <img src={home_12_pricing_bg_4} alt="" />
-                  <img src={home_12_pricing_bg_5} alt="" />
-                  <img src={home_12_pricing_bg_3} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_4} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_5} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_3} alt="" />
                 </div>
                 <div className="price-content">
                   <div className="card-title">
@@ -132,9 +133,9 @@ const Pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="price-card-twelve">
                 <div className="price-bg">
-                  <img src={home_12_pricing_bg_4} alt="" />
-                  <img src={home_12_pricing_bg_5} alt="" />
-                  <img src={home_12_pricing_bg_3} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_4} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_5} alt="" />
+                  <LazyLoadImage src={home_12_pricing_bg_3} alt="" />
                 </div>
                 <div className="price-content">
                   <div className="card-title">

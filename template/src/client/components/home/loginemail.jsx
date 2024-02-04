@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Headerconsultation from "./headerconsultation";
 import { Link } from "react-router-dom";
 
@@ -15,10 +15,10 @@ const Loginemail = () => {
               <div className="account-content">
                 <div className="login-shapes">
                   <div className="shape-img-left">
-                    <img src="assets/img/shape-01.png" alt="" />
+                    <LazyLoadImage src="assets/img/shape-01.png" alt="" />
                   </div>
                   <div className="shape-img-right">
-                    <img src="assets/img/shape-02.png" alt="" />
+                    <LazyLoadImage src="assets/img/shape-02.png" alt="" />
                   </div>
                 </div>
                 <div className="account-info">
@@ -90,7 +90,7 @@ const Loginemail = () => {
                     </div>
                     <div className="social-login-btn">
                       <Link to="#" className="btn btn-block">
-                        <img src="assets/img/icons/google-icon.svg" alt="" />{" "}
+                        <LazyLoadImage src="assets/img/icons/google-icon.svg" alt="" />{" "}
                         Log in with Google
                       </Link>
                     </div>

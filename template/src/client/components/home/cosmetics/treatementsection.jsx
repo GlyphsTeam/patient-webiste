@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   servicesixteenicon,
   treatment1,
@@ -69,7 +69,7 @@ const TreatmentSection = () => {
                 <div className="doc-pro-img">
                   <Link to="/patient/doctor-profile">
                     <div className="doctor-profile-img">
-                      <img src={treatment1} className="img-fluid" alt="" />
+                      <LazyLoadImage src={treatment1} className="img-fluid" alt="" />
                     </div>
                   </Link>
                   <div className="doctor-amount">
@@ -109,7 +109,7 @@ const TreatmentSection = () => {
                 <div className="doc-pro-img">
                   <Link to="/patient/doctor-profile">
                     <div className="doctor-profile-img">
-                      <img src={treatment2} className="img-fluid" alt="" />
+                      <LazyLoadImage src={treatment2} className="img-fluid" alt="" />
                     </div>
                   </Link>
                   <div className="doctor-amount">
@@ -147,7 +147,7 @@ const TreatmentSection = () => {
                 <div className="doc-pro-img">
                   <Link to="/patient/doctor-profile">
                     <div className="doctor-profile-img">
-                      <img src={treatment3} className="img-fluid" alt="" />
+                      <LazyLoadImage src={treatment3} className="img-fluid" alt="" />
                     </div>
                   </Link>
                   <div className="doctor-amount">
@@ -185,7 +185,7 @@ const TreatmentSection = () => {
                 <div className="doc-pro-img">
                   <Link to="/patient/doctor-profile">
                     <div className="doctor-profile-img">
-                      <img src={treatment4} className="img-fluid" alt="" />
+                      <LazyLoadImage src={treatment4} className="img-fluid" alt="" />
                     </div>
                   </Link>
                   <div className="doctor-amount">
@@ -223,7 +223,7 @@ const TreatmentSection = () => {
                 <div className="doc-pro-img">
                   <Link to="/patient/doctor-profile">
                     <div className="doctor-profile-img">
-                      <img src={treatment3} className="img-fluid" alt="" />
+                      <LazyLoadImage src={treatment3} className="img-fluid" alt="" />
                     </div>
                   </Link>
                   <div className="doctor-amount">
@@ -260,7 +260,7 @@ const TreatmentSection = () => {
         </div>
       </div>
       <div className="service-sixteen-icontwo">
-        <img src={servicesixteenicon} alt="" />
+        <LazyLoadImage src={servicesixteenicon} alt="" />
       </div>
     </div>
   );

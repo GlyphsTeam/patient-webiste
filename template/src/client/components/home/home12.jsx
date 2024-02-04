@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   blog_wrap_02,
   blog_wrap_03,
@@ -354,13 +354,13 @@ const Home12 = () => {
           <div className="owl-carousel home-three-slider owl-theme">
             <OwlCarousel {...settings} top={50}>
               <div className="item">
-                <img src={banner4} className="img-fluid" alt="" />
+                <LazyLoadImage src={banner4} className="img-fluid" alt="" />
               </div>
               <div className="item">
-                <img src={banner4} className="img-fluid" alt="" />
+                <LazyLoadImage src={banner4} className="img-fluid" alt="" />
               </div>
               <div className="item">
-                <img src={banner4} className="img-fluid" alt="" />
+                <LazyLoadImage src={banner4} className="img-fluid" alt="" />
               </div>
             </OwlCarousel>
             {/* </div> */}
@@ -543,7 +543,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse1} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse1} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Orthopedic</h4>
@@ -552,7 +552,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon7}
                             className="browse-inner-img"
                             alt=""
@@ -566,7 +566,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse2} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse2} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Cardiologist</h4>
@@ -575,7 +575,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon3}
                             className="browse-inner-img browse-inner-one"
                             alt=""
@@ -589,7 +589,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse3} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse3} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Dentist</h4>
@@ -598,7 +598,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon4}
                             className="browse-inner-img"
                             alt=""
@@ -612,7 +612,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse4} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse4} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>MRI Scans</h4>
@@ -621,7 +621,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon8}
                             className="browse-inner-img"
                             alt=""
@@ -635,7 +635,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse5} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse5} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Urology</h4>
@@ -644,7 +644,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon1}
                             className="browse-inner-img"
                             alt=""
@@ -658,7 +658,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse6} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse6} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Neurology</h4>
@@ -667,7 +667,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon9}
                             className="browse-inner-img"
                             alt=""
@@ -681,7 +681,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse7} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse7} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Laboratory</h4>
@@ -690,7 +690,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon10}
                             className="browse-inner-img"
                             alt=""
@@ -704,7 +704,7 @@ const Home12 = () => {
               <div className="col-lg-3 col-md-6 d-flex aos" data-aos="fade-up">
                 <div className="browse-grid w-100">
                   <div className="browse-img">
-                    <img src={browse8} className="img-fluid" alt="" />
+                    <LazyLoadImage src={browse8} className="img-fluid" alt="" />
                     <div className="overlay" />
                     <div className="browse-content">
                       <h4>Primary Checkup</h4>
@@ -713,7 +713,7 @@ const Home12 = () => {
                     <div className="browse-icon">
                       <div className="browse-inner">
                         <div className="browse-box-img">
-                          <img
+                          <LazyLoadImage
                             src={icon11}
                             className="browse-inner-img"
                             alt=""
@@ -745,7 +745,7 @@ const Home12 = () => {
                       Book Now
                     </Link>
                     <div className="doctor-details-img">
-                      <img src={Doctor01} className="img-fluid" alt="" />
+                      <LazyLoadImage src={Doctor01} className="img-fluid" alt="" />
                     </div>
                   </div>
                 </div>
@@ -763,7 +763,7 @@ const Home12 = () => {
                       Book Now
                     </Link>
                     <div className="doctor-details-img">
-                      <img src={patient1} className="img-fluid" alt="" />
+                      <LazyLoadImage src={patient1} className="img-fluid" alt="" />
                     </div>
                   </div>
                 </div>
@@ -798,7 +798,7 @@ const Home12 = () => {
                       <div className="our-doctors-card">
                         <div className="doctors-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={book_doctor_09}
                               alt=""
                               className="img-fluid"
@@ -812,7 +812,7 @@ const Home12 = () => {
                             </div>
                             <div className="total-patient">
                               <p>
-                                <img
+                                <LazyLoadImage
                                   src={patient_icon}
                                   alt=""
                                   className="me-1"
@@ -858,7 +858,7 @@ const Home12 = () => {
                       <div className="our-doctors-card">
                         <div className="doctors-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={book_doctor_10}
                               alt=""
                               className="img-fluid"
@@ -872,7 +872,7 @@ const Home12 = () => {
                             </div>
                             <div className="total-patient">
                               <p>
-                                <img
+                                <LazyLoadImage
                                   src={patient_icon}
                                   alt=""
                                   className="me-1"
@@ -918,7 +918,7 @@ const Home12 = () => {
                       <div className="our-doctors-card">
                         <div className="doctors-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={book_doctor_11}
                               alt=""
                               className="img-fluid"
@@ -932,7 +932,7 @@ const Home12 = () => {
                             </div>
                             <div className="total-patient">
                               <p>
-                                <img
+                                <LazyLoadImage
                                   src={patient_icon}
                                   alt=""
                                   className="me-1"
@@ -978,7 +978,7 @@ const Home12 = () => {
                       <div className="our-doctors-card">
                         <div className="doctors-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={book_doctor_12}
                               alt=""
                               className="img-fluid"
@@ -992,7 +992,7 @@ const Home12 = () => {
                             </div>
                             <div className="total-patient">
                               <p>
-                                <img
+                                <LazyLoadImage
                                   src={patient_icon}
                                   alt=""
                                   className="me-1"
@@ -1071,7 +1071,7 @@ const Home12 = () => {
                     <div className="item">
                       <div className="features-clinic-grid">
                         <div className="features-clinic-img">
-                          <img
+                          <LazyLoadImage
                             src={features_clinic1}
                             alt=""
                             className="img-fluid"
@@ -1085,7 +1085,7 @@ const Home12 = () => {
                     <div className="item">
                       <div className="features-clinic-grid">
                         <div className="features-clinic-img">
-                          <img
+                          <LazyLoadImage
                             src={features_clinic2}
                             alt=""
                             className="img-fluid"
@@ -1099,7 +1099,7 @@ const Home12 = () => {
                     <div className="item">
                       <div className="features-clinic-grid">
                         <div className="features-clinic-img">
-                          <img
+                          <LazyLoadImage
                             src={features_clinic3}
                             alt=""
                             className="img-fluid"
@@ -1113,7 +1113,7 @@ const Home12 = () => {
                     <div className="item">
                       <div className="features-clinic-grid">
                         <div className="features-clinic-img">
-                          <img
+                          <LazyLoadImage
                             src={features_clinic4}
                             alt=""
                             className="img-fluid"
@@ -1161,7 +1161,7 @@ const Home12 = () => {
                       <div className="latest-blog-grid">
                         <div className="latest-blog-img">
                           <Link to="/blog/blog-details">
-                            <img src={blog_04} alt="" className="img-fluid" />
+                            <LazyLoadImage src={blog_04} alt="" className="img-fluid" />
                           </Link>
                         </div>
                         <div className="lastest-blog-info">
@@ -1178,7 +1178,7 @@ const Home12 = () => {
                           <p>Urology</p>
                           <div className="lastest-post-author">
                             <Link to="/patient/doctor-profile">
-                              <img
+                              <LazyLoadImage
                                 src={doctor_thumb_01}
                                 alt=""
                                 className="me-2"
@@ -1201,7 +1201,7 @@ const Home12 = () => {
                       <div className="latest-blog-grid">
                         <div className="latest-blog-img">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               src={blog_wrap_02}
                               alt=""
                               className="img-fluid"
@@ -1222,7 +1222,7 @@ const Home12 = () => {
                           <p>Surgery</p>
                           <div className="lastest-post-author">
                             <Link to="/patient/doctor-profile">
-                              <img
+                              <LazyLoadImage
                                 src={doctor_thumb_03}
                                 alt=""
                                 className="me-2"
@@ -1245,7 +1245,7 @@ const Home12 = () => {
                       <div className="latest-blog-grid">
                         <div className="latest-blog-img">
                           <Link to="/blog/blog-details">
-                            <img
+                            <LazyLoadImage
                               src={blog_wrap_03}
                               alt=""
                               className="img-fluid"
@@ -1266,7 +1266,7 @@ const Home12 = () => {
                           <p>Cardiology</p>
                           <div className="lastest-post-author">
                             <Link to="/patient/doctor-profile">
-                              <img
+                              <LazyLoadImage
                                 src={doctor_thumb_03}
                                 alt=""
                                 className="me-2"
@@ -1337,7 +1337,7 @@ const Home12 = () => {
               </div>
               <div className="col-md-5 aos" data-aos="fade-up">
                 <div className="news-letter-img">
-                  <img src={news_letter} alt="" className="img-fluid" />
+                  <LazyLoadImage src={news_letter} alt="" className="img-fluid" />
                 </div>
               </div>
             </div>
@@ -1354,7 +1354,7 @@ const Home12 = () => {
                   {/* Footer Widget */}
                   <div className="footer-widget footer-about">
                     <div className="footer-logo">
-                      <img src={logo_one} alt="logo" />
+                      <LazyLoadImage src={logo_one} alt="logo" />
                     </div>
                     <div className="footer-about-content">
                       <p>

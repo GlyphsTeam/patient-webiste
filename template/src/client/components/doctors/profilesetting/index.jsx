@@ -16,6 +16,7 @@ import StickyBox from "react-sticky-box";
 import Header from "../../header";
 import { useDropzone } from "react-dropzone";
 import { useCallback } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ProfileSetting = (props) => {
   const [dropzone, setDropzone] = useState({ files: [] });
@@ -92,7 +93,7 @@ const ProfileSetting = (props) => {
                       <div className="form-group">
                         <div className="change-avatar">
                           <div className="profile-img">
-                            <img src={IMG01} alt="User" />
+                            <LazyLoadImage src={IMG01} alt="User" />
                           </div>
                           <div className="upload-img">
                             <div className="change-photo-btn">
@@ -201,7 +202,7 @@ const ProfileSetting = (props) => {
                       </div>
                       <div className="upload-wrap">
                         <div className="upload-images">
-                          <img src={IMG02} alt="Upload Image" />
+                          <LazyLoadImage src={IMG02} alt="Upload Image" />
                           <Link
                             to="#"
                             className="btn btn-icon btn-danger btn-sm"
@@ -210,7 +211,7 @@ const ProfileSetting = (props) => {
                           </Link>
                         </div>
                         <div className="upload-images">
-                          <img src={IMG03} alt="Upload Image" />
+                          <LazyLoadImage src={IMG03} alt="Upload Image" />
                           <Link
                             to="#"
                             className="btn btn-icon btn-danger btn-sm"

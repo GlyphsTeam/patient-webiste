@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import React, { useEffect } from "react";
 import {
   doctor_19,
@@ -40,7 +41,7 @@ const Service = () => {
               <div className="listing-card">
                 <div className="listing-img">
                   <Link to="/patient/search-doctor1">
-                    <img src={feature_07} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_07} className="img-fluid" alt="#" />
                   </Link>
                   <div className="fav-item">
                     <Link to="#" className="fav-icon">
@@ -61,7 +62,7 @@ const Service = () => {
                       <div className="listing-user">
                         <div className="listing-profile-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={doctor_19}
                               className="img-fluid"
                               alt="#"
@@ -93,7 +94,7 @@ const Service = () => {
               <div className="listing-card">
                 <div className="listing-img">
                   <Link to="/patient/search-doctor1">
-                    <img src={feature_08} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_08} className="img-fluid" alt="#" />
                   </Link>
                   <div className="fav-item">
                     <Link to="#" className="fav-icon">
@@ -114,7 +115,7 @@ const Service = () => {
                       <div className="listing-user">
                         <div className="listing-profile-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={doctor_20}
                               className="img-fluid"
                               alt="#"
@@ -146,7 +147,7 @@ const Service = () => {
               <div className="listing-card">
                 <div className="listing-img">
                   <Link to="/patient/search-doctor1">
-                    <img src={feature_09} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_09} className="img-fluid" alt="#" />
                   </Link>
                   <div className="fav-item">
                     <Link to="#" className="fav-icon">
@@ -167,7 +168,7 @@ const Service = () => {
                       <div className="listing-user">
                         <div className="listing-profile-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={doctor_21}
                               className="img-fluid"
                               alt="#"
@@ -199,7 +200,7 @@ const Service = () => {
               <div className="listing-card">
                 <div className="listing-img">
                   <Link to="/patient/search-doctor1">
-                    <img src={feature_10} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_10} className="img-fluid" alt="#" />
                   </Link>
                   <div className="fav-item">
                     <Link to="#" className="fav-icon">
@@ -218,7 +219,7 @@ const Service = () => {
                       <div className="listing-user">
                         <div className="listing-profile-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={doctor_22}
                               className="img-fluid"
                               alt="#"
@@ -250,7 +251,7 @@ const Service = () => {
               <div className="listing-card">
                 <div className="listing-img">
                   <Link to="/patient/search-doctor1">
-                    <img src={feature_11} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_11} className="img-fluid" alt="#" />
                   </Link>
                   <div className="fav-item">
                     <Link to="#" className="fav-icon">
@@ -271,7 +272,7 @@ const Service = () => {
                       <div className="listing-user">
                         <div className="listing-profile-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={doctor_23}
                               className="img-fluid"
                               alt="#"
@@ -303,7 +304,7 @@ const Service = () => {
               <div className="listing-card">
                 <div className="listing-img">
                   <Link to="/patient/search-doctor1">
-                    <img src={feature_12} className="img-fluid" alt="#" />
+                    <LazyLoadImage src={feature_12} className="img-fluid" alt="#" />
                   </Link>
                   <div className="fav-item">
                     <Link to="#" className="fav-icon">
@@ -324,7 +325,7 @@ const Service = () => {
                       <div className="listing-user">
                         <div className="listing-profile-img">
                           <Link to="/patient/doctor-profile">
-                            <img
+                            <LazyLoadImage
                               src={doctor_24}
                               className="img-fluid"
                               alt="#"

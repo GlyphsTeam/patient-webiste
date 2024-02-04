@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { home_12_why_us } from "../../../imagepath";
 import AOS from "aos";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "aos/dist/aos.css";
 const Chooseus = () => {
   //Aos
@@ -29,7 +30,7 @@ const Chooseus = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="choose-us-right-main">
-                <img src={home_12_why_us} alt="image" className="img-fluid" />
+                <LazyLoadImage src={home_12_why_us} alt="image" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">

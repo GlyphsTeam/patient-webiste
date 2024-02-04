@@ -4,6 +4,7 @@ import loginBanner from "../../../assets/images/login-banner.png";
 import { Link } from "react-router-dom";
 import Header from "../../header";
 import Footer from "../../footer";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const DoctorRegister = (props) => {
   const config = "/react/template";
@@ -24,7 +25,7 @@ const DoctorRegister = (props) => {
               <div className="account-content">
                 <div className="row align-items-center justify-content-center">
                   <div className="col-md-7 col-lg-6 login-left">
-                    <img
+                    <LazyLoadImage
                       src={loginBanner}
                       className="img-fluid"
                       alt="Login Banner"
@@ -62,7 +63,7 @@ const DoctorRegister = (props) => {
                       <button
                         className="btn btn-primary w-100 btn-lg login-btn"
                         type="submit"
-                        // onClick={() => history.push("/pages/onboarding-email")}
+                      // onClick={() => history.push("/pages/onboarding-email")}
                       >
                         Signup
                       </button>

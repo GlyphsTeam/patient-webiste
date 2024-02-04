@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Ourdoctor = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -20,8 +20,8 @@ const Ourdoctor = () => {
     <div>
       <section className="our-doctor-section">
         <div className="section-floating-bg">
-          <img src={hexagon_group_1} alt="" />
-          <img src={hexagon_group_2} alt="" />
+          <LazyLoadImage src={hexagon_group_1} alt="" />
+          <LazyLoadImage src={hexagon_group_2} alt="" />
         </div>
         <div className="container">
           <div className="row">
@@ -39,7 +39,7 @@ const Ourdoctor = () => {
                 <div className="listing-card">
                   <div className="listing-img">
                     <Link to="/patient/doctor-profile">
-                      <img src={doctor_13} className="img-fluid" alt="" />
+                      <LazyLoadImage src={doctor_13} className="img-fluid" alt="" />
                     </Link>
                     <div className="fav-item">
                       <div className="featured-rating">
@@ -64,7 +64,7 @@ const Ourdoctor = () => {
                       </div>
                       <div className="listing-profile-details">
                         <div className="listing-floating-img">
-                          <img src={ecgwave} alt="" />
+                          <LazyLoadImage src={ecgwave} alt="" />
                         </div>
                         <div className="listing-user">
                           <div className="listing-user-details">
@@ -94,7 +94,7 @@ const Ourdoctor = () => {
                 <div className="listing-card">
                   <div className="listing-img">
                     <Link to="/patient/doctor-profile">
-                      <img src={doctor_thumb_02} className="img-fluid" alt="" />
+                      <LazyLoadImage src={doctor_thumb_02} className="img-fluid" alt="" />
                     </Link>
                     <div className="fav-item">
                       <div className="featured-rating">
@@ -117,7 +117,7 @@ const Ourdoctor = () => {
                       </div>
                       <div className="listing-profile-details">
                         <div className="listing-floating-img">
-                          <img src={ecgwave} alt="" />
+                          <LazyLoadImage src={ecgwave} alt="" />
                         </div>
                         <div className="listing-user">
                           <div className="listing-user-details">
@@ -147,7 +147,7 @@ const Ourdoctor = () => {
                 <div className="listing-card">
                   <div className="listing-img">
                     <Link to="/patient/doctor-profile">
-                      <img src={doctor_thumb_05} className="img-fluid" alt="" />
+                      <LazyLoadImage src={doctor_thumb_05} className="img-fluid" alt="" />
                     </Link>
                     <div className="fav-item">
                       <div className="featured-rating">
@@ -172,7 +172,7 @@ const Ourdoctor = () => {
                       </div>
                       <div className="listing-profile-details">
                         <div className="listing-floating-img">
-                          <img src={ecgwave} alt="" />
+                          <LazyLoadImage src={ecgwave} alt="" />
                         </div>
                         <div className="listing-user">
                           <div className="listing-user-details">
@@ -202,7 +202,7 @@ const Ourdoctor = () => {
                 <div className="listing-card">
                   <div className="listing-img">
                     <Link to="/patient/doctor-profile">
-                      <img src={doctor_thumb_07} className="img-fluid" alt="" />
+                      <LazyLoadImage src={doctor_thumb_07} className="img-fluid" alt="" />
                     </Link>
                     <div className="fav-item">
                       <div className="featured-rating">
@@ -225,7 +225,7 @@ const Ourdoctor = () => {
                       </div>
                       <div className="listing-profile-details">
                         <div className="listing-floating-img">
-                          <img src={ecgwave} alt="" />
+                          <LazyLoadImage src={ecgwave} alt="" />
                         </div>
                         <div className="listing-user">
                           <div className="listing-user-details">

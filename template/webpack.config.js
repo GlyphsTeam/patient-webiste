@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-dupe-keys */
 /* eslint-disable no-undef */
+// Pation Website
 const path = require("path");
 const webpack = require("webpack");
 

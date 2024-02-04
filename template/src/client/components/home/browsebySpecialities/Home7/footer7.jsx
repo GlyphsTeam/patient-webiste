@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { logo } from "../../image";
 const Footer7 = () => {
   //Aos
@@ -23,7 +24,7 @@ const Footer7 = () => {
                 <div className="footer-widget footer-about">
                   <div className="footer-logo">
                     <Link to="index-10">
-                      <img src={logo} alt="logo" />
+                      <LazyLoadImage src={logo} alt="logo" />
                     </Link>
                   </div>
                   <div className="footer-about-content">

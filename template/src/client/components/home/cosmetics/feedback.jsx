@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import { feedbacksixteen } from "../image";
 
@@ -10,7 +10,7 @@ const Feedback = () => {
           <div className="row align-items-center">
             <div className="col-lg-5">
               <div className="feedback-inner-main">
-                <img src={feedbacksixteen} alt="image" className="img-fluid" />
+                <LazyLoadImage src={feedbacksixteen} alt="image" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">

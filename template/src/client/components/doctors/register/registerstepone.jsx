@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Logo from "../../../assets/images/logo.png";
 import camera from "../../../assets/images/icons/camera.svg";
 import { Link } from "react-router-dom";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Registerstepone = () => {
   useEffect(() => {
     document.body.classList.add("account-page");
@@ -23,7 +23,7 @@ const Registerstepone = () => {
                 <div className="inner-right-login">
                   <div className="login-header">
                     <div className="logo-icon">
-                      <img src={Logo} alt="" />
+                      <LazyLoadImage src={Logo} alt="" />
                     </div>
                     <div className="step-list">
                       <ul>
@@ -45,7 +45,7 @@ const Registerstepone = () => {
                         <h3>Profile Picture</h3>
                         <div className="profile-pic-upload">
                           <div className="cam-col">
-                            <img
+                            <LazyLoadImage
                               src={camera}
                               id="prof-avatar"
                               alt=""

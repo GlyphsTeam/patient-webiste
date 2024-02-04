@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { CAT01, CAT02, CAT03, CAT04, CAT05 } from "./img.jsx";
 
 const BrowsebySpecialities = () => {
@@ -16,7 +16,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT01} alt="" />
+                <LazyLoadImage src={CAT01} alt="" />
               </div>
               <div className="category-content">
                 <h4>Urology</h4>
@@ -27,7 +27,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT02} alt="" />
+                <LazyLoadImage src={CAT02} alt="" />
               </div>
               <div className="category-content">
                 <h4>Neurology</h4>
@@ -38,7 +38,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT03} alt="" />
+                <LazyLoadImage src={CAT03} alt="" />
               </div>
               <div className="category-content">
                 <h4>Orthopedic</h4>
@@ -49,7 +49,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT04} alt="" />
+                <LazyLoadImage src={CAT04} alt="" />
               </div>
               <div className="category-content">
                 <h4>Cardiologist</h4>
@@ -60,7 +60,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT05} alt="" />
+                <LazyLoadImage src={CAT05} alt="" />
               </div>
               <div className="category-content">
                 <h4>Dentist</h4>
@@ -71,7 +71,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT01} alt="" />
+                <LazyLoadImage src={CAT01} alt="" />
               </div>
               <div className="category-content">
                 <h4>Urology</h4>
@@ -82,7 +82,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT04} alt="" />
+                <LazyLoadImage src={CAT04} alt="" />
               </div>
               <div className="category-content">
                 <h4>Cardiologist</h4>
@@ -93,7 +93,7 @@ const BrowsebySpecialities = () => {
           <div className="col-lg-3">
             <div className="category-box">
               <div className="category-image">
-                <img src={CAT03} alt="" />
+                <LazyLoadImage src={CAT03} alt="" />
               </div>
               <div className="category-content">
                 <h4>Neurology</h4>

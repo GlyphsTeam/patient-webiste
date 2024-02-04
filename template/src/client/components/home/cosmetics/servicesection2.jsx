@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { featureservice1, featureservice2, featureservice3 } from "../image";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -61,7 +61,7 @@ const ServiceSection = () => {
             <OwlCarousel {...settings}>
               <div className="feature-sixteen-main">
                 <div className="feature-six-img">
-                  <img src={featureservice1} alt="" className="img-fluid" />
+                  <LazyLoadImage src={featureservice1} alt="" className="img-fluid" />
                   <div className="feature-content-six">
                     <div className="feature-content-one">
                       <h5>Mommy Makeover</h5>
@@ -89,7 +89,7 @@ const ServiceSection = () => {
               </div>
               <div className="feature-sixteen-main">
                 <div className="feature-six-img">
-                  <img src={featureservice3} alt="" className="img-fluid" />
+                  <LazyLoadImage src={featureservice3} alt="" className="img-fluid" />
                   <div className="feature-content-six">
                     <div className="feature-content-one">
                       <h5>Face Makeover</h5>
@@ -117,7 +117,7 @@ const ServiceSection = () => {
               </div>
               <div className="feature-sixteen-main">
                 <div className="feature-six-img">
-                  <img src={featureservice2} alt="" className="img-fluid" />
+                  <LazyLoadImage src={featureservice2} alt="" className="img-fluid" />
                   <div className="feature-content-six">
                     <div className="feature-content-one">
                       <h5>BodyTite</h5>
@@ -145,7 +145,7 @@ const ServiceSection = () => {
               </div>
               <div className="feature-sixteen-main">
                 <div className="feature-six-img">
-                  <img src={featureservice3} alt="" className="img-fluid" />
+                  <LazyLoadImage src={featureservice3} alt="" className="img-fluid" />
                   <div className="feature-content-six">
                     <div className="feature-content-one">
                       <h5>BodyTite</h5>
@@ -173,7 +173,7 @@ const ServiceSection = () => {
               </div>
               <div className="feature-sixteen-main">
                 <div className="feature-six-img">
-                  <img src={featureservice1} alt="" className="img-fluid" />
+                  <LazyLoadImage src={featureservice1} alt="" className="img-fluid" />
                   <div className="feature-content-six">
                     <div className="feature-content-one">
                       <h5>BodyTite</h5>

@@ -3,6 +3,7 @@ import { healthcare, heartpulse } from "../../imagepath";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Stepstofollow = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -11,7 +12,7 @@ const Stepstofollow = () => {
     <div>
       <section className="need-to-know-section steps-to-follow">
         <div className="floating-bg">
-          <img src={healthcare} alt="#" />
+          <LazyLoadImage src={healthcare} alt="#" />
         </div>
         <div className="container">
           <div className="row align-items-center">
@@ -22,7 +23,7 @@ const Stepstofollow = () => {
                     <div className="steps-list-box">
                       <div className="steps-list-img">
                         <span>1</span>
-                        <img src={heartpulse} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={heartpulse} className="img-fluid" alt="#" />
                       </div>
                       <h6>Choose Your Doctor</h6>
                       <p>Lorem Ipsum is simply dummy text of the printing..</p>
@@ -32,7 +33,7 @@ const Stepstofollow = () => {
                     <div className="steps-list-box">
                       <div className="steps-list-img">
                         <span>3</span>
-                        <img src={heartpulse} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={heartpulse} className="img-fluid" alt="#" />
                       </div>
                       <h6>Consult with doctor</h6>
                       <p>Lorem Ipsum is simply dummy text of the printing..</p>
@@ -44,7 +45,7 @@ const Stepstofollow = () => {
                     <div className="steps-list-box">
                       <div className="steps-list-img">
                         <span>2</span>
-                        <img src={heartpulse} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={heartpulse} className="img-fluid" alt="#" />
                       </div>
                       <h6>Set Appointment</h6>
                       <p>Lorem Ipsum is simply dummy text of the printing..</p>
@@ -54,7 +55,7 @@ const Stepstofollow = () => {
                     <div className="steps-list-box">
                       <div className="steps-list-img">
                         <span>4</span>
-                        <img src={heartpulse} className="img-fluid" alt="#" />
+                        <LazyLoadImage src={heartpulse} className="img-fluid" alt="#" />
                       </div>
                       <h6>Get recommendation</h6>
                       <p>Lorem Ipsum is simply dummy text of the printing..</p>

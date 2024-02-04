@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   Veterinary_blog_01,
   Veterinary_blog_02,
@@ -86,13 +87,13 @@ const Blogsection = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/blog/blog-details">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_blog_01}
                           alt="image"
                           className="img-fluid "
                         />
                         <div className="blog-inner-top-content">
-                          <img src={doctor_04} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_04} alt="" className="me-2" />
                           <span>Dr. Pamila Certis</span>
                         </div>
                       </div>
@@ -141,13 +142,13 @@ const Blogsection = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/blog/blog-details">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_blog_02}
                           alt="image"
                           className="img-fluid "
                         />
                         <div className="blog-inner-top-content">
-                          <img src={doctor_07} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_07} alt="" className="me-2" />
                           <span>Dr. James Matthew</span>
                         </div>
                       </div>
@@ -195,13 +196,13 @@ const Blogsection = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/blog/blog-details">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_blog_03}
                           alt="image"
                           className="img-fluid "
                         />
                         <div className="blog-inner-top-content">
-                          <img src={doctor_06} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_06} alt="" className="me-2" />
                           <span>Dr. James Certis</span>
                         </div>
                       </div>
@@ -249,13 +250,13 @@ const Blogsection = () => {
                   <div className="blog-inner-right-fourt">
                     <Link to="/blog/blog-details">
                       <div className="blog-inner-right-img">
-                        <img
+                        <LazyLoadImage
                           src={Veterinary_blog_01}
                           alt="image"
                           className="img-fluid "
                         />
                         <div className="blog-inner-top-content">
-                          <img src={doctor_04} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_04} alt="" className="me-2" />
                           <span>Dr. Pamila Certis</span>
                         </div>
                       </div>

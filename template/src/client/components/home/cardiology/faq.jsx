@@ -3,6 +3,7 @@ import { faq_img_2, healthcare } from "../../imagepath";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Faq = () => {
   useEffect(() => {
@@ -12,13 +13,13 @@ const Faq = () => {
     <div>
       <section className="faq-section faq-section-ten">
         <div className="floating-bg">
-          <img src={healthcare} alt="#" />
+          <LazyLoadImage src={healthcare} alt="#" />
         </div>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12 aos" data-aos="fade-up">
               <div className="faq-img">
-                <img src={faq_img_2} className="img-fluid" alt="img" />
+                <LazyLoadImage src={faq_img_2} className="img-fluid" alt="img" />
               </div>
             </div>
             <div className="col-lg-6 col-md-12">

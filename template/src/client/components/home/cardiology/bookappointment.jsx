@@ -3,7 +3,7 @@ import { hand, heartplus, hexagon_group_3 } from "../../imagepath";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Bookappointment = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -14,9 +14,9 @@ const Bookappointment = () => {
         <div className="container">
           <div className="book-appointment-ten text-center">
             <div className="book-section-bg">
-              <img src={hexagon_group_3} alt="#" />
-              <img src={hand} alt="#" />
-              <img src={heartplus} alt="#" />
+              <LazyLoadImage src={hexagon_group_3} alt="#" />
+              <LazyLoadImage src={hand} alt="#" />
+              <LazyLoadImage src={heartplus} alt="#" />
             </div>
             <h2>Book An Appointment Today</h2>
             <p>

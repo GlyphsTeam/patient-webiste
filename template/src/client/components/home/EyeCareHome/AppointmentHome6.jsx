@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function AppointmentHome6() {
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -27,7 +27,7 @@ function AppointmentHome6() {
             <div className="row">
               <div className="col-md-12 aos" data-aos="fade-up">
                 <div className="section-heading text-center sec-heading-eye">
-                  <img src={eye_white_icon} alt="" className="img-fluid" />
+                  <LazyLoadImage src={eye_white_icon} alt="" className="img-fluid" />
                   <h2 className="text-white">Book an appointment</h2>
                 </div>
               </div>
@@ -186,7 +186,7 @@ function AppointmentHome6() {
             </form>
           </div>
           <div className="ban-bg">
-            <img src={appoint_bg} alt="" className="img-fluid bg-09" />
+            <LazyLoadImage src={appoint_bg} alt="" className="img-fluid bg-09" />
           </div>
         </div>
       </section>

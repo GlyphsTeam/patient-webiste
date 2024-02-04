@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   ban_six_icon1,
   ban_six_icon2,
@@ -106,28 +107,28 @@ function Home9(props) {
                 className="banner-img banner-img-fourteen aos"
                 data-aos="fade-up"
               >
-                <img src={banner_six_2} className="img-fluid" alt="" />
+                <LazyLoadImage src={banner_six_2} className="img-fluid" alt="" />
                 <div className="banner-img1 banner-imgfourteen">
-                  <img src={ban_six_icon1} className="img-fluid" alt="" />
+                  <LazyLoadImage src={ban_six_icon1} className="img-fluid" alt="" />
                 </div>
                 <div className="banner-img2">
-                  <img src={ban_six_icon3} className="img-fluid" alt="" />
+                  <LazyLoadImage src={ban_six_icon3} className="img-fluid" alt="" />
                 </div>
                 <div className="banner-img3 banner-imgfourteen3">
-                  <img src={ban_six_icon2} className="img-fluid" alt="" />
+                  <LazyLoadImage src={ban_six_icon2} className="img-fluid" alt="" />
                 </div>
                 <div className="banner-imgfourteen4">
-                  <img src={ban_six_icon4} className="img-fluid" alt="" />
+                  <LazyLoadImage src={ban_six_icon4} className="img-fluid" alt="" />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="banner-imgfourteen5">
-          <img src={ban_six_icon5} className="img-fluid" alt="" />
+          <LazyLoadImage src={ban_six_icon5} className="img-fluid" alt="" />
         </div>
         <div className="banner-imgfourteen6">
-          <img src={ban_six_icon6} className="img-fluid" alt="" />
+          <LazyLoadImage src={ban_six_icon6} className="img-fluid" alt="" />
         </div>
       </section>
       <ServiceSectionHome9 />

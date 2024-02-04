@@ -4,6 +4,7 @@ import Logo from "../../../assets/images/logo.png";
 // import camera from '../../../assets/images/icons/camera.svg';
 // import male from '../../../assets/images/icons/male.png'
 // import female from '../../../assets/images/icons/female.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Link } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const Registerstepthree = () => {
                   <div className="inner-right-login">
                     <div className="login-header">
                       <div className="logo-icon">
-                        <img src={Logo} alt="" />
+                        <LazyLoadImage src={Logo} alt="" />
                       </div>
                       <div className="step-list">
                         <ul>

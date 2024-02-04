@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   Client_10,
   Client_9,
@@ -47,13 +48,13 @@ const Feedback = () => {
       {/* Feedback */}
       <section className="clients-section-fourteen">
         <div className="floating-bg">
-          <img src={two_paw} alt="" />
+          <LazyLoadImage src={two_paw} alt="" />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
               <div className="client-inner-main">
-                <img
+                <LazyLoadImage
                   src={home_12_testimonial}
                   alt="image"
                   className="img-fluid"
@@ -83,7 +84,7 @@ const Feedback = () => {
                     <div className="card-body feedback-card-body">
                       <div className="feedback-inner-main">
                         <div className="feedback-inner-img">
-                          <img
+                          <LazyLoadImage
                             src={Client_10}
                             alt="image"
                             className="img-fluid"
@@ -111,7 +112,7 @@ const Feedback = () => {
                     <div className="card-body feedback-card-body">
                       <div className="feedback-inner-main">
                         <div className="feedback-inner-img">
-                          <img
+                          <LazyLoadImage
                             src={Client_9}
                             alt="image"
                             className="img-fluid"

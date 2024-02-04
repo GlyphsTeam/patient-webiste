@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const CosmeticFooter = () => {
   return (
     <>
@@ -13,7 +13,7 @@ const CosmeticFooter = () => {
               <div className="col-lg-4 col-md-4">
                 <div className="footer-widget footer-about">
                   <div className="footer-logo">
-                    <img src={logo} alt="logo" />
+                    <LazyLoadImage src={logo} alt="logo" />
                   </div>
                   <div className="footer-about-content">
                     <p>

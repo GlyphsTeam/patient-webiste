@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { client03, client04, client06, client07, testimonial2 } from "../image";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -65,7 +65,7 @@ const TestimonialSection = () => {
         <div className="row align-items-center">
           <div className="col-md-5">
             <div className="testi-img">
-              <img src={testimonial2} alt="" className="img-fluid" />
+              <LazyLoadImage src={testimonial2} alt="" className="img-fluid" />
               <span className="testi-icon">
                 <i className="fa-solid fa-quote-left" />
               </span>
@@ -74,16 +74,16 @@ const TestimonialSection = () => {
               <div className="nav nav-container slide-11" />
               <ul>
                 <li>
-                  <img src={client04} alt="" className="img-fluid" />
+                  <LazyLoadImage src={client04} alt="" className="img-fluid" />
                 </li>
                 <li>
-                  <img src={client03} alt="" className="img-fluid" />
+                  <LazyLoadImage src={client03} alt="" className="img-fluid" />
                 </li>
                 <li>
-                  <img src={client06} alt="" className="img-fluid" />
+                  <LazyLoadImage src={client06} alt="" className="img-fluid" />
                 </li>
                 <li>
-                  <img src={client07} alt="" className="img-fluid" />
+                  <LazyLoadImage src={client07} alt="" className="img-fluid" />
                 </li>
               </ul>
             </div>

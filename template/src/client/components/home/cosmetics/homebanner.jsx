@@ -6,6 +6,7 @@ import {
   bansixteenimg1,
   bansixteenimg2,
 } from "../image";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HomeBanner = () => {
   return (
@@ -35,18 +36,18 @@ const HomeBanner = () => {
           <div className="col-lg-6">
             <div className="banner-image-sixteen">
               <div className="banner-inner-img-sixteen">
-                <img src={banrightimg1} alt="" className="img-fluid" />
-                <img src={banrightimg2} alt="" className="img-fluid" />
+                <LazyLoadImage src={banrightimg1} alt="" className="img-fluid" />
+                <LazyLoadImage src={banrightimg2} alt="" className="img-fluid" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="ban-sixteen-imgone">
-        <img src={bansixteenimg1} alt="" />
+        <LazyLoadImage src={bansixteenimg1} alt="" />
       </div>
       <div className="ban-sixteen-imgtwo">
-        <img src={bansixteenimg2} alt="" />
+        <LazyLoadImage src={bansixteenimg2} alt="" />
       </div>
     </section>
   );

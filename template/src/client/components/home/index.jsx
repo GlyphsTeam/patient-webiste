@@ -7,6 +7,7 @@ import HomeFeatures from "./features";
 import HomeBlog from "./blog";
 import { Doctor07, ImgPharmacy1, LabImage, footerlogo } from "./image.jsx";
 import Header from "../header";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import Footer from "../footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,7 +36,7 @@ const Home = (props) => {
                 <div className="row">
                   <div className="col-lg-4 mb-3">
                     <div className="card text-center doctor-book-card">
-                      <img src={Doctor07} alt="" className="img-fluid" />
+                      <LazyLoadImage src={Doctor07} alt="" className="img-fluid" />
                       <div className="doctor-book-card-content tile-card-content-1">
                         <div>
                           <h3 className="card-title mb-0">Visit a Doctor</h3>
@@ -52,7 +53,7 @@ const Home = (props) => {
                   </div>
                   <div className="col-lg-4 mb-3">
                     <div className="card text-center doctor-book-card">
-                      <img src={ImgPharmacy1} alt="" className="img-fluid" />
+                      <LazyLoadImage src={ImgPharmacy1} alt="" className="img-fluid" />
                       <div className="doctor-book-card-content tile-card-content-1">
                         <div>
                           <h3 className="card-title mb-0">Find a Pharmacy</h3>
@@ -69,7 +70,7 @@ const Home = (props) => {
                   </div>
                   <div className="col-lg-4 mb-3">
                     <div className="card text-center doctor-book-card">
-                      <img src={LabImage} alt="" className="img-fluid" />
+                      <LazyLoadImage src={LabImage} alt="" className="img-fluid" />
                       <div className="doctor-book-card-content tile-card-content-1">
                         <div>
                           <h3 className="card-title mb-0">Find a Lab</h3>
@@ -104,7 +105,7 @@ const Home = (props) => {
                 {/* Footer Widget */}
                 <div className="footer-widget footer-about">
                   <div className="footer-logo">
-                    <img src={footerlogo} alt="logo" />
+                    <LazyLoadImage src={footerlogo} alt="logo" />
                   </div>
                   <div className="footer-about-content">
                     <p>

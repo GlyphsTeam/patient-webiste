@@ -1,10 +1,10 @@
-import React from "react";
 import Headerconsultation from "./headerconsultation";
 import { Link } from "react-router-dom";
 import { doctor02 } from "../pages/aboutus/img";
 import { appimg, devicemessage, googleimg, smartphone } from "../imagepath";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import Select from "react-select";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const Patientdetails = () => {
   const config = "/react/template";
 
@@ -150,7 +150,7 @@ const Patientdetails = () => {
                     <div className="booking-doctor-left">
                       <div className="booking-doctor-img">
                         <Link to="/patient/doctor-profile">
-                          <img src={doctor02} alt="" />
+                          <LazyLoadImage src={doctor02} alt="" />
                         </Link>
                       </div>
                       <div className="booking-doctor-info">
@@ -195,7 +195,7 @@ const Patientdetails = () => {
                   <div className="booking-doctor-details">
                     <div className="booking-device">
                       <div className="booking-device-img">
-                        <img src={devicemessage} alt="" />
+                        <LazyLoadImage src={devicemessage} alt="" />
                       </div>
                       <div className="booking-doctor-info">
                         <h3>We can help you</h3>
@@ -216,7 +216,7 @@ const Patientdetails = () => {
                   <div className="booking-doctor-details">
                     <div className="booking-device">
                       <div className="booking-device-img">
-                        <img src={smartphone} alt="" />
+                        <LazyLoadImage src={smartphone} alt="" />
                       </div>
                       <div className="booking-doctor-info">
                         <h3>Get the App</h3>
@@ -226,10 +226,10 @@ const Patientdetails = () => {
                         </p>
                         <div className="app-images">
                           <Link to="#">
-                            <img src={googleimg} alt="" />
+                            <LazyLoadImage src={googleimg} alt="" />
                           </Link>
                           <Link to="#">
-                            <img src={appimg} alt="" />
+                            <LazyLoadImage src={appimg} alt="" />
                           </Link>
                         </div>
                       </div>

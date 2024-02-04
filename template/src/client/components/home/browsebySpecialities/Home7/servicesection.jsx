@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   bath_tub,
   big_paw,
@@ -20,8 +21,8 @@ const Servicesection = () => {
       {/* services Section */}
       <section className="services-section-fourteen">
         <div className="floating-bg">
-          <img src={big_paw} alt="" />
-          <img src={small_paw} alt="" />
+          <LazyLoadImage src={big_paw} alt="" />
+          <LazyLoadImage src={small_paw} alt="" />
         </div>
         <div className="container">
           <div className="row">
@@ -41,7 +42,7 @@ const Servicesection = () => {
             <div className="col-lg-3 col-md-4 col-sm-12">
               <div className="our-services-list">
                 <div className="service-icon">
-                  <img src={injection} alt="" />
+                  <LazyLoadImage src={injection} alt="" />
                 </div>
                 <h4>Vaccination</h4>
                 <p>
@@ -52,7 +53,7 @@ const Servicesection = () => {
             <div className="col-lg-3 col-md-4 col-sm-12">
               <div className="our-services-list">
                 <div className="service-icon">
-                  <img src={bottel} alt="" />
+                  <LazyLoadImage src={bottel} alt="" />
                 </div>
                 <h4>Pet Medicine</h4>
                 <p>
@@ -63,7 +64,7 @@ const Servicesection = () => {
             <div className="col-lg-3 col-md-4 col-sm-12">
               <div className="our-services-list">
                 <div className="service-icon">
-                  <img src={bath_tub} alt="" />
+                  <LazyLoadImage src={bath_tub} alt="" />
                 </div>
                 <h4>Pet Grooming</h4>
                 <p>
@@ -74,7 +75,7 @@ const Servicesection = () => {
             <div className="col-lg-3 col-md-4 col-sm-12">
               <div className="our-services-list">
                 <div className="service-icon">
-                  <img src={pet_doctor} alt="" />
+                  <LazyLoadImage src={pet_doctor} alt="" />
                 </div>
                 <h4>Pet Care</h4>
                 <p>

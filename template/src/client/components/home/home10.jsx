@@ -7,6 +7,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import { RiPhoneLine } from "react-icons/ri";
 // import { AiOutlineMail, AiOutlineClockCircle } from "react-icons/ai";
 // import config from "config";
@@ -219,7 +220,7 @@ const Home10 = (props) => {
                   </div>
                   <div className="aboutus-companyimg">
                     <Link to="#">
-                      <img src={banner_vd} alt="image" className="img-fluid" />
+                      <LazyLoadImage src={banner_vd} alt="image" className="img-fluid" />
                     </Link>
                     <Link to="#" data-bs-toggle="modal" data-bs-target="#video">
                       <div className="playicon">
@@ -230,13 +231,13 @@ const Home10 = (props) => {
                     </Link>
                   </div>
                   <div className="watch-video-fifteen">
-                    <img src={fifteen_play} alt="" />
+                    <LazyLoadImage src={fifteen_play} alt="" />
                     <h6>Watch Video About Us</h6>
                   </div>
                   <div className="support-consult-main">
                     <div className="support-consult">
                       <div className="support-consult-img">
-                        <img src={customer_service_2} alt="" />
+                        <LazyLoadImage src={customer_service_2} alt="" />
                       </div>
                       <div className="support-consult-right">
                         <h6>24/7 Support</h6>
@@ -251,7 +252,7 @@ const Home10 = (props) => {
                     </div>
                     <div className="support-consult">
                       <div className="support-consult-img">
-                        <img src={customer_service_1} alt="" />
+                        <LazyLoadImage src={customer_service_1} alt="" />
                       </div>
                       <div className="support-consult-right">
                         <h6>Online Consultation</h6>
@@ -263,30 +264,30 @@ const Home10 = (props) => {
               </div>
               <div className="col-lg-5">
                 <div className="banner-right-fifteen">
-                  <img src={banner_ryt} alt="image" className="img-fluid" />
+                  <LazyLoadImage src={banner_ryt} alt="image" className="img-fluid" />
                   <div className="banner-right-fifteenone">
-                    <img src={ban_fift_icon1} alt="" />
+                    <LazyLoadImage src={ban_fift_icon1} alt="" />
                   </div>
                   <div className="banner-right-fifteentwo">
-                    <img src={ban_fift_icon2} alt="" />
+                    <LazyLoadImage src={ban_fift_icon2} alt="" />
                   </div>
                   <div className="banner-right-fifteenthree">
-                    <img src={ban_fift_icon3} alt="" />
+                    <LazyLoadImage src={ban_fift_icon3} alt="" />
                   </div>
                   <div className="banner-right-fifteenfour">
-                    <img src={ban_fift_icon4} alt="" />
+                    <LazyLoadImage src={ban_fift_icon4} alt="" />
                   </div>
                   <div className="banner-right-fifteenfive">
-                    <img src={ban_fift_icon5} alt="" />
+                    <LazyLoadImage src={ban_fift_icon5} alt="" />
                   </div>
                   <div className="banner-right-fifteensix">
-                    <img src={ban_fift_icon6} alt="" />
+                    <LazyLoadImage src={ban_fift_icon6} alt="" />
                   </div>
                   <div className="banner-right-fifteenseven">
-                    <img src={ban_fift_icon7} alt="" />
+                    <LazyLoadImage src={ban_fift_icon7} alt="" />
                   </div>
                   <div className="banner-right-fifteeneight">
-                    <img src={ban_fift_icon8} alt="" />
+                    <LazyLoadImage src={ban_fift_icon8} alt="" />
                   </div>
                 </div>
               </div>

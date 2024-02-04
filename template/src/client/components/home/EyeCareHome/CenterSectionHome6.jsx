@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   center_bg,
   doc_01,
@@ -15,13 +15,13 @@ function CenterSectionHome6() {
     <>
       <section className="center-section">
         <div className="ban-bg">
-          <img src={center_bg} alt="" className="img-fluid bg-05" />
+          <LazyLoadImage src={center_bg} alt="" className="img-fluid bg-05" />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-lg-5 aos" data-aos="fade-up">
               <div className="center-img">
-                <img src={hospital} alt="" className="img-fluid" />
+                <LazyLoadImage src={hospital} alt="" className="img-fluid" />
                 <div className="center-service">
                   <span>
                     <i className="fa-solid fa-headphones" />
@@ -36,7 +36,7 @@ function CenterSectionHome6() {
             <div className="col-lg-7 aos" data-aos="fade-up">
               <div className="center-info">
                 <div className="section-heading sec-heading-eye">
-                  <img src={eye_icon} alt="" className="img-fluid" />
+                  <LazyLoadImage src={eye_icon} alt="" className="img-fluid" />
                   <h2>
                     <span>Who</span> We Are
                   </h2>
@@ -59,7 +59,7 @@ function CenterSectionHome6() {
                 <div className="col-md-4">
                   <div className="care-box">
                     <span>
-                      <img src={doc_01} alt="" className="img-fluid" />
+                      <LazyLoadImage src={doc_01} alt="" className="img-fluid" />
                     </span>
                     <h6>Expert Professionals and World Class Facilities</h6>
                     <Link to="/patient/search-doctor2">
@@ -71,7 +71,7 @@ function CenterSectionHome6() {
                 <div className="col-md-4">
                   <div className="care-box">
                     <span>
-                      <img src={doc_02} alt="" className="img-fluid" />
+                      <LazyLoadImage src={doc_02} alt="" className="img-fluid" />
                     </span>
                     <h6>Specialty Eyecare treatment for all</h6>
                     <Link to="/patient/booking1">
@@ -83,7 +83,7 @@ function CenterSectionHome6() {
                 <div className="col-md-4">
                   <div className="care-box">
                     <span>
-                      <img src={doc_03} alt="" className="img-fluid" />
+                      <LazyLoadImage src={doc_03} alt="" className="img-fluid" />
                     </span>
                     <h6>Online Appointment and Excellent Treatment</h6>
                     <Link to="/patient/booking2">

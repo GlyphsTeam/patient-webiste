@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   IMG01,
   IMG02,
@@ -35,7 +36,7 @@ const HomeBlog = () => {
             <div className="blog grid-blog">
               <div className="blog-image">
                 <Link to="/blog/blog-details">
-                  <img className="img-fluid" src={IMG01} alt="Post" />
+                  <LazyLoadImage className="img-fluid" src={IMG01} alt="Post" />
                 </Link>
               </div>
               <div className="blog-content">
@@ -43,7 +44,7 @@ const HomeBlog = () => {
                   <li>
                     <div className="post-author">
                       <Link to="/patient/doctor-profile">
-                        <img src={IMG_th01} alt="Post Author" />
+                        <LazyLoadImage src={IMG_th01} alt="Post Author" />
                         <span>Dr. Ruby Perrin</span>
                       </Link>
                     </div>
@@ -68,7 +69,7 @@ const HomeBlog = () => {
             <div className="blog grid-blog">
               <div className="blog-image">
                 <Link to="/blog/blog-details">
-                  <img className="img-fluid" src={IMG02} alt="Post" />
+                  <LazyLoadImage className="img-fluid" src={IMG02} alt="Post" />
                 </Link>
               </div>
               <div className="blog-content">
@@ -76,7 +77,7 @@ const HomeBlog = () => {
                   <li>
                     <div className="post-author">
                       <Link to="/patient/doctor-profile">
-                        <img src={IMG_th02} alt="Post Author" />
+                        <LazyLoadImage src={IMG_th02} alt="Post Author" />
                         <span>Dr. Darren Elder</span>
                       </Link>
                     </div>
@@ -101,7 +102,7 @@ const HomeBlog = () => {
             <div className="blog grid-blog">
               <div className="blog-image">
                 <Link to="/blog/blog-details">
-                  <img className="img-fluid" src={IMG03} alt="Post" />
+                  <LazyLoadImage className="img-fluid" src={IMG03} alt="Post" />
                 </Link>
               </div>
               <div className="blog-content">
@@ -109,7 +110,7 @@ const HomeBlog = () => {
                   <li>
                     <div className="post-author">
                       <Link to="/patient/doctor-profile">
-                        <img src={IMG_th03} alt="Post Author" />
+                        <LazyLoadImage src={IMG_th03} alt="Post Author" />
                         <span>Dr. Deborah Angel</span>
                       </Link>
                     </div>
@@ -134,7 +135,7 @@ const HomeBlog = () => {
             <div className="blog grid-blog">
               <div className="blog-image">
                 <Link to="/blog/blog-details">
-                  <img className="img-fluid" src={IMG04} alt="Post" />
+                  <LazyLoadImage className="img-fluid" src={IMG04} alt="Post" />
                 </Link>
               </div>
               <div className="blog-content">
@@ -142,7 +143,7 @@ const HomeBlog = () => {
                   <li>
                     <div className="post-author">
                       <Link to="/patient/doctor-profile">
-                        <img src={IMG_th04} alt="Post Author" />
+                        <LazyLoadImage src={IMG_th04} alt="Post Author" />
                         <span>Dr. Sofia Brient</span>
                       </Link>
                     </div>

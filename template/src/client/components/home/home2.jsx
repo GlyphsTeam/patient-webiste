@@ -13,6 +13,7 @@ import Footer from "../footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ProgressCircle from "./paediatric/scrolltotop";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Home2 = (props) => {
   const config = "/react/template";
@@ -55,9 +56,8 @@ const Home2 = (props) => {
         <div className="container">
           <header className="header">
             <nav
-              className={`navbar navbar-expand-lg header-nav nav-transparent ${
-                pathnames.includes("home1") ? "nav-transparent" : ""
-              }`}
+              className={`navbar navbar-expand-lg header-nav nav-transparent ${pathnames.includes("home1") ? "nav-transparent" : ""
+                }`}
             >
               <div className="navbar-header">
                 <Link
@@ -72,13 +72,13 @@ const Home2 = (props) => {
                   </span>
                 </Link>
                 <Link to="/index-2" className="navbar-brand logo">
-                  <img src={logo} className="img-fluid" alt="Logo" />
+                  <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
                 </Link>
               </div>
               <div className="main-menu-wrapper">
                 <div className="menu-header">
                   <Link to="/index-2" className="menu-logo">
-                    <img src={logo} className="img-fluid" alt="Logo" />
+                    <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
                   </Link>
                   <Link
                     to="#0"
@@ -91,25 +91,24 @@ const Home2 = (props) => {
                 </div>
                 <ul className="main-nav white-font">
                   <li
-                    className={`has-submenu ${
-                      pathnames.includes("home") ||
-                      pathnames.includes("home2") ||
-                      pathnames.includes("home3") ||
-                      pathnames.includes("cardiohome") ||
-                      pathnames.includes("homeslider1") ||
-                      pathnames.includes("home4") ||
-                      pathnames.includes("homeslider2") ||
-                      pathnames.includes("home6") ||
-                      (pathnames.includes("home7") &&
-                        !pathnames.includes("home10")) ||
-                      pathnames.includes("home11") ||
-                      pathnames.includes("home12") ||
-                      pathnames.includes("home13") ||
-                      pathnames.includes("home14") ||
-                      pathnames.includes("paediatrichome")
+                    className={`has-submenu ${pathnames.includes("home") ||
+                        pathnames.includes("home2") ||
+                        pathnames.includes("home3") ||
+                        pathnames.includes("cardiohome") ||
+                        pathnames.includes("homeslider1") ||
+                        pathnames.includes("home4") ||
+                        pathnames.includes("homeslider2") ||
+                        pathnames.includes("home6") ||
+                        (pathnames.includes("home7") &&
+                          !pathnames.includes("home10")) ||
+                        pathnames.includes("home11") ||
+                        pathnames.includes("home12") ||
+                        pathnames.includes("home13") ||
+                        pathnames.includes("home14") ||
+                        pathnames.includes("paediatrichome")
                         ? "active"
                         : ""
-                    }`}
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "home" ? "subdrop" : ""}
@@ -124,20 +123,20 @@ const Home2 = (props) => {
                         <li
                           className={
                             pathnames.includes("home") &&
-                            !pathnames.includes("home2") &&
-                            !pathnames.includes("home3") &&
-                            !pathnames.includes("cardiohome") &&
-                            !pathnames.includes("homeslider1") &&
-                            !pathnames.includes("home4") &&
-                            !pathnames.includes("homeslider2") &&
-                            !pathnames.includes("home6") &&
-                            !pathnames.includes("home7") &&
-                            !pathnames.includes("home10") &&
-                            !pathnames.includes("home11") &&
-                            !pathnames.includes("home12") &&
-                            !pathnames.includes("home13") &&
-                            !pathnames.includes("home14") &&
-                            !pathnames.includes("paediatrichome")
+                              !pathnames.includes("home2") &&
+                              !pathnames.includes("home3") &&
+                              !pathnames.includes("cardiohome") &&
+                              !pathnames.includes("homeslider1") &&
+                              !pathnames.includes("home4") &&
+                              !pathnames.includes("homeslider2") &&
+                              !pathnames.includes("home6") &&
+                              !pathnames.includes("home7") &&
+                              !pathnames.includes("home10") &&
+                              !pathnames.includes("home11") &&
+                              !pathnames.includes("home12") &&
+                              !pathnames.includes("home13") &&
+                              !pathnames.includes("home14") &&
+                              !pathnames.includes("paediatrichome")
                               ? "active"
                               : ""
                           }
@@ -244,9 +243,8 @@ const Home2 = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/doctor") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/doctor") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "doctors" ? "subdrop" : ""}
@@ -394,9 +392,8 @@ const Home2 = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/patient") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/patient") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "patients" ? "subdrop" : ""}
@@ -411,9 +408,8 @@ const Home2 = (props) => {
                     {isSideMenu == "patients" ? (
                       <ul className={`submenu`}>
                         <li
-                          className={`has-submenu ${
-                            pathnames.includes("doctor") ? "active" : ""
-                          }`}
+                          className={`has-submenu ${pathnames.includes("doctor") ? "active" : ""
+                            }`}
                         >
                           <Link
                             className={
@@ -604,9 +600,8 @@ const Home2 = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/pages") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/pages") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "pages" ? "subdrop" : ""}
@@ -619,9 +614,8 @@ const Home2 = (props) => {
                     {isSideMenu == "pages" ? (
                       <ul className={`submenu`}>
                         <li
-                          className={`${
-                            pathnames.includes("/voice-call") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/voice-call") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/voice-call"
@@ -631,9 +625,8 @@ const Home2 = (props) => {
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/video-call") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/video-call") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/video-call"
@@ -657,9 +650,8 @@ const Home2 = (props) => {
                         </li>
 
                         <li
-                          className={`${
-                            pathnames.includes("/calendar") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/calendar") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/calendar"
@@ -669,29 +661,26 @@ const Home2 = (props) => {
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/onboarding-email")
+                          className={`${pathnames.includes("/onboarding-email")
                               ? "active"
                               : ""
-                          }`}
+                            }`}
                         >
                           <Link to="/pages/onboarding-email">
                             Doctor Onboarding
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/patient-email") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/patient-email") ? "active" : ""
+                            }`}
                         >
                           <Link to="/pages/patient-email">
                             Patient Onboarding
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/component") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/component") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/component"
@@ -702,9 +691,8 @@ const Home2 = (props) => {
                         </li>
 
                         <li
-                          className={`has-submenu ${
-                            pathnames.includes("/invoice-view") ? "active" : ""
-                          }`}
+                          className={`has-submenu ${pathnames.includes("/invoice-view") ? "active" : ""
+                            }`}
                         >
                           <Link
                             className={
@@ -750,9 +738,8 @@ const Home2 = (props) => {
                           )}
                         </li>
                         <li
-                          className={`${
-                            pathnames.includes("/blank-page") ? "active" : ""
-                          }`}
+                          className={`${pathnames.includes("/blank-page") ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/pages/blank-page"
@@ -784,9 +771,8 @@ const Home2 = (props) => {
                           </Link>
                         </li>
                         <li
-                          className={`${
-                            pathnames === "/forgot-password" ? "active" : ""
-                          }`}
+                          className={`${pathnames === "/forgot-password" ? "active" : ""
+                            }`}
                         >
                           <Link
                             to="/forgot-password"
@@ -801,9 +787,8 @@ const Home2 = (props) => {
                     )}
                   </li>
                   <li
-                    className={`has-submenu ${
-                      url.includes("/blog") ? "active" : ""
-                    }`}
+                    className={`has-submenu ${url.includes("/blog") ? "active" : ""
+                      }`}
                   >
                     <Link
                       className={isSideMenu == "blog" ? "subdrop" : ""}
@@ -907,10 +892,10 @@ const Home2 = (props) => {
                 </li>
 
                 {pathnames.includes("voice-call") ||
-                pathnames.includes("video-call") ? (
+                  pathnames.includes("video-call") ? (
                   <Dropdown className="user-drop nav-item dropdown has-arrow logged-item">
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
-                      <img
+                      <LazyLoadImage
                         className="rounded-circle"
                         src={IMG01}
                         width="31"
@@ -921,7 +906,7 @@ const Home2 = (props) => {
                     <Dropdown.Menu>
                       <div className="user-header">
                         <div className="avatar avatar-sm">
-                          <img
+                          <LazyLoadImage
                             src={IMG01}
                             alt="User"
                             className="avatar-img rounded-circle"
@@ -958,7 +943,7 @@ const Home2 = (props) => {
           </header>
           <div className="row">
             <div className="col-md-6">
-              <img src={drslider} className="img-fluid dr-img" alt="" />
+              <LazyLoadImage src={drslider} className="img-fluid dr-img" alt="" />
             </div>
             <div className="col-md-6 search-doctor">
               <div className="search-area">

@@ -19,7 +19,7 @@ import StickyBox from "react-sticky-box";
 import Header from "../../header";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const PatientProfile = (props) => {
   // const [ setsow] = useState();
 
@@ -148,7 +148,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -191,7 +191,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -234,7 +234,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -277,7 +277,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -328,7 +328,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -371,7 +371,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -414,7 +414,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -457,7 +457,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -501,7 +501,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -545,7 +545,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -619,7 +619,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG01}
                                           alt="User Image"
@@ -657,7 +657,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -711,7 +711,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG03}
                                           alt="User Image"
@@ -750,7 +750,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG04}
                                           alt="User Image"
@@ -788,7 +788,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG05}
                                           alt="User Image"
@@ -826,7 +826,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG06}
                                           alt="User Image"
@@ -865,7 +865,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG07}
                                           alt="User Image"
@@ -903,7 +903,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG08}
                                           alt="User Image"
@@ -942,7 +942,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG09}
                                           alt="User Image"
@@ -980,7 +980,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG10}
                                           alt="User Image"
@@ -1059,7 +1059,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG01}
                                           alt="User Image"
@@ -1103,7 +1103,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -1164,7 +1164,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG03}
                                           alt="User Image"
@@ -1209,7 +1209,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG04}
                                           alt="User Image"
@@ -1253,7 +1253,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG05}
                                           alt="User Image"
@@ -1298,7 +1298,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG06}
                                           alt="User Image"
@@ -1343,7 +1343,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG07}
                                           alt="User Image"
@@ -1387,7 +1387,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG08}
                                           alt="User Image"
@@ -1432,7 +1432,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG09}
                                           alt="User Image"
@@ -1476,7 +1476,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG10}
                                           alt="User Image"
@@ -1546,7 +1546,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG01}
                                           alt="User Image"
@@ -1589,7 +1589,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG02}
                                           alt="User Image"
@@ -1647,7 +1647,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG03}
                                           alt="User Image"
@@ -1691,7 +1691,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG04}
                                           alt="User Image"
@@ -1734,7 +1734,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG05}
                                           alt="User Image"
@@ -1778,7 +1778,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG06}
                                           alt="User Image"
@@ -1822,7 +1822,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG07}
                                           alt="User Image"
@@ -1865,7 +1865,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG08}
                                           alt="User Image"
@@ -1909,7 +1909,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG09}
                                           alt="User Image"
@@ -1952,7 +1952,7 @@ const PatientProfile = (props) => {
                                         to="/patient/doctor-profile"
                                         className="avatar avatar-sm me-2"
                                       >
-                                        <img
+                                        <LazyLoadImage
                                           className="avatar-img rounded-circle"
                                           src={IMG10}
                                           alt="User Image"

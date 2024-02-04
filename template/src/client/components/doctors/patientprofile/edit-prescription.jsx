@@ -4,7 +4,7 @@ import StickyBox from "react-sticky-box";
 import { Link } from "react-router-dom";
 import Footer from "../../footer";
 import Header from "../../header";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const EditPrescription = (props) => {
   return (
     <div>
@@ -43,7 +43,7 @@ const EditPrescription = (props) => {
                     <div className="pro-widget-content">
                       <div className="profile-info-widget">
                         <Link to="#" className="booking-doc-img">
-                          <img src={patient} alt="User Image" />
+                          <LazyLoadImage src={patient} alt="User Image" />
                         </Link>
                         <div className="profile-det-info">
                           <h3>

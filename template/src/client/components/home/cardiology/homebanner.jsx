@@ -6,7 +6,7 @@ import {
   heart_bg,
   home5banner_img,
 } from "../../imagepath";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import AOS from "aos";
@@ -31,7 +31,7 @@ const Homebanner = () => {
             <div className="col-lg-7">
               <div className="banner-content aos" data-aos="fade-up">
                 <h6>
-                  <img src={heart_2} className="me-2" alt="#" />
+                  <LazyLoadImage src={heart_2} className="me-2" alt="#" />
                   Every Beat, Every Moment
                 </h6>
                 <h1>
@@ -53,15 +53,15 @@ const Homebanner = () => {
             </div>
             <div className="col-lg-5">
               <div className="banner-img aos" data-aos="fade-up">
-                <img src={home5banner_img} className="img-fluid" alt="#" />
-                <img src={heart_bg} className="img-fluid" alt="#" />
+                <LazyLoadImage src={home5banner_img} className="img-fluid" alt="#" />
+                <LazyLoadImage src={heart_bg} className="img-fluid" alt="#" />
               </div>
             </div>
             <div className="col-md-12">
               <div className="search-box-one search-ten aos" data-aos="fade-up">
                 <div className="search-title">
                   <h5>Book An Apppointment</h5>
-                  <img src={health_care_1} alt="#" />
+                  <LazyLoadImage src={health_care_1} alt="#" />
                 </div>
                 <form action={`${config}/patient/search-doctor1`}>
                   <div className="row row-gap">

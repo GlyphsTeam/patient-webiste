@@ -1,11 +1,10 @@
-import React from "react";
 import DoctorSidebar from "../sidebar";
 import { IMG01, IMG02, IMG03, IMG04, IMG05, IMG06, IMG07, IMG08 } from "./img";
 import Footer from "../../footer";
 import StickyBox from "react-sticky-box";
 import { Link } from "react-router-dom";
 import Header from "../../header";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Review = (props) => {
   return (
     <>
@@ -45,7 +44,7 @@ const Review = (props) => {
                 <ul className="comments-list">
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG01}
@@ -95,7 +94,7 @@ const Review = (props) => {
                     <ul className="comments-reply">
                       <li>
                         <div className="comment">
-                          <img
+                          <LazyLoadImage
                             className="avatar rounded-circle"
                             alt="User"
                             src={IMG02}
@@ -128,7 +127,7 @@ const Review = (props) => {
 
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage 
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG03}
@@ -174,7 +173,7 @@ const Review = (props) => {
 
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG04}
@@ -220,7 +219,7 @@ const Review = (props) => {
 
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG05}
@@ -268,7 +267,7 @@ const Review = (props) => {
 
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG06}
@@ -314,7 +313,7 @@ const Review = (props) => {
 
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG07}
@@ -362,7 +361,7 @@ const Review = (props) => {
 
                   <li>
                     <div className="comment">
-                      <img
+                      <LazyLoadImage
                         className="avatar rounded-circle"
                         alt="User"
                         src={IMG08}

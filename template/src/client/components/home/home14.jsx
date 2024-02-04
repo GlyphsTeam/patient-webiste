@@ -5,6 +5,7 @@ import FeatherIcon from "feather-icons-react";
 // import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import {
   book_doctor_13,
@@ -156,13 +157,13 @@ const Home14 = () => {
                     </span>
                   </Link>
                   <Link to="/index-2" className="navbar-brand logo">
-                    <img src={logo} className="img-fluid" alt="Logo" />
+                    <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
                   </Link>
                 </div>
                 <div className="main-menu-wrapper">
                   <div className="menu-header">
                     <Link to="/index-2" className="menu-logo">
-                      <img src={logo} className="img-fluid" alt="Logo" />
+                      <LazyLoadImage src={logo} className="img-fluid" alt="Logo" />
                     </Link>
                     <Link
                       to="#0"
@@ -175,25 +176,24 @@ const Home14 = () => {
                   </div>
                   <ul className="main-nav black-font">
                     <li
-                      className={`has-submenu ${
-                        pathnames.includes("home") ||
-                        pathnames.includes("home2") ||
-                        pathnames.includes("home3") ||
-                        pathnames.includes("cardiohome") ||
-                        pathnames.includes("homeslider1") ||
-                        pathnames.includes("home4") ||
-                        pathnames.includes("homeslider2") ||
-                        pathnames.includes("home6") ||
-                        (pathnames.includes("home7") &&
-                          !pathnames.includes("home10")) ||
-                        pathnames.includes("home11") ||
-                        pathnames.includes("home12") ||
-                        pathnames.includes("home13") ||
-                        pathnames.includes("home14") ||
-                        pathnames.includes("paediatrichome")
+                      className={`has-submenu ${pathnames.includes("home") ||
+                          pathnames.includes("home2") ||
+                          pathnames.includes("home3") ||
+                          pathnames.includes("cardiohome") ||
+                          pathnames.includes("homeslider1") ||
+                          pathnames.includes("home4") ||
+                          pathnames.includes("homeslider2") ||
+                          pathnames.includes("home6") ||
+                          (pathnames.includes("home7") &&
+                            !pathnames.includes("home10")) ||
+                          pathnames.includes("home11") ||
+                          pathnames.includes("home12") ||
+                          pathnames.includes("home13") ||
+                          pathnames.includes("home14") ||
+                          pathnames.includes("paediatrichome")
                           ? "active"
                           : ""
-                      }`}
+                        }`}
                     >
                       <Link
                         className={isSideMenu == "home" ? "subdrop" : ""}
@@ -208,20 +208,20 @@ const Home14 = () => {
                           <li
                             className={
                               pathnames.includes("home") &&
-                              !pathnames.includes("home2") &&
-                              !pathnames.includes("home3") &&
-                              !pathnames.includes("cardiohome") &&
-                              !pathnames.includes("homeslider1") &&
-                              !pathnames.includes("home4") &&
-                              !pathnames.includes("homeslider2") &&
-                              !pathnames.includes("home6") &&
-                              !pathnames.includes("home7") &&
-                              !pathnames.includes("home10") &&
-                              !pathnames.includes("home11") &&
-                              !pathnames.includes("home12") &&
-                              !pathnames.includes("home13") &&
-                              !pathnames.includes("home14") &&
-                              !pathnames.includes("paediatrichome")
+                                !pathnames.includes("home2") &&
+                                !pathnames.includes("home3") &&
+                                !pathnames.includes("cardiohome") &&
+                                !pathnames.includes("homeslider1") &&
+                                !pathnames.includes("home4") &&
+                                !pathnames.includes("homeslider2") &&
+                                !pathnames.includes("home6") &&
+                                !pathnames.includes("home7") &&
+                                !pathnames.includes("home10") &&
+                                !pathnames.includes("home11") &&
+                                !pathnames.includes("home12") &&
+                                !pathnames.includes("home13") &&
+                                !pathnames.includes("home14") &&
+                                !pathnames.includes("paediatrichome")
                                 ? "active"
                                 : ""
                             }
@@ -325,9 +325,8 @@ const Home14 = () => {
                       )}
                     </li>
                     <li
-                      className={`has-submenu ${
-                        url.includes("/doctor") ? "active" : ""
-                      }`}
+                      className={`has-submenu ${url.includes("/doctor") ? "active" : ""
+                        }`}
                     >
                       <Link
                         className={isSideMenu == "doctors" ? "subdrop" : ""}
@@ -477,9 +476,8 @@ const Home14 = () => {
                       )}
                     </li>
                     <li
-                      className={`has-submenu ${
-                        url.includes("/patient") ? "active" : ""
-                      }`}
+                      className={`has-submenu ${url.includes("/patient") ? "active" : ""
+                        }`}
                     >
                       <Link
                         className={isSideMenu == "patients" ? "subdrop" : ""}
@@ -494,13 +492,12 @@ const Home14 = () => {
                       {isSideMenu == "patients" ? (
                         <ul className={`submenu`}>
                           <li
-                            className={`has-submenu ${
-                              pathnames.includes("doctor") &&
-                              !pathnames.includes("doctor-profile") &&
-                              !pathnames.includes("search-doctor")
+                            className={`has-submenu ${pathnames.includes("doctor") &&
+                                !pathnames.includes("doctor-profile") &&
+                                !pathnames.includes("search-doctor")
                                 ? "active"
                                 : ""
-                            }`}
+                              }`}
                           >
                             <Link
                               className={
@@ -594,7 +591,7 @@ const Home14 = () => {
                           <li
                             className={
                               pathnames.includes("booking") &&
-                              !pathnames.includes("booking-success")
+                                !pathnames.includes("booking-success")
                                 ? "active"
                                 : ""
                             }
@@ -671,7 +668,7 @@ const Home14 = () => {
                           <li
                             className={
                               pathnames.includes("profile") &&
-                              !pathnames.includes("doctor-profile")
+                                !pathnames.includes("doctor-profile")
                                 ? "active"
                                 : ""
                             }
@@ -703,9 +700,8 @@ const Home14 = () => {
                       )}
                     </li>
                     <li
-                      className={`has-submenu ${
-                        url.includes("/Pharmacy") ? "active" : ""
-                      }`}
+                      className={`has-submenu ${url.includes("/Pharmacy") ? "active" : ""
+                        }`}
                     >
                       <Link
                         className={isSideMenu == "pharmacy" ? "subdrop" : ""}
@@ -814,9 +810,8 @@ const Home14 = () => {
                       )}
                     </li>
                     <li
-                      className={`has-submenu ${
-                        url.includes("/pages") ? "active" : ""
-                      }`}
+                      className={`has-submenu ${url.includes("/pages") ? "active" : ""
+                        }`}
                     >
                       <Link
                         className={isSideMenu == "pages" ? "subdrop" : ""}
@@ -829,9 +824,8 @@ const Home14 = () => {
                       {isSideMenu == "pages" ? (
                         <ul className={`submenu`}>
                           <li
-                            className={`${
-                              pathnames.includes("/voice-call") ? "active" : ""
-                            }`}
+                            className={`${pathnames.includes("/voice-call") ? "active" : ""
+                              }`}
                           >
                             <Link
                               to="/pages/voice-call"
@@ -841,9 +835,8 @@ const Home14 = () => {
                             </Link>
                           </li>
                           <li
-                            className={`${
-                              pathnames.includes("/video-call") ? "active" : ""
-                            }`}
+                            className={`${pathnames.includes("/video-call") ? "active" : ""
+                              }`}
                           >
                             <Link
                               to="/pages/video-call"
@@ -868,9 +861,8 @@ const Home14 = () => {
                           </li>
 
                           <li
-                            className={`${
-                              pathnames.includes("/calendar") ? "active" : ""
-                            }`}
+                            className={`${pathnames.includes("/calendar") ? "active" : ""
+                              }`}
                           >
                             <Link
                               to="/pages/calendar"
@@ -879,22 +871,20 @@ const Home14 = () => {
                               Calendar
                             </Link>
                             <li
-                              className={`${
-                                pathnames.includes("/onboarding-email")
+                              className={`${pathnames.includes("/onboarding-email")
                                   ? "active"
                                   : ""
-                              }`}
+                                }`}
                             >
                               <Link to="/pages/onboarding-email">
                                 Doctor Onboarding
                               </Link>
                             </li>
                             <li
-                              className={`${
-                                pathnames.includes("/patient-email")
+                              className={`${pathnames.includes("/patient-email")
                                   ? "active"
                                   : ""
-                              }`}
+                                }`}
                             >
                               <Link to="/pages/patient-email">
                                 Patient Onboarding
@@ -902,9 +892,8 @@ const Home14 = () => {
                             </li>
                           </li>
                           <li
-                            className={`${
-                              pathnames.includes("/component") ? "active" : ""
-                            }`}
+                            className={`${pathnames.includes("/component") ? "active" : ""
+                              }`}
                           >
                             <Link
                               to="/pages/component"
@@ -914,11 +903,10 @@ const Home14 = () => {
                             </Link>
                           </li>
                           <li
-                            className={`has-submenu ${
-                              pathnames.includes("/invoice-view")
+                            className={`has-submenu ${pathnames.includes("/invoice-view")
                                 ? "active"
                                 : ""
-                            }`}
+                              }`}
                           >
                             <Link
                               className={
@@ -966,9 +954,8 @@ const Home14 = () => {
                             )}
                           </li>
                           <li
-                            className={`${
-                              pathnames.includes("/blank-page") ? "active" : ""
-                            }`}
+                            className={`${pathnames.includes("/blank-page") ? "active" : ""
+                              }`}
                           >
                             <Link
                               to="/pages/blank-page"
@@ -1002,9 +989,8 @@ const Home14 = () => {
                             </Link>
                           </li>
                           <li
-                            className={`${
-                              pathnames === "/forgot-password" ? "active" : ""
-                            }`}
+                            className={`${pathnames === "/forgot-password" ? "active" : ""
+                              }`}
                           >
                             <Link
                               to="/forgot-password"
@@ -1019,9 +1005,8 @@ const Home14 = () => {
                       )}
                     </li>
                     <li
-                      className={`has-submenu ${
-                        url.includes("/blog") ? "active" : ""
-                      }`}
+                      className={`has-submenu ${url.includes("/blog") ? "active" : ""
+                        }`}
                     >
                       <Link
                         className={isSideMenu == "blog" ? "subdrop" : ""}
@@ -1305,7 +1290,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five">
-                      <img src={clinic_1} alt="" />
+                      <LazyLoadImage src={clinic_1} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1322,7 +1307,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five">
-                      <img src={clinic_2} alt="" />
+                      <LazyLoadImage src={clinic_2} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1339,7 +1324,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five">
-                      <img src={clinic_3} alt="" />
+                      <LazyLoadImage src={clinic_3} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1356,7 +1341,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five">
-                      <img src={clinic_4} alt="" />
+                      <LazyLoadImage src={clinic_4} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1373,7 +1358,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five">
-                      <img src={clinic_5} alt="" />
+                      <LazyLoadImage src={clinic_5} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1390,7 +1375,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five">
-                      <img src={clinic_6} alt="" />
+                      <LazyLoadImage src={clinic_6} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1436,7 +1421,7 @@ const Home14 = () => {
                 data-aos="fade-up"
               >
                 <div className="doctor-grid-five w-100">
-                  <img src={doctor_img2} alt="" className="img-fluid" />
+                  <LazyLoadImage src={doctor_img2} alt="" className="img-fluid" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 d-flex aos" data-aos="fade-up">
@@ -1475,7 +1460,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon1} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon1} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Urology</Link>
@@ -1490,7 +1475,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon7} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon7} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Orthopedic</Link>
@@ -1505,7 +1490,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon4} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon4} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Dentist</Link>
@@ -1520,7 +1505,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon3} alt="" className="img-fluid spec-img" />
+                    <LazyLoadImage src={icon3} alt="" className="img-fluid spec-img" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Cardiologist</Link>
@@ -1535,7 +1520,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon8} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon8} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">MRI Scans</Link>
@@ -1550,7 +1535,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon9} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon9} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Neurology</Link>
@@ -1565,7 +1550,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon10} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon10} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Laboratory</Link>
@@ -1580,7 +1565,7 @@ const Home14 = () => {
               <div className="col-lg-3 col-md-6 aos" data-aos="fade-up">
                 <div className="specialist-card-five d-flex hvr-bounce-to-right">
                   <div className="specialist-img-five">
-                    <img src={icon11} alt="" className="img-fluid" />
+                    <LazyLoadImage src={icon11} alt="" className="img-fluid" />
                   </div>
                   <div className="specialist-info">
                     <Link to="#">Primary Checkup</Link>
@@ -1614,7 +1599,7 @@ const Home14 = () => {
                 <div className="doctors-grid-five w-100">
                   <div className="doctors-img-five">
                     <Link to="/patient/doctor-profile">
-                      <img src={book_doctor_13} alt="" className="img-fluid" />
+                      <LazyLoadImage src={book_doctor_13} alt="" className="img-fluid" />
                     </Link>
                     <div className="social-info">
                       <div className="social-inner">
@@ -1662,7 +1647,7 @@ const Home14 = () => {
                 <div className="doctors-grid-five w-100">
                   <div className="doctors-img-five">
                     <Link to="/patient/doctor-profile">
-                      <img src={book_doctor_14} alt="" className="img-fluid" />
+                      <LazyLoadImage src={book_doctor_14} alt="" className="img-fluid" />
                     </Link>
                     <div className="social-info">
                       <div className="social-inner">
@@ -1710,7 +1695,7 @@ const Home14 = () => {
                 <div className="doctors-grid-five w-100">
                   <div className="doctors-img-five">
                     <Link to="/patient/doctor-profile">
-                      <img src={book_doctor_15} alt="" className="img-fluid" />
+                      <LazyLoadImage src={book_doctor_15} alt="" className="img-fluid" />
                     </Link>
                     <div className="social-info">
                       <div className="social-inner">
@@ -1758,7 +1743,7 @@ const Home14 = () => {
                 <div className="doctors-grid-five w-100">
                   <div className="doctors-img-five">
                     <Link to="/patient/doctor-profile">
-                      <img src={book_doctor_16} alt="" className="img-fluid" />
+                      <LazyLoadImage  src={book_doctor_16} alt="" className="img-fluid" />
                     </Link>
                     <div className="social-info">
                       <div className="social-inner">
@@ -1831,7 +1816,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom pb-0">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five clinic-img-five1">
-                      <img src={features_01} alt="" />
+                      <LazyLoadImage src={features_01} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1843,7 +1828,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom pb-0">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five clinic-img-five1">
-                      <img src={features_02} alt="" />
+                      <LazyLoadImage src={features_02} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1855,7 +1840,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom pb-0">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five clinic-img-five1">
-                      <img src={features_03} alt="" />
+                      <LazyLoadImage src={features_03} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1867,7 +1852,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom pb-0">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five clinic-img-five1">
-                      <img src={features_04} alt="" />
+                      <LazyLoadImage src={features_04} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1879,7 +1864,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five w-100 hvr-bounce-to-bottom pb-0">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five clinic-img-five1">
-                      <img src={features_05} alt="" />
+                      <LazyLoadImage src={features_05} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1891,7 +1876,7 @@ const Home14 = () => {
                 <div className="clinic-grid-five hvr-bounce-to-bottom w-100 pb-0">
                   <div className="clinic-grid-img">
                     <div className="clinic-img-five clinic-img-five1">
-                      <img src={features_06} alt="" />
+                      <LazyLoadImage src={features_06} alt="" />
                     </div>
                   </div>
                   <div className="clinic-grid-info">
@@ -1960,7 +1945,7 @@ const Home14 = () => {
                 <div className="blog-grid-five w-100">
                   <div className="blog-five-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={blog_11}
                         className="img-fluid blog-details-img"
                         alt=""
@@ -1977,7 +1962,7 @@ const Home14 = () => {
                       </div>
                       <div className="blog-doctors-profile">
                         <Link to="/blog/blog-details">
-                          <img src={doctor_thumb_01} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_thumb_01} alt="" className="me-2" />
                           <span>Ruby Perrin</span>
                         </Link>
                       </div>
@@ -2004,7 +1989,7 @@ const Home14 = () => {
                 <div className="blog-grid-five w-100">
                   <div className="blog-five-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={blog_12}
                         className="img-fluid blog-details-img"
                         alt=""
@@ -2021,7 +2006,7 @@ const Home14 = () => {
                       </div>
                       <div className="blog-doctors-profile">
                         <Link to="/blog/blog-details">
-                          <img src={doctor_thumb_02} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_thumb_02} alt="" className="me-2" />
                           <span>Daren Elder</span>
                         </Link>
                       </div>
@@ -2048,7 +2033,7 @@ const Home14 = () => {
                 <div className="blog-grid-five w-100">
                   <div className="blog-five-img">
                     <Link to="/blog/blog-details">
-                      <img
+                      <LazyLoadImage
                         src={blog_13}
                         className="img-fluid blog-details-img"
                         alt=""
@@ -2065,7 +2050,7 @@ const Home14 = () => {
                       </div>
                       <div className="blog-doctors-profile">
                         <Link to="/blog/blog-details">
-                          <img src={doctor_thumb_03} alt="" className="me-2" />
+                          <LazyLoadImage src={doctor_thumb_03} alt="" className="me-2" />
                           <span>Dr. Angel</span>
                         </Link>
                       </div>
@@ -2111,7 +2096,7 @@ const Home14 = () => {
                   {/* Footer Widget */}
                   <div className="footer-widget footer-about">
                     <div className="footer-logo">
-                      <img src={footer_logo} alt="logo" />
+                      <LazyLoadImage src={footer_logo} alt="logo" />
                     </div>
                     <div className="footer-about-content">
                       <p>

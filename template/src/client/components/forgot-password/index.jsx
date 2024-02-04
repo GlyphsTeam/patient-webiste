@@ -4,6 +4,7 @@ import loginBanner from "../../assets/images/login-banner.png";
 import { Link } from "react-router-dom";
 import Header from "../header";
 import Footer from "../footer";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const ForgotPassword = (props) => {
   // const history = useHistory();
@@ -28,7 +29,7 @@ const ForgotPassword = (props) => {
                 <div className="account-content">
                   <div className="row align-items-center justify-content-center">
                     <div className="col-md-7 col-lg-6 login-left">
-                      <img
+                      <LazyLoadImage
                         src={loginBanner}
                         className="img-fluid"
                         alt="Login Banner"

@@ -1,4 +1,4 @@
-import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import IMG01 from "../../../assets/images/patient.jpg";
 import IMG02 from "../../../assets/images/doctor-thumb-02.jpg";
 
@@ -12,7 +12,7 @@ const PatientSidebar = () => {
           <div className="pro-widget-content">
             <div className="profile-info-widget">
               <Link to="#0" className="booking-doc-img">
-                <img src={IMG01} alt="User" />
+                <LazyLoadImage src={IMG01} alt="User" />
               </Link>
               <div className="profile-det-info">
                 <h3>Richard Wilson</h3>
@@ -53,7 +53,7 @@ const PatientSidebar = () => {
           <li className="list-group-item">
             <div className="media align-items-center d-flex">
               <div className="me-3 flex-shrink-0">
-                <img
+                <LazyLoadImage
                   alt="Image placeholder"
                   src={IMG02}
                   className="avatar  rounded-circle"
@@ -71,7 +71,7 @@ const PatientSidebar = () => {
           <li className="list-group-item">
             <div className="media align-items-center d-flex">
               <div className="me-3 flex-shrink-0">
-                <img
+                <LazyLoadImage
                   alt="Image placeholder"
                   src={IMG02}
                   className="avatar  rounded-circle"
