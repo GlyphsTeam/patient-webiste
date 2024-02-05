@@ -1,4 +1,4 @@
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import { doctor_thumb_02 } from "../../imagepath";
 
@@ -11,7 +11,7 @@ const DoctorSidebar = () => {
         <div className="widget-profile pro-widget-content">
           <div className="profile-info-widget">
             <Link to="#" className="booking-doc-img">
-              <img src={doctor_thumb_02} alt="User Image" />
+              <LazyLoadImage src={doctor_thumb_02} alt="User Image" />
             </Link>
             <div className="profile-det-info">
               <h3>Dr. Darren Elder</h3>

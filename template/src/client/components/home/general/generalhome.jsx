@@ -14,10 +14,8 @@ import Faq from "./faq";
 import Header from "../../header";
 import Footer from "../../footer";
 import ProgressCircle from "../paediatric/scrolltotop";
-
 function Generalhome(props) {
   let pathname = props.location.pathname;
-
   if (props.location.pathname === "/index") {
     require("../../../assets/css/feather.css");
   }
@@ -36,7 +34,7 @@ function Generalhome(props) {
           {/* Doctors Section */}
           <Doctor />
           {/* /Doctors Section */}
-    
+
           {/* Work Section */}
           <Worksection />
           {/* /Work Section */}

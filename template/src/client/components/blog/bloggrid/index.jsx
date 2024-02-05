@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
+import Title from '../../title/Title.jsx'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 //images
 import {
@@ -29,25 +30,8 @@ const BlogGrid = (props) => {
   return (
     <div>
       <Header {...props} />
-      <div className="breadcrumb-bar-two">
-        <div className="container">
-          <div className="row align-items-center inner-banner">
-            <div className="col-md-12 col-12 text-center">
-              <h2 className="breadcrumb-title">Blog Grid</h2>
-              <nav aria-label="breadcrumb" className="page-breadcrumb">
-                <ol className="breadcrumb">
-                  <li className="breadcrumb-item">
-                    <Link to="/index-2">Home</Link>
-                  </li>
-                  <li className="breadcrumb-item" aria-current="page">
-                    Blog Grid
-                  </li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Title title="Blog Grid" subTitle="Blog Grid"/>
+       
       <div className="content">
         <div className="container">
           <div className="row">

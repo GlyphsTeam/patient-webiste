@@ -3,30 +3,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../header";
+import Title from '../../title/Title';
+import AboutLeft from './aboutLeft';
+import AboutRight from './aboutRight'
 import Footer from "../../footer";
+import CardDoctor from "./cardDoctor";
 import {
-  vect1,
-  vect2,
-  vect3,
-  feature7,
-  feature8,
-  feature9,
-  feature10,
-  feature11,
-  feature12,
-  specialities1,
-  specialities2,
-  specialities3,
-  specialities4,
-  specialities5,
-  patient1,
-  patient2,
-  patient3,
-  patient4,
-  aboutimg1,
-  aboutimg2,
-  aboutimg3,
-  phoneicon,
   choose01,
   choose02,
   choose03,
@@ -39,19 +21,14 @@ import {
   doctor04,
   doctor05,
   doctor02,
-  shape04,
-  shape05,
-  client01,
-  client02,
-  client03,
-  client04,
-  client05,
   faqimg,
 } from "../aboutus/img";
 // import HomeClinic from '../../home/clinic/index';
 // import Slider from "react-slick";
 import CountUp from "react-countup";
 import Testimonial from "../../home/general/testimonial";
+import AboutCard from "./aboutCard";
+import { doctor_06 } from "../../imagepath";
 
 const Aboutus = (props) => {
   let pathname = props.location.pathname;
@@ -97,98 +74,94 @@ const Aboutus = (props) => {
       },
     ],
   };
+  const doctors = [
+    {
+      id: 1,
+      img: doctor03,
+      price: 200,
+      name: "Dr. Ruby Perrin",
+      category: "Cardiology",
+      rate: 4.5,
+      rateValue: 35,
+      location:"Georgia, USA"
 
+    },
+    {
+      id: 2,
+      img: doctor04,
+      price: 200,
+      name: "Dr. Ruby Perrin",
+      category: "Cardiology",
+      rate: 4.5,
+      rateValue: 35,
+      location:"Georgia, USA"
+
+    },
+    {
+      id: 3,
+      img: doctor05,
+      price: 200,
+      name: "Dr. Ruby Perrin",
+      category: "Cardiology",
+      rate: 4.5,
+      rateValue: 35,
+      location:"Georgia, USA"
+
+    },
+    {
+      id: 4,
+      img: doctor_06,
+      price: 200,
+      name: "Dr. Ruby Perrin",
+      category: "Cardiology",
+      rate: 4.5,
+      rateValue: 35,
+      location:"Georgia, USA"
+
+    },
+
+  ]
+  const aboutData = [
+    {
+      id: 1,
+      img: choose01,
+      title: "Qualified Staff of Doctors",
+      description: "  Lorem ipsum sit amet consectetur incididunt ut labore et exercitation ullamco laboris nisi dolore magna enimveniam aliqua",
+    },
+    {
+      id: 2,
+      img: choose02,
+      title: "Qualified Staff of Doctors",
+      description: "  Lorem ipsum sit amet consectetur incididunt ut labore et exercitation ullamco laboris nisi dolore magna enimveniam aliqua",
+
+    },
+    {
+      id: 3,
+      img: choose03,
+      title: "Qualified Staff of Doctors",
+      description: "  Lorem ipsum sit amet consectetur incididunt ut labore et exercitation ullamco laboris nisi dolore magna enimveniam aliqua",
+    },
+    {
+      id: 4,
+      img: choose04,
+      title: "Qualified Staff of Doctors",
+      description: "  Lorem ipsum sit amet consectetur incididunt ut labore et exercitation ullamco laboris nisi dolore magna enimveniam aliqua",
+
+    },
+  ]
   return (
     <>
       <Header {...props} />
       <>
         {/* Breadcrumb */}
-        <div className="breadcrumb-bar-two">
-          <div className="container">
-            <div className="row align-items-center inner-banner">
-              <div className="col-md-12 col-12 text-center">
-                <h2 className="breadcrumb-title">About Us</h2>
-                <nav aria-label="breadcrumb" className="page-breadcrumb">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <Link to="/index-2">Home</Link>
-                    </li>
-                    <li className="breadcrumb-item" aria-current="page">
-                      About Us
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Title title="About Us" subTitle="About Us" />
         {/* /Breadcrumb */}
         {/* About Us */}
         <section className="about-section">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="about-img-info">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="about-inner-img">
-                        <div className="about-img">
-                          <img src={aboutimg1} className="img-fluid" alt="" />
-                        </div>
-                        <div className="about-img">
-                          <img src={aboutimg2} className="img-fluid" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="about-inner-img">
-                        <div className="about-box">
-                          <h4>Over 25+ Years Experience</h4>
-                        </div>
-                        <div className="about-img">
-                          <img src={aboutimg3} className="img-fluid" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 col-md-12">
-                <div className="section-inner-header about-inner-header">
-                  <h6>About Our Company</h6>
-                  <h2>
-                    We Are Always Ensure Best Medical Treatment For Your Health
-                  </h2>
-                </div>
-                <div className="about-content">
-                  <div className="about-content-details">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus sit voluptatem
-                      accusantium doloremque eaque ipsa quae architecto beatae
-                      vitae dicta sunt explicabo.
-                    </p>
-                  </div>
-                  <div className="about-contact">
-                    <div className="about-contact-icon">
-                      <span>
-                        <img src={phoneicon} alt="" />
-                      </span>
-                    </div>
-                    <div className="about-contact-text">
-                      <p>Need Emergency?</p>
-                      <h4>+1 315 369 5943</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <AboutLeft />
+              <AboutRight />
             </div>
           </div>
         </section>
@@ -204,82 +177,13 @@ const Aboutus = (props) => {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="card why-choose-card w-100">
-                  <div className="card-body">
-                    <div className="why-choose-icon">
-                      <span>
-                        <img src={choose01} alt="" />
-                      </span>
-                    </div>
-                    <div className="why-choose-content">
-                      <h4>Qualified Staff of Doctors</h4>
-                      <p>
-                        Lorem ipsum sit amet consectetur incididunt ut labore et
-                        exercitation ullamco laboris nisi dolore magna enim
-                        veniam aliqua.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="card why-choose-card w-100">
-                  <div className="card-body">
-                    <div className="why-choose-icon">
-                      <span>
-                        <img src={choose02} alt="" />
-                      </span>
-                    </div>
-                    <div className="why-choose-content">
-                      <h4>Qualified Staff of Doctors</h4>
-                      <p>
-                        Lorem ipsum sit amet consectetur incididunt ut labore et
-                        exercitation ullamco laboris nisi dolore magna enim
-                        veniam aliqua.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="card why-choose-card w-100">
-                  <div className="card-body">
-                    <div className="why-choose-icon">
-                      <span>
-                        <img src={choose03} alt="" />
-                      </span>
-                    </div>
-                    <div className="why-choose-content">
-                      <h4>Qualified Staff of Doctors</h4>
-                      <p>
-                        Lorem ipsum sit amet consectetur incididunt ut labore et
-                        exercitation ullamco laboris nisi dolore magna enim
-                        veniam aliqua.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="card why-choose-card w-100">
-                  <div className="card-body">
-                    <div className="why-choose-icon">
-                      <span>
-                        <img src={choose04} alt="" />
-                      </span>
-                    </div>
-                    <div className="why-choose-content">
-                      <h4>Qualified Staff of Doctors</h4>
-                      <p>
-                        Lorem ipsum sit amet consectetur incididunt ut labore et
-                        exercitation ullamco laboris nisi dolore magna enim
-                        veniam aliqua.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {aboutData?.map((item) => {
+                return <AboutCard
+                  key={item.title}
+                  description={item.description}
+                  title={item.title}
+                  imgCard={item.img} />
+              })}
             </div>
           </div>
         </section>
@@ -332,160 +236,18 @@ const Aboutus = (props) => {
             </div>
             <div className="row">
               {/* Doctor Item */}
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="doctor-profile-widget w-100">
-                  <div className="doc-pro-img">
-                    <Link to="/patient/doctor-profile">
-                      <div className="doctor-profile-img">
-                        <img src={doctor03} className="img-fluid" alt="" />
-                      </div>
-                    </Link>
-                    <div className="doctor-amount">
-                      <span>$ 200</span>
-                    </div>
-                  </div>
-                  <div className="doc-content">
-                    <div className="doc-pro-info">
-                      <div className="doc-pro-name">
-                        <Link to="/patient/doctor-profile">
-                          Dr. Ruby Perrin
-                        </Link>
-                        <p>Cardiology</p>
-                      </div>
-                      <div className="reviews-ratings">
-                        <p>
-                          <span>
-                            <i className="fas fa-star" /> 4.5
-                          </span>{" "}
-                          (35)
-                        </p>
-                      </div>
-                    </div>
-                    <div className="doc-pro-location">
-                      <p>
-                        <i className="feather-map-pin" /> Newyork, USA
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /Doctor Item */}
-              {/* Doctor Item */}
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="doctor-profile-widget w-100">
-                  <div className="doc-pro-img">
-                    <Link to="/patient/doctor-profile">
-                      <div className="doctor-profile-img">
-                        <img src={doctor04} className="img-fluid" alt="" />
-                      </div>
-                    </Link>
-                    <div className="doctor-amount">
-                      <span>$ 360</span>
-                    </div>
-                  </div>
-                  <div className="doc-content">
-                    <div className="doc-pro-info">
-                      <div className="doc-pro-name">
-                        <Link to="/patient/doctor-profile">
-                          Dr. Darren Elder
-                        </Link>
-                        <p>Neurology</p>
-                      </div>
-                      <div className="reviews-ratings">
-                        <p>
-                          <span>
-                            <i className="fas fa-star" /> 4.0
-                          </span>{" "}
-                          (20)
-                        </p>
-                      </div>
-                    </div>
-                    <div className="doc-pro-location">
-                      <p>
-                        <i className="feather-map-pin" /> Florida, USA
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /Doctor Item */}
-              {/* Doctor Item */}
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="doctor-profile-widget w-100">
-                  <div className="doc-pro-img">
-                    <Link to="/patient/doctor-profile">
-                      <div className="doctor-profile-img">
-                        <img src={doctor05} className="img-fluid" alt="" />
-                      </div>
-                    </Link>
-                    <div className="doctor-amount">
-                      <span>$ 450</span>
-                    </div>
-                  </div>
-                  <div className="doc-content">
-                    <div className="doc-pro-info">
-                      <div className="doc-pro-name">
-                        <Link to="/patient/doctor-profile">
-                          Dr. Sofia Brient
-                        </Link>
-                        <p>Urology</p>
-                      </div>
-                      <div className="reviews-ratings">
-                        <p>
-                          <span>
-                            <i className="fas fa-star" /> 4.5
-                          </span>{" "}
-                          (30)
-                        </p>
-                      </div>
-                    </div>
-                    <div className="doc-pro-location">
-                      <p>
-                        <i className="feather-map-pin" /> Georgia, USA
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /Doctor Item */}
-              {/* Doctor Item */}
-              <div className="col-lg-3 col-md-6 d-flex">
-                <div className="doctor-profile-widget w-100">
-                  <div className="doc-pro-img">
-                    <Link to="/patient/doctor-profile">
-                      <div className="doctor-profile-img">
-                        <img src={doctor02} className="img-fluid" alt="" />
-                      </div>
-                    </Link>
-                    <div className="doctor-amount">
-                      <span>$ 570</span>
-                    </div>
-                  </div>
-                  <div className="doc-content">
-                    <div className="doc-pro-info">
-                      <div className="doc-pro-name">
-                        <Link to="/patient/doctor-profile">
-                          Dr. Paul Richard
-                        </Link>
-                        <p>Orthopedic</p>
-                      </div>
-                      <div className="reviews-ratings">
-                        <p>
-                          <span>
-                            <i className="fas fa-star" /> 4.3
-                          </span>{" "}
-                          (45)
-                        </p>
-                      </div>
-                    </div>
-                    <div className="doc-pro-location">
-                      <p>
-                        <i className="feather-map-pin" /> Michigan, USA
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {doctors.map((doctor) => {
+                return <CardDoctor 
+                category={doctor.category}
+                doctorImg={doctor.img}
+                doctorName={doctor.name}
+                locationUrl={doctor.location}
+                price={doctor.price}
+                rate={doctor.rate}
+                rateValue={doctor.rateValue}
+                key={doctor.id}
+                />
+              })}
               {/* /Doctor Item */}
             </div>
           </div>

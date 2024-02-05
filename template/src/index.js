@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 import AppRouter from "./approuter";
 // import * as serviceWorker from './client/serviceWorker';
@@ -33,11 +35,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // console.log('window.location.pathname :>> ', window.location.pathname);
 
 
-  require("./client/assets/css/all.css");
-  require("./client/assets/css/all.min.css");
-  require("./client/assets/css/fontawesome.min.css");
-  require("./client/assets/css/custom.css")
-  require("../src/client/components/customstyleclient.css");
+require("./client/assets/css/all.css");
+require("./client/assets/css/all.min.css");
+require("./client/assets/css/fontawesome.min.css");
+require("./client/assets/css/custom.css")
+require("../src/client/components/customstyleclient.css");
 
 
 // ReactDOM.render(<AppRouter/>, document.getElementById('root'));
@@ -49,6 +51,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <AppRouter />
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
   </>
 );

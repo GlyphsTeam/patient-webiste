@@ -84,7 +84,6 @@ const Header = () => {
   const handlerShow = () => {
     setShowNav(!showNav)
   }
-  console.log("isSideMenu>>>>", isSideMenu)
   // const mobilemenus = () => {
   //   setMenu(!true);
   // };
@@ -100,6 +99,7 @@ const Header = () => {
     var root = document.getElementsByTagName("html")[0];
     root.classList.add("menu-opened");
   };
+  console.log("isSideMenu>>>>", pathnames)
 
   const onhandleCloseMenu = () => {
     var root = document.getElementsByTagName("html")[0];
@@ -302,7 +302,7 @@ const Header = () => {
 
 
                   <li
-                    className={`has-submenu ${url.includes("/pages") ? "active" : ""
+                    className={`has-submenu ${pathnames.includes("/pages/contactus") ? "active" : ""
                       }`}
                   >
                     <Link
@@ -364,7 +364,7 @@ const Header = () => {
                       Blog
                     </Link>
                   </li>
-                  <li className="has-submenu">
+                  <li className={`has-submenu ${pathnames.includes("aboutus") ? "active" : ""}`}>
                     <Link
                       to="/pages/aboutus"
                       // target="_blank"
