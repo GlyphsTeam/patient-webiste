@@ -4,10 +4,61 @@ import Logo from "../../assets/images/logo.png";
 // import camera from '../../assets/images/icons/camera.svg';
 // import male from '../../assets/images/icons/male.png'
 // import female from '../../assets/images/icons/female.png'
-
-import { Link } from "react-router-dom";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { setLocation, setState } from '../../../store/Register/register';
+import { Link, useHistory } from "react-router-dom";
+import {
+  setAge,
+  setBloodType,
+  setGenderRegister,
+  setHeight,
+  setImgProfile,
+  setNameRegister,
+  setPasswordRegister,
+  setPhoneRegister,
+  setRate,
+  setWeight,
+} from '../../../store/Register/register';
 const Patientregisterstepfive = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const registerState = useSelector((state) => state.register);
+
+  const hanlderSubmit = (e) => {
+    e.preventDefault();
+
+    let formData = new FormData();
+
+    formData.append("name", registerState?.name);
+    formData.append("phone", registerState?.phone);
+    formData.append("password", registerState.password);
+    formData.append("image", registerState.imgProfile);
+    formData.append("age", registerState.age);
+    formData.append("bloodType", registerState.bloodType);
+    formData.append("location", registerState.location);
+    formData.append("gender", registerState.gender);
+    formData.append("height", registerState.height);
+    formData.append("weight", registerState.weight);
+    formData.append("rate", registerState.rate);
+    formData.append("state", registerState.state);
+
+
+    dispatch(setAge(""));
+    dispatch(setBloodType(""));
+    dispatch(setPasswordRegister(""));
+    dispatch(setGenderRegister(""));
+    dispatch(setWeight(""));
+    dispatch(setImgProfile(null));
+    dispatch(setRate(""));
+    dispatch(setLocation(""));
+    dispatch(setState(""));
+    dispatch(setHeight(""));
+    dispatch(setPhoneRegister(""));
+    dispatch(setNameRegister(""));
+
+    history.push("/patient/dashboard")
+  }
+
   return (
     <>
       <>
@@ -52,7 +103,7 @@ const Patientregisterstepfive = () => {
                           </li>
                         </ul>
                       </div>
-                      <form method="post">
+                      <form onSubmit={hanlderSubmit}>
                         <h3 className="my-4">Your Location</h3>
                         <div className="form-group">
                           <label>Select City</label>
@@ -62,6 +113,7 @@ const Patientregisterstepfive = () => {
                             name="heart_rate"
                             tabIndex={-1}
                             aria-hidden="true"
+                            onChange={(e) => dispatch(setLocation(e.target.value))}
                           >
                             <option value="">Select Your City</option>
                             <option value={1}>City 1</option>
@@ -76,6 +128,7 @@ const Patientregisterstepfive = () => {
                             name="bp"
                             tabIndex={-1}
                             aria-hidden="true"
+                            onChange={(e) => dispatch(setState(e.target.value))}
                           >
                             <option value="">Select Your State</option>
                             <option value={1}>State 1</option>
@@ -83,12 +136,12 @@ const Patientregisterstepfive = () => {
                           </select>
                         </div>
                         <div className="mt-5">
-                          <Link
-                            to="/patient/dashboard"
+                          <button
+
                             className="btn btn-primary w-100 btn-lg login-btn step5_submit"
                           >
                             continue{" "}
-                          </Link>
+                          </button>
                         </div>
                       </form>
                     </div>

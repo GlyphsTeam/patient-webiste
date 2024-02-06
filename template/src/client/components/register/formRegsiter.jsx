@@ -1,32 +1,29 @@
 import React, { useRef } from 'react'
-import { Link } from "react-router-dom";
+import { useHistory, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setNameRegister, setPhoneRegister, setPasswordRegister } from '../../../store/Register/register';
 
 function FormRegsiter() {
     const name = useRef(null);
     const phoneNumber = useRef(null);
     const password = useRef(null);
+    const dispatch = useDispatch();
+    const history = useHistory();
 
-    const handlerRegsiter = (e) => {
-        e.preventDefault();
+    const handlerRegsiter = () => {
 
         const nameValue = name.current?.value;
         const phoneValue = phoneNumber.current?.value;
         const passwordValue = password.current?.value;
 
-        let formData = new FormData();
-        console.log("name>>>>",nameValue, "phone>>>>", phoneNumber, "password>>>>", passwordValue);
-
-        formData.append("name", nameValue);
-        formData.append("phone", phoneValue);
-        formData.append("password", passwordValue);
-
-        name.current.value = "";
-        phoneNumber.current.value = "";
-        password.current.value = "";
+        dispatch(setNameRegister(nameValue));
+        dispatch(setPhoneRegister(phoneValue));
+        dispatch(setPasswordRegister(passwordValue));
+        history.push("/patient/patientregisterstep-1")
 
     }
     return (
-        <form onSubmit={handlerRegsiter}>
+        <form >
             <div className="form-group form-focus">
                 <input
                     ref={name}
@@ -56,12 +53,14 @@ function FormRegsiter() {
                     Already have an account?
                 </Link>
             </div>
-            <Link to="/patient/patientregisterstep-1"
+            <button
+                onClick={() => handlerRegsiter()}
                 className="btn btn-primary w-100 btn-lg login-btn"
                 type="submit"
+
             >
                 Signup
-            </Link>
+            </button>
             <div className="login-or">
                 <span className="or-line" />
                 <span className="span-or">or</span>

@@ -2,9 +2,27 @@ import React from "react";
 // import loginBanner from '../../assets/images/login-banner.png';
 import Logo from "../../assets/images/logo.png";
 import camera from "../../assets/images/icons/camera.svg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { setImgProfile } from '../../../store/Register/register';
 
 const Patientregisterstepone = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const registerState = useSelector((state) => state.register);
+
+  
+
+  const hanlderRegister = () => {
+
+
+    history.push("/patient/patientregisterstep-2");
+  }
+  const handlerUploadImage = (e) => {
+    
+    let image = e.target.files[0];
+    dispatch(setImgProfile(image));
+  }
   return (
     <>
       <>
@@ -18,7 +36,7 @@ const Patientregisterstepone = () => {
                   <div className="inner-right-login">
                     <div className="login-header">
                       <div className="logo-icon">
-                        <img src={Logo} alt="" />
+                        <img src={registerState?.imgProfile ? URL.createObjectURL(registerState?.imgProfile) : Logo} alt="" />
                       </div>
                       <div className="step-list">
                         <ul>
@@ -58,16 +76,17 @@ const Patientregisterstepone = () => {
                               type="file"
                               id="profile_image"
                               name="profile_image"
+                              onChange={(e) => handlerUploadImage(e)}
                             />
                           </div>
                         </div>
                         <div className="mt-5">
-                          <Link
-                            to="/patient/patientregisterstep-2"
+                          <button
+                            onClick={() => hanlderRegister()}
                             className="btn btn-primary w-100 btn-lg login-btn step1_submit"
                           >
                             continue{" "}
-                          </Link>
+                          </button>
                         </div>
                       </form>
                     </div>

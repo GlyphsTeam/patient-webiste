@@ -5,10 +5,21 @@ import Logo from "../../assets/images/logo.png";
 // import camera from '../../assets/images/icons/camera.svg';
 import male from "../../assets/images/icons/male.png";
 import female from "../../assets/images/icons/female.png";
-
+import {
+  setGenderRegister,
+  setHeight,
+  setWeight,
+  setAge,
+  setBloodType,
+  setRate
+} from '../../../store/Register/register';
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+
 
 const Patientregistersteptwo = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <>
@@ -59,6 +70,7 @@ const Patientregistersteptwo = () => {
                                 id="test1"
                                 name="gender"
                                 defaultValue="Male"
+                                onChange={(e) => dispatch(setGenderRegister(e.target.value))}
                               />
                               <label htmlFor="test1">
                                 <span className="gender-icon">
@@ -72,6 +84,7 @@ const Patientregistersteptwo = () => {
                                 type="radio"
                                 id="test2"
                                 name="gender"
+                                onChange={(e) => dispatch(setGenderRegister(e.target.value))}
                                 defaultValue="Female"
                               />
                               <label htmlFor="test2">
@@ -139,6 +152,7 @@ const Patientregistersteptwo = () => {
                                   name="weight"
                                   defaultValue="weight"
                                   id="weight"
+                                  onChange={(e) => dispatch(setWeight(e.target.value))}
                                 />
                               </div>
                               <div className="col-5 ps-2">
@@ -160,6 +174,7 @@ const Patientregistersteptwo = () => {
                                   type="text"
                                   className="form-control"
                                   id="height"
+                                  onChange={(e) => dispatch(setHeight(e.target.value))}
                                 />
                               </div>
                               <div className="col-5 ps-2">
@@ -181,7 +196,7 @@ const Patientregistersteptwo = () => {
                             <input
                               type="text"
                               name="age"
-                            value=""
+                              onChange={(e) => dispatch(setAge(e.target.value))}
                               className="form-control"
                               id="age"
                             />
@@ -193,6 +208,7 @@ const Patientregistersteptwo = () => {
                               id="blood_group"
                               name="blood_group"
                               tabIndex={-1}
+                              onChange={(e) => dispatch(setBloodType(e.target.value))}
                               aria-hidden="true"
                             >
                               <option value="">Select your blood group</option>
@@ -214,6 +230,7 @@ const Patientregistersteptwo = () => {
                               name="heart_rate"
                               tabIndex={-1}
                               aria-hidden="true"
+                              onChange={(e) => dispatch(setRate(e.target.value))}
                             >
                               <option value="">Select Your Heart Rate</option>
                               <option value={1}>1</option>

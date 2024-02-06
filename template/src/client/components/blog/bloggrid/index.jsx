@@ -1,23 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import Title from '../../title/Title.jsx'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import CardBlog from "./cardBlog.jsx";
 //images
-import {
-  IMG01,
-  IMG02,
-  IMG03,
-  IMG04,
-  IMG05,
-  IMG06,
-  IMG_th01,
-  IMG_th02,
-  IMG_th03,
-  IMG_th04,
-  IMG_th05,
-  IMG_th06,
-} from "./img.jsx";
+import { IMG01, IMG_th01 } from "./img.jsx";
 //components
 import BlogListSearch from "../search/search.jsx";
 import LastestBlog from "../lastestblog";
@@ -27,215 +13,83 @@ import Header from "../../header";
 import Footer from "../../footer";
 
 const BlogGrid = (props) => {
+  const blodData = [
+    {
+      id: 1,
+      img: IMG01,
+      img2: IMG_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 2,
+      img: IMG01,
+      img2: IMG_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 3,
+      img: IMG01,
+      img2: IMG_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 4,
+      img: IMG01,
+      img2: IMG_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 5,
+      img: IMG01,
+      img2: IMG_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 6,
+      img: IMG01,
+      img2: IMG_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+  ]
   return (
     <div>
       <Header {...props} />
-      <Title title="Blog Grid" subTitle="Blog Grid"/>
-       
+      <Title title="Blog Grid" subTitle="Blog Grid" />
+
       <div className="content">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-12">
               <div className="row blog-grid-row">
-                <div className="col-md-6 col-sm-12">
-                  <div className="blog grid-blog">
-                    <div className="blog-image">
-                      <Link to="/blog/blog-details">
-                        <LazyLoadImage className="img-fluid" src={IMG01} alt="Post" />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <ul className="entry-meta meta-item">
-                        <li>
-                          <div className="post-author">
-                            <Link to="/patient/doctor-profile">
-                              <LazyLoadImage src={IMG_th01} alt="Post Author" />
-                              <span>Dr. Ruby Perrin</span>
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <i className="far fa-clock"></i> 4 Dec 2019
-                        </li>
-                      </ul>
-                      <h3 className="blog-title">
-                        <Link to="/blog/blog-details">
-                          Doccure – Making your clinic painless visit?
-                        </Link>
-                      </h3>
-
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur em adipiscing
-                        elit, sed do eiusmod tempor.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-sm-12">
-                  <div className="blog grid-blog">
-                    <div className="blog-image">
-                      <Link to="/blog/blog-details">
-                        <LazyLoadImage className="img-fluid" src={IMG02} alt="Post" />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <ul className="entry-meta meta-item">
-                        <li>
-                          <div className="post-author">
-                            <Link to="/patient/doctor-profile">
-                              <LazyLoadImage src={IMG_th02} alt="Post Author" />
-                              <span>Dr. Darren Elder</span>
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <i className="far fa-clock"></i> 3 Dec 2019
-                        </li>
-                      </ul>
-                      <h3 className="blog-title">
-                        <Link to="/blog/blog-details">
-                          What are the benefits of Online Doctor Booking?
-                        </Link>
-                      </h3>
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur em adipiscing
-                        elit, sed do eiusmod tempor.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-sm-12">
-                  <div className="blog grid-blog">
-                    <div className="blog-image">
-                      <Link to="/blog/blog-details">
-                        <LazyLoadImage className="img-fluid" src={IMG03} alt="Post" />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <ul className="entry-meta meta-item">
-                        <li>
-                          <div className="post-author">
-                            <Link to="/patient/doctor-profile">
-                              <LazyLoadImage src={IMG_th03} alt="Post Author" />
-                              <span>Dr. Deborah Angel</span>
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <i className="far fa-clock"></i> 3 Dec 2019
-                        </li>
-                      </ul>
-                      <h3 className="blog-title">
-                        <Link to="/blog/blog-details">
-                          Benefits of consulting with an Online Doctor
-                        </Link>
-                      </h3>
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur em adipiscing
-                        elit, sed do eiusmod tempor.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-sm-12">
-                  <div className="blog grid-blog">
-                    <div className="blog-image">
-                      <Link to="/blog/blog-details">
-                        <LazyLoadImage className="img-fluid" src={IMG04} alt="Post" />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <ul className="entry-meta meta-item">
-                        <li>
-                          <div className="post-author">
-                            <Link to="/patient/doctor-profile">
-                              <LazyLoadImage src={IMG_th04} alt="Post Author" />
-                              <span>Dr. Sofia Brient</span>
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <i className="far fa-clock"></i> 2 Dec 2019
-                        </li>
-                      </ul>
-                      <h3 className="blog-title">
-                        <Link to="/blog/blog-details">
-                          5 Great reasons to use an Online Doctor
-                        </Link>
-                      </h3>
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur em adipiscing
-                        elit, sed do eiusmod tempor.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-sm-12">
-                  <div className="blog grid-blog">
-                    <div className="blog-image">
-                      <Link to="/blog/blog-details">
-                        <LazyLoadImage className="img-fluid" src={IMG05} alt="Post" />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <ul className="entry-meta meta-item">
-                        <li>
-                          <div className="post-author">
-                            <Link to="/patient/doctor-profile">
-                              <LazyLoadImage src={IMG_th05} alt="Post Author" />
-                              <span>Dr. Marvin Campbell</span>
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <i className="far fa-clock"></i> 1 Dec 2019
-                        </li>
-                      </ul>
-                      <h3 className="blog-title">
-                        <Link to="/blog/blog-details">
-                          Online Doctor Appointment Scheduling
-                        </Link>
-                      </h3>
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur em adipiscing
-                        elit, sed do eiusmod tempor.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-sm-12">
-                  <div className="blog grid-blog">
-                    <div className="blog-image">
-                      <Link to="/blog/blog-details">
-                        <LazyLoadImage className="img-fluid" src={IMG06} alt="Post" />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <ul className="entry-meta meta-item">
-                        <li>
-                          <div className="post-author">
-                            <Link to="/patient/doctor-profile">
-                              <LazyLoadImage src={IMG_th06} alt="Post Author" />
-                              <span>Dr. Marvin Campbell</span>
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <i className="far fa-clock"></i>30 Nov 2019
-                        </li>
-                      </ul>
-                      <h3 className="blog-title">
-                        <Link to="/blog/blog-details">
-                          Online Doctor Appointment Scheduling
-                        </Link>
-                      </h3>
-                      <p className="mb-0">
-                        Lorem ipsum dolor sit amet, consectetur em adipiscing
-                        elit, sed do eiusmod tempor.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                {blodData.map((blog) => {
+                  return <CardBlog 
+                  blogDetails={blog.deatiles}
+                  date={blog.date}
+                  description={blog.description}
+                  doctorName={blog.name}
+                  imgSrc={blog.img}
+                  imgSrcTwo={blog.img2}
+                  key={blog.id}
+                  />
+                })}
               </div>
             </div>
             <div className="col-lg-4 col-md-12 sidebar-right theiaStickySidebar">

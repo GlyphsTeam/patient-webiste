@@ -39,6 +39,7 @@ require("./client/assets/css/all.css");
 require("./client/assets/css/all.min.css");
 require("./client/assets/css/fontawesome.min.css");
 require("./client/assets/css/custom.css")
+require("./client/assets/css/App.css")
 require("../src/client/components/customstyleclient.css");
 
 
