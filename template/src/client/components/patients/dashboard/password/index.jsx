@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import DashboardSidebar from "../sidebar/sidebar.jsx";
 import StickyBox from "react-sticky-box";
 import Footer from "../../../footer";
@@ -6,6 +6,29 @@ import { Link } from "react-router-dom";
 import Header from "../../../header.jsx";
 
 const Password = (props) => {
+  const oldPassword = useRef(null);
+  const newPassword = useRef(null);
+  const confirmPassword = useRef(null);
+
+  const handlerPassword = (e) => {
+    e.preventDefault();
+    const oldPassValue = oldPassword.current.value;
+    const newPassValue = newPassword.current.value;
+    const confirmPassValue = confirmPassword.current.value;
+
+    let formData = new FormData();
+
+
+    formData.append("oldPassword", oldPassValue);
+    formData.append("newPassword", newPassValue);
+    formData.append("confirmPassword", confirmPassValue);
+
+
+    oldPassword.current.value = "";
+    newPassword.current.value = "";
+    confirmPassword.current.value = "";
+
+  }
   return (
     <div>
       <Header {...props} />
@@ -40,18 +63,18 @@ const Password = (props) => {
             <div className="col-md-7 col-lg-8 col-xl-9">
               <div className="card">
                 <div className="card-body">
-                  <form>
+                  <form onSubmit={handlerPassword}>
                     <div className="form-group">
                       <label>Old Password</label>
-                      <input type="password" className="form-control" />
+                      <input type="password" className="form-control" ref={oldPassword} />
                     </div>
                     <div className="form-group">
                       <label>New Password</label>
-                      <input type="password" className="form-control" />
+                      <input type="password" className="form-control" ref={newPassword} />
                     </div>
                     <div className="form-group">
                       <label>Confirm Password</label>
-                      <input type="password" className="form-control" />
+                      <input type="password" className="form-control" ref={confirmPassword} />
                     </div>
                     <div className="submit-section">
                       <button

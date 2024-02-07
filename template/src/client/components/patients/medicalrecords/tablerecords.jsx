@@ -14,6 +14,50 @@ import {
 const Tablerecords = () => {
   const [show, setShow] = useState(false);
 
+  const tableRecordsData = [
+    {
+      name: "Richard Wilson",
+      date: "11 Nov 2019",
+      time: "10.00 AM",
+      description: "Benzaxapine Croplex",
+      orderBy: "Your Self"
+    },
+    {
+      name: "Richard Wilson",
+      date: "11 Nov 2019",
+      time: "10.00 AM",
+      description: "Benzaxapine Croplex",
+      orderBy: "Your Self"
+    },
+    {
+      name: "Richard Wilson",
+      date: "11 Nov 2019",
+      time: "10.00 AM",
+      description: "Benzaxapine Croplex",
+      orderBy: "Your Self"
+    },
+    {
+      name: "Richard Wilson",
+      date: "11 Nov 2019",
+      time: "10.00 AM",
+      description: "Benzaxapine Croplex",
+      orderBy: "Your Self"
+    },
+    {
+      name: "Richard Wilson",
+      date: "11 Nov 2019",
+      time: "10.00 AM",
+      description: "Benzaxapine Croplex",
+      orderBy: "Your Self"
+    },
+    {
+      name: "Richard Wilson",
+      date: "11 Nov 2019",
+      time: "10.00 AM",
+      description: "Benzaxapine Croplex",
+      orderBy: "Your Self"
+    },
+  ]
   return (
     <div>
       <div className="row">
@@ -84,16 +128,17 @@ const Tablerecords = () => {
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Richard Wilson</td>
+                            {tableRecordsData.map((recordes, index) => { 
+                              return <tr key={`recordes${index}`}>
+                              <td>{index}</td>
+                              <td>{recordes.name}</td>
                               <td>
-                                11 Nov 2019{" "}
+                                {recordes.date}{" "}
                                 <span className="d-block text-info">
-                                  10.00 AM
+                                  {recordes.time}
                                 </span>
                               </td>
-                              <td>Benzaxapine Croplex</td>
+                              <td>{recordes.description}</td>
                               <td>
                                 <Link
                                   to="#"
@@ -103,7 +148,7 @@ const Tablerecords = () => {
                                   <i className="fa fa-download" />
                                 </Link>
                               </td>
-                              <td>Your Self</td>
+                              <td>{recordes.orderBy}</td>
                               <td>
                                 <Link
                                   to="#"
@@ -112,118 +157,8 @@ const Tablerecords = () => {
                                 </Link>
                               </td>
                             </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Vena</td>
-                              <td>
-                                3 Nov 2019{" "}
-                                <span className="d-block text-info">
-                                  11.00 AM
-                                </span>
-                              </td>
-                              <td>Rapalac Neuronium</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  title="Download attachment"
-                                  className="btn btn-primary btn-sm">
-                                  {" "}
-                                  <i className="fa fa-download" />
-                                </Link>
-                              </td>
-                              <td>Your Self</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  className="btn btn-sm bg-danger-light">
-                                  <i className="far fa-trash-alt" />
-                                </Link>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Tressie</td>
-                              <td>
-                                1 Nov 2019{" "}
-                                <span className="d-block text-info">
-                                  1.00 PM
-                                </span>
-                              </td>
-                              <td>Ombinazol Bonibamol</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  title="Download attachment"
-                                  className="btn btn-primary btn-sm">
-                                  {" "}
-                                  <i className="fa fa-download" />
-                                </Link>
-                              </td>
-                              <td>Your Self</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  className="btn btn-sm bg-danger-light">
-                                  <i className="far fa-trash-alt" />
-                                </Link>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>4</td>
-                              <td>Richard Wilson</td>
-                              <td>
-                                30 Oct 2019{" "}
-                                <span className="d-block text-info">
-                                  9.00 AM
-                                </span>
-                              </td>
-                              <td>Dantotate Dantodazole</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  title="Download attachment"
-                                  className="btn btn-primary btn-sm">
-                                  {" "}
-                                  <i className="fa fa-download" />
-                                </Link>
-                              </td>
-                              <td>Your Self</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  className="btn btn-sm bg-danger-light">
-                                  <i className="far fa-trash-alt" />
-                                </Link>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>5</td>
-                              <td>Christopher</td>
-                              <td>
-                                28 Oct 2019{" "}
-                                <span className="d-block text-info">
-                                  6.00 PM
-                                </span>
-                              </td>
-                              <td>Acetrace Amionel</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  title="Download attachment"
-                                  className="btn btn-primary btn-sm">
-                                  {" "}
-                                  <i className="fa fa-download" />
-                                </Link>
-                              </td>
-                              <td>Your Self</td>
-                              <td>
-                                <Link
-                                  to="#"
-                                  className="btn btn-sm bg-danger-light">
-                                  <i className="far fa-trash-alt" />
-                                </Link>
-                              </td>
-                            </tr>
+                            })}
+                            
                           </tbody>
                         </table>
                       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import DashboardSidebar from "../sidebar/sidebar.jsx";
 import IMG01 from "../../../../assets/images/patient.jpg";
 import StickyBox from "react-sticky-box";
@@ -7,6 +7,72 @@ import Footer from "../../../footer.jsx";
 import Header from "../../../header.jsx";
 
 const Profile = (props) => {
+  const [imageProfile, setImgProfile] = useState(null);
+
+  const firstNameRef = useRef(null);
+  const lastNameRef = useRef(null);
+  const dateBirthRef = useRef(null);
+  const bloodSelectRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  const addressRef = useRef(null);
+  const cityRef = useRef(null);
+  const stateRef = useRef(null);
+  const zipCodeRef = useRef(null);
+  const countryRef = useRef(null);
+
+  const handlerUpload = (e) => {
+    const image = e.target.files[0];
+    setImgProfile(image);
+  }
+  const handlerProfile = (e) => {
+    e.preventDefault();
+
+    const firstName = firstNameRef.current.value;
+    const lastName = lastNameRef.current.value;
+    const dateValue = dateBirthRef.current.value;
+    const bloodValue = bloodSelectRef.current.value;
+    const emailValue = emailRef.current.value;
+    const phoneValue = phoneRef.current.value;
+    const addressValue = addressRef.current.value;
+    const cityValue = cityRef.current.value;
+    const stateValue = stateRef.current.value;
+    const zipCodeValue = zipCodeRef.current.value;
+    const countryValue = countryRef.current.value;
+
+
+    let formData = new FormData();
+
+
+    formData.append("image", imageProfile);
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("date", dateValue);
+    formData.append("blood", bloodValue);
+    formData.append("email", emailValue);
+    formData.append("phone", phoneValue);
+    formData.append("address", addressValue);
+    formData.append("city", cityValue);
+    formData.append("state", stateValue);
+    formData.append("zipCode", zipCodeValue);
+    formData.append("country", countryValue);
+
+
+    firstNameRef.current.value = "";
+    lastNameRef.current.value = "";
+    dateBirthRef.current.value = "";
+    bloodSelectRef.current.value = "";
+    emailRef.current.value = "";
+    phoneRef.current.value = "";
+    addressRef.current.value = "";
+    cityRef.current.value = "";
+    stateRef.current.value = "";
+    zipCodeRef.current.value = "";
+    countryRef.current.value = "";
+    setImgProfile(null);
+    
+
+  }
   return (
     <div>
       <Header {...props} />
@@ -41,20 +107,20 @@ const Profile = (props) => {
             <div className="col-md-7 col-lg-8 col-xl-9">
               <div className="card">
                 <div className="card-body">
-                  <form>
+                  <form onSubmit={handlerProfile}>
                     <div className="row form-row">
                       <div className="col-12 col-md-12">
                         <div className="form-group">
                           <div className="change-avatar">
                             <div className="profile-img">
-                              <img src={IMG01} alt="User" />
+                              <img src={imageProfile ? URL.createObjectURL(imageProfile) : IMG01} alt="User" />
                             </div>
                             <div className="upload-img">
                               <div className="change-photo-btn">
                                 <span>
                                   <i className="fa fa-upload"></i> Upload Photo
                                 </span>
-                                <input type="file" className="upload" />
+                                <input type="file" className="upload" onChange={(e) => handlerUpload(e)} />
                               </div>
                               <small className="form-text text-muted">
                                 Allowed JPG, GIF or PNG. Max size of 2MB
@@ -69,7 +135,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="Richard"
+                            ref={firstNameRef}
                           />
                         </div>
                       </div>
@@ -79,7 +145,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="Wilson"
+                            ref={lastNameRef}
                           />
                         </div>
                       </div>
@@ -88,6 +154,7 @@ const Profile = (props) => {
                           <label>Date of Birth</label>
                           <div className="cal-icon">
                             <input
+                              ref={dateBirthRef}
                               type="text"
                               className="form-control datetimepicker"
                               defaultValue="24-07-1983"
@@ -98,7 +165,7 @@ const Profile = (props) => {
                       <div className="col-12 col-md-6">
                         <div className="form-group">
                           <label>Blood Group</label>
-                          <select className="form-select form-control">
+                          <select className="form-select form-control" ref={bloodSelectRef}>
                             <option>A-</option>
                             <option>A+</option>
                             <option>B-</option>
@@ -116,7 +183,7 @@ const Profile = (props) => {
                           <input
                             type="email"
                             className="form-control"
-                            defaultValue="richard@example.com"
+                            ref={emailRef}
                           />
                         </div>
                       </div>
@@ -125,7 +192,7 @@ const Profile = (props) => {
                           <label>Mobile</label>
                           <input
                             type="text"
-                            defaultValue="+1 202-555-0125"
+                            ref={phoneRef}
                             className="form-control"
                           />
                         </div>
@@ -136,7 +203,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="806 Twin Willow Lane"
+                            ref={addressRef}
                           />
                         </div>
                       </div>
@@ -146,7 +213,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="Old Forge"
+                            ref={cityRef}
                           />
                         </div>
                       </div>
@@ -156,7 +223,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="Newyork"
+                            ref={stateRef}
                           />
                         </div>
                       </div>
@@ -166,7 +233,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="13420"
+                            ref={zipCodeRef}
                           />
                         </div>
                       </div>
@@ -176,7 +243,7 @@ const Profile = (props) => {
                           <input
                             type="text"
                             className="form-control"
-                            defaultValue="United States"
+                            ref={countryRef}
                           />
                         </div>
                       </div>

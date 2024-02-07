@@ -1,14 +1,127 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import DashboardSidebar from "../dashboard/sidebar/sidebar.jsx";
 import { Modal } from "react-bootstrap";
 import StickyBox from "react-sticky-box";
 import { Link } from "react-router-dom";
 import Header from "../../header";
 import Footer from "../../footer";
-
+import Alert from '../../Alert/Alert'
 const MedicalDetails = (props) => {
-  const [show, setShow] = useState(false);
 
+  const [show, setShow] = useState(false);
+  const bmiRef = useRef(null);
+  const rateRef = useRef(null);
+  const weightRef = useRef(null);
+  const fbcRef = useRef(null);
+  const dateRef = useRef(null);
+  const [type, setType] = useState("");
+  const [message, setMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const [count, setCount] = useState(0);
+
+
+
+  const handlerMeical = (e) => {
+
+    e.preventDefault();
+
+    const bmiValue = bmiRef.current.value;
+    const rateValue = rateRef.current.value;
+    const weightValue = weightRef.current.value;
+    const fbcValue = fbcRef.current.value;
+    const dateValue = dateRef.current.value;
+
+
+    if (!bmiValue) {
+      setCount(1)
+      setMessage("The Bmi is requier")
+      setShowAlert(true);
+      setType("warnning")
+    }
+    if (rateValue === null) {
+      console.log("asd")
+    }
+    if (weightValue === null) {
+
+    }
+    if (fbcValue === null) {
+
+    }
+    if (dateValue === null) {
+
+    }
+
+    if (
+      bmiValue !== ""
+      && rateValue !== ""
+      && weightValue !== ""
+      && fbcValue !== ""
+      && dateValue !== "") {
+
+      let formData = new FormData();
+
+      formData.append("bmi", bmiValue);
+      formData.append("rate", rateValue);
+      formData.append("weight", weightValue);
+      formData.append("fbc", fbcValue);
+      formData.append("date", dateValue);
+
+
+      bmiRef.current.value = "";
+      rateRef.current.value = "";
+      weightRef.current.value = "";
+      fbcRef.current.value = "";
+      dateRef.current.value = "";
+    }
+
+  }
+  const medicalData = [
+    {
+      name: "Richard Wilson",
+      BMI: 23.7,
+      hearteRate: 89,
+      FBC: 140,
+      weight: "74kg",
+      date: "11 Nov 2019",
+      time: "10.00 AM"
+    },
+    {
+      name: "Richard Wilson",
+      BMI: 23.7,
+      hearteRate: 89,
+      FBC: 140,
+      weight: "74kg",
+      date: "11 Nov 2019",
+      time: "10.00 AM"
+    },
+    {
+      name: "Richard Wilson",
+      BMI: 23.7,
+      hearteRate: 89,
+      FBC: 140,
+      weight: "74kg",
+      date: "11 Nov 2019",
+      time: "10.00 AM"
+    },
+    {
+      name: "Richard Wilson",
+      BMI: 23.7,
+      hearteRate: 89,
+      FBC: 140,
+      weight: "74kg",
+      date: "11 Nov 2019",
+      time: "10.00 AM"
+    },
+    {
+      name: "Richard Wilson",
+      BMI: 23.7,
+      hearteRate: 89,
+      FBC: 140,
+      weight: "74kg",
+      date: "11 Nov 2019",
+      time: "10.00 AM"
+    }
+  ]
   return (
     <div>
       <Header {...props} />
@@ -75,171 +188,43 @@ const MedicalDetails = (props) => {
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td>Richard Wilson</td>
-                                  <td>23.7</td>
-                                  <td className="text-center">89</td>
-                                  <td className="text-center">140</td>
-                                  <td>74Kg</td>
-                                  <td>
-                                    11 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      10.00 AM
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <div className="table-action">
-                                      <Link
-                                        to="#edit_medical_form"
-                                        onClick={() => setShow(true)}
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="fas fa-edit" /> Edit
-                                      </Link>{" "}
-                                      &nbsp;
-                                      <Link
-                                        to="#"
-                                        className="btn btn-sm bg-danger-light"
-                                      >
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        Delete
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>2</td>
-                                  <td>Champagne</td>
-                                  <td>25.2</td>
-                                  <td className="text-center">92</td>
-                                  <td className="text-center">135</td>
-                                  <td>73Kg</td>
-                                  <td>
-                                    3 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      11.00 AM
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <div className="table-action">
-                                      <Link
-                                        to="#edit_medical_form"
-                                        onClick={() => setShow(true)}
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="fas fa-edit" /> Edit
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#"
-                                        className="btn btn-sm bg-danger-light"
-                                      >
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        Delete
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>3</td>
-                                  <td>Vena</td>
-                                  <td>24.5</td>
-                                  <td className="text-center">90</td>
-                                  <td className="text-center">125</td>
-                                  <td>73.5Kg</td>
-                                  <td>
-                                    1 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      1.00 PM
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <div className="table-action">
-                                      <Link
-                                        to="#edit_medical_form"
-                                        onClick={() => setShow(true)}
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="fas fa-edit" /> Edit
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#"
-                                        className="btn btn-sm bg-danger-light"
-                                      >
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        Delete
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>4</td>
-                                  <td>Tressie</td>
-                                  <td>24.2</td>
-                                  <td className="text-center">95</td>
-                                  <td className="text-center">128</td>
-                                  <td>10.2Kg</td>
-                                  <td>
-                                    30 Oct 2019{" "}
-                                    <span className="d-block text-info">
-                                      9.00 AM
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <div className="table-action">
-                                      <Link
-                                        to="#edit_medical_form"
-                                        onClick={() => setShow(true)}
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="fas fa-edit" /> Edit
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#"
-                                        className="btn btn-sm bg-danger-light"
-                                      >
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        Delete
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>5</td>
-                                  <td>Christopher</td>
-                                  <td>24.7</td>
-                                  <td className="text-center">99</td>
-                                  <td className="text-center">122</td>
-                                  <td>12.8Kg</td>
-                                  <td>
-                                    28 Oct 2019{" "}
-                                    <span className="d-block text-info">
-                                      6.00 PM
-                                    </span>
-                                  </td>
-                                  <td>
-                                    <div className="table-action">
-                                      <Link
-                                        to="#edit_medical_form"
-                                        onClick={() => setShow(true)}
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="fas fa-edit" /> Edit
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#"
-                                        className="btn btn-sm bg-danger-light"
-                                      >
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        Delete
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
+                                {medicalData.map((medical, index) => {
+                                  return <tr key={`medical_${index}`}>
+                                    <td>{index}</td>
+                                    <td>{medical.name}</td>
+                                    <td>{medical.BMI}</td>
+                                    <td className="text-center">{medical.hearteRate}</td>
+                                    <td className="text-center">{medical.FBC}</td>
+                                    <td>{medical.weight}</td>
+                                    <td>
+                                      {medical.date}{" "}
+                                      <span className="d-block text-info">
+                                        {medical.time}
+                                      </span>
+                                    </td>
+                                    <td>
+                                      <div className="table-action">
+                                        <Link
+                                          to="#edit_medical_form"
+                                          onClick={() => setShow(true)}
+                                          className="btn btn-sm bg-info-light"
+                                        >
+                                          <i className="fas fa-edit" /> Edit
+                                        </Link>{" "}
+                                        &nbsp;
+                                        <Link
+                                          to="#"
+                                          className="btn btn-sm bg-danger-light"
+                                        >
+                                          <i className="fas fa-trash-alt" />{" "}
+                                          Delete
+                                        </Link>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                })}
+
+
                               </tbody>
                             </table>
                           </div>
@@ -268,10 +253,9 @@ const MedicalDetails = (props) => {
           <div className="modal-body">
             <div>
               <form
-                action="#"
+                
                 encType="multipart/form-data"
-                autoComplete="off"
-                method="post"
+                onSubmit={handlerMeical}
               >
                 <div className="modal-body">
                   <input type="hidden" defaultValue name="id" />
@@ -341,6 +325,14 @@ const MedicalDetails = (props) => {
         </Modal.Body>
       </Modal>
       <Footer {...props} />
+      <Alert
+        message={message}
+        count={count}
+        show={showAlert}
+        setShow={setShowAlert}
+        setCount={setCount}
+        type={type} />
+
     </div>
   );
 };

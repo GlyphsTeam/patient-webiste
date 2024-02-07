@@ -27,10 +27,69 @@ import Graph4 from "../../../assets/images/shapes/graph-04.png";
 
 import Footer from "../../footer";
 import Header from "../../header.jsx";
+import { IMG010 } from "../chat/img.jsx";
 
 const Dashboard = (props) => {
-  const [count, setCount] = useState(1, 2, 3, 4);
+  // const [count, setCount] = useState(1, 2, 3, 4);
 
+  const doctorList = [
+    {
+      imgSrc: IMG01,
+      name: "Dr. Ruby Perrin",
+      type: "Dental",
+      date: "14 Nov 2019",
+      time: "10.00 AM",
+      bookingData: "12 Nov 2019",
+      amount: "160",
+      followUp: "16 Nov 2019",
+      status: true,
+    },
+    {
+      imgSrc: IMG07,
+      name: "Dr. Ruby Perrin",
+      type: "Dental",
+      date: "14 Nov 2019",
+      time: "10.00 AM",
+      bookingData: "12 Nov 2019",
+      amount: "160",
+      followUp: "16 Nov 2019",
+      status: true,
+    },
+    {
+      imgSrc: IMG08,
+      name: "Dr. Ruby Perrin",
+      type: "Dental",
+      date: "14 Nov 2019",
+      time: "10.00 AM",
+      bookingData: "12 Nov 2019",
+      amount: "160",
+      followUp: "16 Nov 2019",
+      status: true,
+    },
+    {
+      imgSrc: IMG09,
+      name: "Dr. Ruby Perrin",
+      type: "Dental",
+      date: "14 Nov 2019",
+      time: "10.00 AM",
+      bookingData: "12 Nov 2019",
+      amount: "160",
+      followUp: "16 Nov 2019",
+      status: true,
+    },
+    {
+      imgSrc: IMG010,
+      name: "Dr. Ruby Perrin",
+      type: "Dental",
+      date: "14 Nov 2019",
+      time: "10.00 AM",
+      bookingData: "12 Nov 2019",
+      amount: "160",
+      followUp: "16 Nov 2019",
+      status: true,
+    },
+
+  ]
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -280,258 +339,59 @@ const Dashboard = (props) => {
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td>
-                                    <h2 className="table-avatar">
-                                      <Link
-                                        to="/patient/doctor-profile"
-                                        className="avatar avatar-sm me-2"
-                                      >
-                                        <img
-                                          className="avatar-img rounded-circle"
-                                          src={IMG01}
-                                          alt="User"
-                                        />
-                                      </Link>
-                                      <Link to="/patient/doctor-profile">
-                                        Dr. Ruby Perrin <span>Dental</span>
-                                      </Link>
-                                    </h2>
-                                  </td>
-                                  <td>
-                                    14 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      10.00 AM
-                                    </span>
-                                  </td>
-                                  <td>12 Nov 2019</td>
-                                  <td>$160</td>
-                                  <td>16 Nov 2019</td>
-                                  <td>
-                                    <span className="badge rounded-pill bg-success-light">
-                                      Confirm
-                                    </span>
-                                  </td>
-                                  <td className="text-end">
-                                    <div className="table-action">
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-primary-light"
-                                      >
-                                        <i className="fas fa-print"></i> Print
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="far fa-eye"></i> View
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
+                                {doctorList.map((doctor, index) => {
+                                  return <tr key={`doctor${index}`}>
+                                    <td>
+                                      <h2 className="table-avatar">
+                                        <Link
+                                          to="/patient/doctor-profile"
+                                          className="avatar avatar-sm me-2"
+                                        >
+                                          <img
+                                            className="avatar-img rounded-circle"
+                                            src={doctor.imgSrc}
+                                            alt="User"
+                                          />
+                                        </Link>
+                                        <Link to="/patient/doctor-profile">
+                                          {doctor.name} <span>{doctor.type}</span>
+                                        </Link>
+                                      </h2>
+                                    </td>
+                                    <td>
+                                      {doctor.date}{" "}
+                                      <span className="d-block text-info">
+                                        {doctor.time}
+                                      </span>
+                                    </td>
+                                    <td>{doctor.bookingData}</td>
+                                    <td>${doctor.amount}</td>
+                                    <td>{doctor.followUp}</td>
+                                    <td>
+                                      <span className="badge rounded-pill bg-success-light">
+                                        Confirm
+                                      </span>
+                                    </td>
+                                    <td className="text-end">
+                                      <div className="table-action">
+                                        <Link
+                                          to="#0"
+                                          className="btn btn-sm bg-primary-light"
+                                        >
+                                          <i className="fas fa-print"></i> Print
+                                        </Link>
+                                        &nbsp;
+                                        <Link
+                                          to="#0"
+                                          className="btn btn-sm bg-info-light"
+                                        >
+                                          <i className="far fa-eye"></i> View
+                                        </Link>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                })}
 
-                                <tr>
-                                  <td>
-                                    <h2 className="table-avatar">
-                                      <Link
-                                        to="/patient/doctor-profile"
-                                        className="avatar avatar-sm me-2"
-                                      >
-                                        <img
-                                          className="avatar-img rounded-circle"
-                                          src={IMG07}
-                                          alt="User"
-                                        />
-                                      </Link>
-                                      <Link to="/patient/doctor-profile">
-                                        Dr. Linda Tobin <span>Neurology</span>
-                                      </Link>
-                                    </h2>
-                                  </td>
-                                  <td>
-                                    8 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      6.00 PM
-                                    </span>
-                                  </td>
-                                  <td>6 Nov 2019</td>
-                                  <td>$450</td>
-                                  <td>10 Nov 2019</td>
-                                  <td>
-                                    <span className="badge rounded-pill bg-success-light">
-                                      Confirm
-                                    </span>
-                                  </td>
-                                  <td className="text-end">
-                                    <div className="table-action">
-                                      <Link
-                                        className="btn btn-sm bg-primary-light"
-                                        to="#0"
-                                      >
-                                        <i className="fas fa-print"></i> Print
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        className="btn btn-sm bg-info-light"
-                                        to="#0"
-                                      >
-                                        <i className="far fa-eye"></i> View
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <h2 className="table-avatar">
-                                      <Link
-                                        to="/patient/doctor-profile"
-                                        className="avatar avatar-sm me-2"
-                                      >
-                                        <img
-                                          className="avatar-img rounded-circle"
-                                          src={IMG08}
-                                          alt="User"
-                                        />
-                                      </Link>
-                                      <Link to="/patient/doctor-profile">
-                                        Dr. Paul Richard{" "}
-                                        <span>Dermatology</span>
-                                      </Link>
-                                    </h2>
-                                  </td>
-                                  <td>
-                                    7 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      9.00 PM
-                                    </span>
-                                  </td>
-                                  <td>7 Nov 2019</td>
-                                  <td>$275</td>
-                                  <td>9 Nov 2019</td>
-                                  <td>
-                                    <span className="badge rounded-pill bg-success-light">
-                                      Confirm
-                                    </span>
-                                  </td>
-                                  <td className="text-end">
-                                    <div className="table-action">
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-primary-light"
-                                      >
-                                        <i className="fas fa-print"></i> Print
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="far fa-eye"></i> View
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <h2 className="table-avatar">
-                                      <Link
-                                        to="/patient/doctor-profile"
-                                        className="avatar avatar-sm me-2"
-                                      >
-                                        <img
-                                          className="avatar-img rounded-circle"
-                                          src={IMG09}
-                                          alt="User"
-                                        />
-                                      </Link>
-                                      <Link to="/patient/doctor-profile">
-                                        Dr. John Gibbs <span>Dental</span>
-                                      </Link>
-                                    </h2>
-                                  </td>
-                                  <td>
-                                    6 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      8.00 PM
-                                    </span>
-                                  </td>
-                                  <td>4 Nov 2019</td>
-                                  <td>$600</td>
-                                  <td>8 Nov 2019</td>
-                                  <td>
-                                    <span className="badge rounded-pill bg-success-light">
-                                      Confirm
-                                    </span>
-                                  </td>
-                                  <td className="text-end">
-                                    <div className="table-action">
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-primary-light"
-                                      >
-                                        <i className="fas fa-print"></i> Print
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="far fa-eye"></i> View
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <h2 className="table-avatar">
-                                      <Link
-                                        to="/patient/doctor-profile"
-                                        className="avatar avatar-sm me-2"
-                                      >
-                                        <img
-                                          className="avatar-img rounded-circle"
-                                          src={IMG10}
-                                          alt="User "
-                                        />
-                                      </Link>
-                                      <Link to="/patient/doctor-profile">
-                                        Dr. Olga Barlow <span>Dental</span>
-                                      </Link>
-                                    </h2>
-                                  </td>
-                                  <td>
-                                    5 Nov 2019{" "}
-                                    <span className="d-block text-info">
-                                      5.00 PM
-                                    </span>
-                                  </td>
-                                  <td>1 Nov 2019</td>
-                                  <td>$100</td>
-                                  <td>7 Nov 2019</td>
-                                  <td>
-                                    <span className="badge rounded-pill bg-success-light">
-                                      Confirm
-                                    </span>
-                                  </td>
-                                  <td className="text-end">
-                                    <div className="table-action">
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-primary-light"
-                                      >
-                                        <i className="fas fa-print"></i> Print
-                                      </Link>
-                                      &nbsp;
-                                      <Link
-                                        to="#0"
-                                        className="btn btn-sm bg-info-light"
-                                      >
-                                        <i className="far fa-eye"></i> View
-                                      </Link>
-                                    </div>
-                                  </td>
-                                </tr>
                               </tbody>
                             </table>
                           </div>

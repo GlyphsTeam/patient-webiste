@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
-import Priceingplan from "./priceingplan";
+import React, { useState } from "react";
 import Homebanner from "./homebanner";
 import Speacialities from "./speacialities";
 import Worksection from "./worksection";
@@ -19,6 +18,33 @@ function Generalhome(props) {
   if (props.location.pathname === "/index") {
     require("../../../assets/css/feather.css");
   }
+  const [faqData, setFqaData] = useState([
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+  ])
 
   return (
     <>
@@ -45,7 +71,7 @@ function Generalhome(props) {
           <Appsection />
           {/* /App Section */}
           {/* FAQ Section */}
-          <Faq />
+          <Faq faqData={faqData} setFqaData={setFqaData}/>
           {/* /FAQ Section */}
           {/* Testimonial Section */}
           <Testimonial />

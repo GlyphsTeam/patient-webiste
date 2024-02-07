@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../header";
 import Title from '../../title/Title';
 import AboutLeft from './aboutLeft';
 import AboutRight from './aboutRight'
 import Footer from "../../footer";
+import Faq from '../../home/general/faq';
 import CardDoctor from "./cardDoctor";
 import {
   choose01,
@@ -31,6 +32,33 @@ import AboutCard from "./aboutCard";
 import { doctor_06 } from "../../imagepath";
 
 const Aboutus = (props) => {
+  const [faqData, setFqaData] = useState([
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    {
+      show: false,
+      question: "Can i make an Appointment Online with White Plains Hospital Kendi?",
+      answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+  ])
   let pathname = props.location.pathname;
 
   if (props.location.pathname === "/pages/aboutus") {
@@ -83,7 +111,7 @@ const Aboutus = (props) => {
       category: "Cardiology",
       rate: 4.5,
       rateValue: 35,
-      location:"Georgia, USA"
+      location: "Georgia, USA"
 
     },
     {
@@ -94,7 +122,7 @@ const Aboutus = (props) => {
       category: "Cardiology",
       rate: 4.5,
       rateValue: 35,
-      location:"Georgia, USA"
+      location: "Georgia, USA"
 
     },
     {
@@ -105,7 +133,7 @@ const Aboutus = (props) => {
       category: "Cardiology",
       rate: 4.5,
       rateValue: 35,
-      location:"Georgia, USA"
+      location: "Georgia, USA"
 
     },
     {
@@ -116,7 +144,7 @@ const Aboutus = (props) => {
       category: "Cardiology",
       rate: 4.5,
       rateValue: 35,
-      location:"Georgia, USA"
+      location: "Georgia, USA"
 
     },
 
@@ -237,15 +265,15 @@ const Aboutus = (props) => {
             <div className="row">
               {/* Doctor Item */}
               {doctors.map((doctor) => {
-                return <CardDoctor 
-                category={doctor.category}
-                doctorImg={doctor.img}
-                doctorName={doctor.name}
-                locationUrl={doctor.location}
-                price={doctor.price}
-                rate={doctor.rate}
-                rateValue={doctor.rateValue}
-                key={doctor.id}
+                return <CardDoctor
+                  category={doctor.category}
+                  doctorImg={doctor.img}
+                  doctorName={doctor.name}
+                  locationUrl={doctor.location}
+                  price={doctor.price}
+                  rate={doctor.rate}
+                  rateValue={doctor.rateValue}
+                  key={doctor.id}
                 />
               })}
               {/* /Doctor Item */}
@@ -268,199 +296,8 @@ const Aboutus = (props) => {
               </div>
             </div>
             <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="faq-img">
-                  <img src={faqimg} className="img-fluid" alt="img" />
-                  <div className="faq-patients-count">
-                    <div className="faq-smile-img">
-                      <img src={smilingicon} alt="icon" />
-                    </div>
-                    <div className="faq-patients-content">
-                      <h4>
-                        <span className="count-digit">
-                          <CountUp start={1} end={95} />
-                        </span>
-                        k+
-                      </h4>
-                      <p>Happy Patients</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 col-md-12">
-                <div className="faq-info">
-                  <div className="accordion" id="accordionExample">
-                    {/* FAQ Item */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingOne">
-                        <Link
-                          to="#"
-                          className="accordion-button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                          Can i make an Appointment Online with White Plains
-                          Hospital Kendi?
-                        </Link>
-                      </h2>
-                      <div
-                        id="collapseOne"
-                        className="accordion-collapse collapse show"
-                        aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div className="accordion-body">
-                          <div className="accordion-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* /FAQ Item */}
-                    {/* FAQ Item */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingTwo">
-                        <Link
-                          to="#"
-                          className="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo"
-                        >
-                          Can i make an Appointment Online with White Plains
-                          Hospital Kendi?
-                        </Link>
-                      </h2>
-                      <div
-                        id="collapseTwo"
-                        className="accordion-collapse collapse"
-                        aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div className="accordion-body">
-                          <div className="accordion-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* /FAQ Item */}
-                    {/* FAQ Item */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingThree">
-                        <Link
-                          to="#"
-                          className="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          Can i make an Appointment Online with White Plains
-                          Hospital Kendi?
-                        </Link>
-                      </h2>
-                      <div
-                        id="collapseThree"
-                        className="accordion-collapse collapse"
-                        aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div className="accordion-body">
-                          <div className="accordion-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* /FAQ Item */}
-                    {/* FAQ Item */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingFour">
-                        <Link
-                          to="#"
-                          className="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseFour"
-                          aria-expanded="false"
-                          aria-controls="collapseFour"
-                        >
-                          Can i make an Appointment Online with White Plains
-                          Hospital Kendi?
-                        </Link>
-                      </h2>
-                      <div
-                        id="collapseFour"
-                        className="accordion-collapse collapse"
-                        aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div className="accordion-body">
-                          <div className="accordion-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* /FAQ Item */}
-                    {/* FAQ Item */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingFive">
-                        <Link
-                          to="#"
-                          className="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseFive"
-                          aria-expanded="false"
-                          aria-controls="collapseFive"
-                        >
-                          Can i make an Appointment Online with White Plains
-                          Hospital Kendi?
-                        </Link>
-                      </h2>
-                      <div
-                        id="collapseFive"
-                        className="accordion-collapse collapse"
-                        aria-labelledby="headingFive"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div className="accordion-body">
-                          <div className="accordion-content">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* /FAQ Item */}
-                  </div>
-                </div>
+              <div className="col-lg-12 col-md-6">
+                <Faq faqData={faqData} setFqaData={setFqaData}/>
               </div>
             </div>
           </div>

@@ -4392,7 +4392,7 @@ table .table-hover tbody tr:hover td {
   display: block;
   width: 100%;
   z-index: 9999;
-  background: #F2F6F6;
+  background: var(--light5-beige);
   box-shadow: inherit;
 }
 .header-one.header-space .header-nav {
@@ -6995,7 +6995,7 @@ html.menu-opened body {
 }
 
 .footer-one {
-  background: #F2F6F6;
+  background: var(--light5-beige);
 }
 .footer-one .footer-top {
   margin: 0;
@@ -9138,7 +9138,7 @@ html.menu-opened body {
 }
 
 .banner-section {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   padding: 100px 0 30px;
   position: relative;
   overflow: hidden;
@@ -9624,8 +9624,8 @@ html.menu-opened body {
   padding-bottom: 18px;
 }
 .specialities-section-one .specialities-img span {
-  background: #F2F6F6;
-  border: 1px solid #F2F6F6;
+  background: var(--light5-beige);
+  border: 1px solid var(--light5-beige);
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -9753,7 +9753,7 @@ html.menu-opened body {
 }
 
 .doctors-section {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   margin: 0;
   padding: 80px 0;
   position: relative;
@@ -9990,7 +9990,7 @@ html.menu-opened body {
 }
 
 .work-section {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   margin: 0;
   padding: 80px 0 0;
   position: relative;
@@ -10137,7 +10137,7 @@ html.menu-opened body {
 }
 
 .work-section {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   margin: 0;
   padding: 80px 0 0;
   position: relative;
@@ -10791,7 +10791,7 @@ html.menu-opened body {
 }
 
 .footer-1.footer {
-  background-color: #F2F6F6;
+  background-color: var(--light5-beige);
 }
 .footer-1.footer .footer-top .footer-title {
   color: var(--reg-color);
@@ -16223,7 +16223,7 @@ span.call-duration.float-end {
 }
 
 .breadcrumb-bar-one {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   background-repeat: no-repeat;
   padding-top: 70px;
   min-height: 300px;
@@ -16674,7 +16674,7 @@ span.call-duration.float-end {
 }
 
 .filter-header {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   border-radius: 10px 10px 0px 0px;
   padding: 15px 20px;
 }
@@ -16938,7 +16938,7 @@ span.call-duration.float-end {
   width: 94px;
 }
 .doctor-filter-select .select2-container .select2-selection--single {
-  background-color: #F2F6F6;
+  background-color: var(--light5-beige);
   border: 1px solid #F3F4F6;
   height: 32px;
 }
@@ -24586,7 +24586,7 @@ span.call-duration.float-end {
 .blog-section-fourteen {
   position: relative;
   padding: 80px 0;
-  background: #F2F6F6;
+  background: var(--light5-beige);
 }
 @media (max-width: 1199.98px) {
   .blog-section-fourteen {
@@ -24738,13 +24738,13 @@ span.call-duration.float-end {
 }
 @media (max-width: 1199.98px) {
   .choose-us-fourteen .you-get-list ul li .get-list-content {
-    background: #F2F6F6;
+    background: var(--light5-beige);
     border-radius: 30px;
   }
 }
 @media (max-width: 991.98px) {
   .choose-us-fourteen .you-get-list ul li .get-list-content {
-    background: #F2F6F6;
+    background: var(--light5-beige);
     border-radius: 30px;
   }
 }
@@ -24758,13 +24758,13 @@ span.call-duration.float-end {
 }
 @media (max-width: 1199.98px) {
   .choose-us-fourteen .you-get-list ul li .get-list-content.second-bg {
-    background: #F2F6F6;
+    background: var(--light5-beige);
     border-radius: 30px;
   }
 }
 @media (max-width: 991.98px) {
   .choose-us-fourteen .you-get-list ul li .get-list-content.second-bg {
-    background: #F2F6F6;
+    background: var(--light5-beige);
     border-radius: 30px;
   }
 }
@@ -24827,7 +24827,7 @@ span.call-duration.float-end {
 .clients-section-fourteen {
   position: relative;
   padding: 80px 0 150px 0;
-  background: #F2F6F6;
+  background: var(--light5-beige);
 }
 @media (max-width: 1199.98px) {
   .clients-section-fourteen {
@@ -24954,7 +24954,7 @@ span.call-duration.float-end {
 }
 
 .contact-section-fourteen {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   margin: 0 0 -200px 0;
 }
 .contact-section-fourteen .contact-schedule-main {
@@ -33785,7 +33785,7 @@ ul.benifits-col li i {
 }
 
 .pricing-card {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   border: 1px solid #E5E7EB;
   border-radius: 24px;
   -webkit-transition: 0.7s;
@@ -34159,7 +34159,7 @@ ul.benifits-col li i {
 }
 
 .breadcrumb-bar-two {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   background-repeat: no-repeat;
   padding-top: 70px;
   min-height: 300px;
@@ -34606,7 +34606,7 @@ ul.benifits-col li i {
 }
 
 .testimonial-section {
-  background: #F2F6F6;
+  background: var(--light5-beige);
   margin: 0;
   padding: 80px 0;
   position: relative;
