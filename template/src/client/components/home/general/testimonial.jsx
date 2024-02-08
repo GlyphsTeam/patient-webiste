@@ -1,7 +1,7 @@
 import React from "react";
-import { client_01, client_02, client_03, client_04 } from "../../imagepath";
+import { client_01 } from "../../imagepath";
 import Slider from "react-slick";
-
+import TestimonialCard from "./TestimonialCard";
 function Testimonial() {
   const settings = {
     arrows: true,
@@ -34,6 +34,48 @@ function Testimonial() {
       },
     ],
   };
+  const testimonialData = [
+    {
+      imgSrc: client_01,
+      title: "Testimonials",
+      question: "What Our Client Says",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      name: "John Doe",
+      city: " New York"
+    },
+    {
+      imgSrc: client_01,
+      title: "Testimonials",
+      question: "What Our Client Says",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      name: "John Doe",
+      city: " New York"
+    },
+    {
+      imgSrc: client_01,
+      title: "Testimonials",
+      question: "What Our Client Says",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      name: "John Doe",
+      city: " New York"
+    },
+    {
+      imgSrc: client_01,
+      title: "Testimonials",
+      question: "What Our Client Says",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      name: "John Doe",
+      city: " New York"
+    },
+    {
+      imgSrc: client_01,
+      title: "Testimonials",
+      question: "What Our Client Says",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      name: "John Doe",
+      city: " New York"
+    },
+  ]
   return (
     <>
       <section className="testimonial-section">
@@ -42,141 +84,17 @@ function Testimonial() {
             <div className="col-md-12">
               <div className="testimonial-slider slick">
                 <Slider {...settings}>
-                  <div className="testimonial-grid">
-                    <div className="testimonial-info">
-                      <div className="testimonial-img">
-                        <img src={client_01} className="img-fluid" alt="" />
-                      </div>
-                      <div className="testimonial-content">
-                        <div className="section-header section-inner-header testimonial-header">
-                          <h5>Testimonials</h5>
-                          <h2>What Our Client Says</h2>
-                        </div>
-                        <div className="testimonial-details">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur.
-                          </p>
-                          <h6>
-                            <span>John Doe</span> New York
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial-grid">
-                    <div className="testimonial-info">
-                      <div className="testimonial-img">
-                        <img src={client_02} className="img-fluid" alt="" />
-                      </div>
-                      <div className="testimonial-content">
-                        <div className="section-header section-inner-header testimonial-header">
-                          <h5>Testimonials</h5>
-                          <h2>What Our Client Says</h2>
-                        </div>
-                        <div className="testimonial-details">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur.
-                          </p>
-                          <h6>
-                            <span>Amanda Warren</span> Florida
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial-grid">
-                    <div className="testimonial-info">
-                      <div className="testimonial-img">
-                        <img src={client_03} className="img-fluid" alt="" />
-                      </div>
-                      <div className="testimonial-content">
-                        <div className="section-header section-inner-header testimonial-header">
-                          <h5>Testimonials</h5>
-                          <h2>What Our Client Says</h2>
-                        </div>
-                        <div className="testimonial-details">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur.
-                          </p>
-                          <h6>
-                            <span>Betty Carlson</span> Georgia
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial-grid">
-                    <div className="testimonial-info">
-                      <div className="testimonial-img">
-                        <img src={client_04} className="img-fluid" alt="" />
-                      </div>
-                      <div className="testimonial-content">
-                        <div className="section-header section-inner-header testimonial-header">
-                          <h5>Testimonials</h5>
-                          <h2>What Our Client Says</h2>
-                        </div>
-                        <div className="testimonial-details">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur.
-                          </p>
-                          <h6>
-                            <span>Veronica</span> California
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial-grid">
-                    <div className="testimonial-info">
-                      <div className="testimonial-img">
-                        <img src={client_01} className="img-fluid" alt="" />
-                      </div>
-                      <div className="testimonial-content">
-                        <div className="section-header section-inner-header testimonial-header">
-                          <h5>Testimonials</h5>
-                          <h2>What Our Client Says</h2>
-                        </div>
-                        <div className="testimonial-details">
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur.
-                          </p>
-                          <h6>
-                            <span>Richard</span> Michigan
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {testimonialData.map((testimonial, index) => {
+                    return <TestimonialCard
+                      city={testimonial.city}
+                      description={testimonial.description}
+                      imgSrc={testimonial.imgSrc}
+                      name={testimonial.name}
+                      question={testimonial.question}
+                      title={testimonial.title}
+                      key={`testimonial_${index}`}
+                    />
+                  })}
                 </Slider>
               </div>
             </div>

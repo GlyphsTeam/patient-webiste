@@ -5,7 +5,8 @@ import StickyBox from "react-sticky-box";
 import { Link } from "react-router-dom";
 import Header from "../../header";
 import Footer from "../../footer";
-import Alert from '../../Alert/Alert'
+import Alert from '../../Alert/Alert';
+
 const MedicalDetails = (props) => {
 
   const [show, setShow] = useState(false);
@@ -20,44 +21,48 @@ const MedicalDetails = (props) => {
   const [count, setCount] = useState(0);
 
 
-
+  const showAlertWithMessage = (message, alertType) => {
+     setCount(1); 
+     setMessage(message); 
+     setShowAlert(true); 
+     setType(alertType); 
+    };
   const handlerMeical = (e) => {
 
     e.preventDefault();
 
-    const bmiValue = bmiRef.current.value;
-    const rateValue = rateRef.current.value;
-    const weightValue = weightRef.current.value;
-    const fbcValue = fbcRef.current.value;
-    const dateValue = dateRef.current.value;
-
-
-    if (!bmiValue) {
-      setCount(1)
-      setMessage("The Bmi is requier")
-      setShowAlert(true);
-      setType("warnning")
+    const bmiValue = bmiRef.current ? bmiRef.current.value : null;
+    const rateValue = rateRef.current ? rateRef.current.value : null;
+    const weightValue = weightRef.current ? weightRef.current.value : null;
+    const fbcValue = fbcRef.current ? fbcRef.current.value : null;
+    const dateValue = dateRef.current ? dateRef.current.value : null;
+  
+    if (dateRef.current.value === "") {
+      showAlertWithMessage("The dateValue is required", "warning");
     }
-    if (rateValue === null) {
-      console.log("asd")
+    if (fbcRef.current.value === "") {
+      showAlertWithMessage("The fbcValue is required", "warning");
     }
-    if (weightValue === null) {
-
+    if (weightRef.current.value  === "") {
+      showAlertWithMessage("The weightValue is required", "warning");
     }
-    if (fbcValue === null) {
-
+    if (rateRef.current.value === "") {
+      showAlertWithMessage("The rateValue is required", "warning");
     }
-    if (dateValue === null) {
-
+    if (bmiRef.current.value === "") {
+      showAlertWithMessage("The Bmi is required", "warning");
     }
+   
+    
+  
 
     if (
-      bmiValue !== ""
-      && rateValue !== ""
-      && weightValue !== ""
-      && fbcValue !== ""
-      && dateValue !== "") {
-
+      bmiValue !== null
+      && rateValue !== null
+      && weightValue !== null
+      && fbcValue !== null
+      && dateValue !== null) {
+    
       let formData = new FormData();
 
       formData.append("bmi", bmiValue);
@@ -253,13 +258,11 @@ const MedicalDetails = (props) => {
           <div className="modal-body">
             <div>
               <form
-                
-                encType="multipart/form-data"
                 onSubmit={handlerMeical}
               >
                 <div className="modal-body">
                   <input type="hidden" defaultValue name="id" />
-                  <input type="hidden" defaultValue="insert" name="method" />
+                  <input type="hidden"  name="method" />
                   <div className="form-group">
                     <label className="control-label mb-10">
                       {" "}
@@ -269,7 +272,7 @@ const MedicalDetails = (props) => {
                       type="text"
                       name="bmi"
                       className="form-control"
-                      defaultValue="23.7"
+                      ref={bmiRef}
                     />
                   </div>
                   <div className="form-group">
@@ -278,7 +281,8 @@ const MedicalDetails = (props) => {
                       type="text"
                       name="hr"
                       className="form-control"
-                      defaultValue={89}
+                      ref={rateRef}
+                      
                     />
                   </div>
                   <div className="form-group">
@@ -287,7 +291,8 @@ const MedicalDetails = (props) => {
                       type="text"
                       name="Weight"
                       className="form-control"
-                      defaultValue={74}
+                      ref={weightRef}
+                    
                     />
                   </div>
                   <div className="form-group">
@@ -296,7 +301,8 @@ const MedicalDetails = (props) => {
                       type="text"
                       name="Fbc"
                       className="form-control"
-                      defaultValue={140}
+                      ref={fbcRef}
+                      
                     />
                   </div>
                   <div className="form-group">
@@ -305,9 +311,8 @@ const MedicalDetails = (props) => {
                       type="text"
                       name="dob"
                       id="editdob"
-                      defaultValue="11/11/2019"
-                      readOnly
                       className="form-control"
+                      ref={dateRef}
                     />
                   </div>
                 </div>

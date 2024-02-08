@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import loginBanner from '../../assets/images/login-banner.png';
 import Logo from "../../assets/images/logo.png";
 // import camera from '../../assets/images/icons/camera.svg';
@@ -19,44 +19,69 @@ import {
   setRate,
   setWeight,
 } from '../../../store/Register/register';
-const Patientregisterstepfive = () => {
+import Alert from "../Alert/Alert";
+const Patientregisterstepfive = () => 
+{
   const dispatch = useDispatch();
   const history = useHistory();
   const registerState = useSelector((state) => state.register);
+  const [type, setType] = useState("");
+  const [message, setMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const [count, setCount] = useState(0);
 
   const hanlderSubmit = (e) => {
     e.preventDefault();
+    const city = e.target.city.value;
+    const state = e.target.state.value;
 
-    let formData = new FormData();
+    if (state === "") {
+      setCount(1);
+      setType("warning");
+      setMessage("The state field is required");
+      setShowAlert(true);
+    }
+    
+    if (city === "") {
+      setCount(1);
+      setType("warning");
+      setMessage("The city field is required");
+      setShowAlert(true);
+    }
+    
+    if (city !== "" && state !== "") {
 
-    formData.append("name", registerState?.name);
-    formData.append("phone", registerState?.phone);
-    formData.append("password", registerState.password);
-    formData.append("image", registerState.imgProfile);
-    formData.append("age", registerState.age);
-    formData.append("bloodType", registerState.bloodType);
-    formData.append("location", registerState.location);
-    formData.append("gender", registerState.gender);
-    formData.append("height", registerState.height);
-    formData.append("weight", registerState.weight);
-    formData.append("rate", registerState.rate);
-    formData.append("state", registerState.state);
+      let formData = new FormData();
+
+      formData.append("name", registerState?.name);
+      formData.append("phone", registerState?.phone);
+      formData.append("password", registerState.password);
+      formData.append("image", registerState.imgProfile);
+      formData.append("age", registerState.age);
+      formData.append("bloodType", registerState.bloodType);
+      formData.append("location", registerState.location);
+      formData.append("gender", registerState.gender);
+      formData.append("height", registerState.height);
+      formData.append("weight", registerState.weight);
+      formData.append("rate", registerState.rate);
+      formData.append("state", registerState.state);
 
 
-    dispatch(setAge(""));
-    dispatch(setBloodType(""));
-    dispatch(setPasswordRegister(""));
-    dispatch(setGenderRegister(""));
-    dispatch(setWeight(""));
-    dispatch(setImgProfile(null));
-    dispatch(setRate(""));
-    dispatch(setLocation(""));
-    dispatch(setState(""));
-    dispatch(setHeight(""));
-    dispatch(setPhoneRegister(""));
-    dispatch(setNameRegister(""));
+      dispatch(setAge(""));
+      dispatch(setBloodType(""));
+      dispatch(setPasswordRegister(""));
+      dispatch(setGenderRegister(""));
+      dispatch(setWeight(""));
+      dispatch(setImgProfile(null));
+      dispatch(setRate(""));
+      dispatch(setLocation(""));
+      dispatch(setState(""));
+      dispatch(setHeight(""));
+      dispatch(setPhoneRegister(""));
+      dispatch(setNameRegister(""));
 
-    history.push("/patient/dashboard")
+      history.push("/patient/dashboard")
+    }
   }
 
   return (
@@ -109,11 +134,11 @@ const Patientregisterstepfive = () => {
                           <label>Select City</label>
                           <select
                             className="form-select form-control"
-                            id="heart_rate"
-                            name="heart_rate"
+                            id="city"
+                            name="city"
                             tabIndex={-1}
                             aria-hidden="true"
-                            onChange={(e) => dispatch(setLocation(e.target.value))}
+                          // onChange={(e) => dispatch(setLocation(e.target.value))}
                           >
                             <option value="">Select Your City</option>
                             <option value={1}>City 1</option>
@@ -124,11 +149,11 @@ const Patientregisterstepfive = () => {
                           <label>Select State</label>
                           <select
                             className="form-select form-control"
-                            id="bp"
-                            name="bp"
+                            id="state"
+                            name="state"
                             tabIndex={-1}
                             aria-hidden="true"
-                            onChange={(e) => dispatch(setState(e.target.value))}
+                          // onChange={(e) => dispatch(setState(e.target.value))}
                           >
                             <option value="">Select Your State</option>
                             <option value={1}>State 1</option>
@@ -157,6 +182,14 @@ const Patientregisterstepfive = () => {
         </div>
         {/* /Page Content */}
       </>
+      <Alert
+        count={count}
+        message={message}
+        setCount={setCount}
+        setShow={setShowAlert}
+        show={showAlert}
+        type={type}
+      />
     </>
   );
 };

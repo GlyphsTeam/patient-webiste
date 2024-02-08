@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useHistory, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setNameRegister, setPhoneRegister, setPasswordRegister } from '../../../store/Register/register';
+import Alert from '../Alert/Alert';
 
 function FormRegsiter() {
     const name = useRef(null);
@@ -10,74 +11,119 @@ function FormRegsiter() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const handlerRegsiter = () => {
+    const [type, setType] = useState("");
+    const [message, setMessage] = useState("");
+    const [showAlert, setShowAlert] = useState(false);
+    const [count, setCount] = useState(0);
+
+    const showAlertWithMessage = (message, alertType) => {
+        setCount(1);
+        setMessage(message);
+        setShowAlert(true);
+        setType(alertType);
+    };
+
+    const handlerRegsiter = (e) => {
+        e.preventDefault();
 
         const nameValue = name.current?.value;
         const phoneValue = phoneNumber.current?.value;
         const passwordValue = password.current?.value;
 
-        dispatch(setNameRegister(nameValue));
-        dispatch(setPhoneRegister(phoneValue));
-        dispatch(setPasswordRegister(passwordValue));
-        history.push("/patient/patientregisterstep-1")
+        if (passwordValue === "") {
+            showAlertWithMessage("The  Password field is required.", "warning");
+        }
+
+        if (passwordValue?.length < 8) {
+            showAlertWithMessage("The  Password length must be more than 7.", "warning");
+        }
+        if (phoneValue === "") {
+            showAlertWithMessage("The Phone Number field is required.", "warning");
+        }
+
+        if (nameValue === "") {
+            showAlertWithMessage("The  field Name is required.", "warning");
+        }
+
+
+        if (nameValue !== ""
+            && phoneValue !== ""
+            && passwordValue !== "") {
+
+            dispatch(setNameRegister(nameValue));
+            dispatch(setPhoneRegister(phoneValue));
+            dispatch(setPasswordRegister(passwordValue));
+            
+            history.push("/patient/patientregisterstep-1");
+        }
+
 
     }
     return (
-        <form >
-            <div className="form-group form-focus">
-                <input
-                    ref={name}
-                    type="text"
-                    className="form-control floating"
-                />
-                <label className="focus-label">Name</label>
-            </div>
-            <div className="form-group form-focus">
-                <input
-                    ref={phoneNumber}
-                    type="text"
-                    className="form-control floating"
-                />
-                <label className="focus-label">Mobile Number</label>
-            </div>
-            <div className="form-group form-focus">
-                <input
-                    ref={password}
-                    type="password"
-                    className="form-control floating"
-                />
-                <label className="focus-label">Create Password</label>
-            </div>
-            <div className="text-end">
-                <Link className="forgot-link" to="/login">
-                    Already have an account?
-                </Link>
-            </div>
-            <button
-                onClick={() => handlerRegsiter()}
-                className="btn btn-primary w-100 btn-lg login-btn"
-                type="submit"
+        <>
+            <form onSubmit={handlerRegsiter}>
+                <div className="form-group form-focus">
+                    <input
+                        ref={name}
+                        type="text"
+                        className="form-control floating"
+                    />
+                    <label className="focus-label">Name</label>
+                </div>
+                <div className="form-group form-focus">
+                    <input
+                        ref={phoneNumber}
+                        type="text"
+                        className="form-control floating"
+                    />
+                    <label className="focus-label">Mobile Number</label>
+                </div>
+                <div className="form-group form-focus">
+                    <input
+                        ref={password}
+                        type="password"
+                        className="form-control floating"
+                    />
+                    <label className="focus-label">Create Password</label>
+                </div>
+                <div className="text-end">
+                    <Link className="forgot-link" to="/login">
+                        Already have an account?
+                    </Link>
+                </div>
+                <button
+                    className="btn btn-primary w-100 btn-lg login-btn"
 
-            >
-                Signup
-            </button>
-            <div className="login-or">
-                <span className="or-line" />
-                <span className="span-or">or</span>
-            </div>
-            <div className="row form-row social-login">
-                <div className="col-6">
-                    <Link to="#" className="btn btn-facebook w-100">
-                        <i className="fab fa-facebook-f me-1" /> Login
-                    </Link>
+
+                >
+                    Signup
+                </button>
+                <div className="login-or">
+                    <span className="or-line" />
+                    <span className="span-or">or</span>
                 </div>
-                <div className="col-6">
-                    <Link to="#" className="btn btn-google w-100">
-                        <i className="fab fa-google me-1" /> Login
-                    </Link>
+                <div className="row form-row social-login">
+                    <div className="col-6">
+                        <Link to="#" className="btn btn-facebook w-100">
+                            <i className="fab fa-facebook-f me-1" /> Login
+                        </Link>
+                    </div>
+                    <div className="col-6">
+                        <Link to="#" className="btn btn-google w-100">
+                            <i className="fab fa-google me-1" /> Login
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+            <Alert
+                count={count}
+                message={message}
+                setCount={setCount}
+                setShow={setShowAlert}
+                show={showAlert}
+                type={type}
+            />
+        </>
     )
 }
 

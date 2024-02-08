@@ -128,11 +128,9 @@ const Bookingsuccess = lazy(() => import("./client/components/home/bookingsucces
 const Patientdetails = lazy(() => import("./client/components/home/patientdetails"));
 const Loginemail = lazy(() => import("./client/components/home/loginemail"));
 const HomecareHome = lazy(() => import("./client/components/home/HomecareHome/index"));
-import { useSelector } from 'react-redux';
 const AppContainer = function (props) {
   // const config = "/react/template/";
-  const registerState = useSelector((state) => state.register);
-  console.log("registerState>>>",registerState)
+
   if (props) {
 
     useEffect(() => {

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 // import loginBanner from '../../assets/images/login-banner.png';
 import Logo from "../../assets/images/logo.png";
 import camera from "../../assets/images/icons/camera.svg";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { setImgProfile } from '../../../store/Register/register';
+import Alert from '../Alert/Alert';
 
 const Patientregisterstepone = () => {
+
   const dispatch = useDispatch();
   const history = useHistory();
   const registerState = useSelector((state) => state.register);
 
-  
+  const [count, setCount] = useState(0);
+  const [type, setType] = useState("");
+  const [message, setMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
 
   const hanlderRegister = () => {
 
@@ -19,9 +25,18 @@ const Patientregisterstepone = () => {
     history.push("/patient/patientregisterstep-2");
   }
   const handlerUploadImage = (e) => {
-    
+
     let image = e.target.files[0];
-    dispatch(setImgProfile(image));
+
+    if (!image.type.startsWith('image/')) {
+      setCount(1);
+      setType("warning");
+      setMessage("Please upload only images.");
+      setShowAlert(true);
+    }
+    else {
+      dispatch(setImgProfile(image));
+    }
   }
   return (
     <>
@@ -102,6 +117,14 @@ const Patientregisterstepone = () => {
         </div>
         {/* /Page Content */}
       </>
+      <Alert
+        count={count}
+        message={message}
+        setCount={setCount}
+        setShow={setShowAlert}
+        show={showAlert}
+        type={type}
+      />
     </>
   );
 };

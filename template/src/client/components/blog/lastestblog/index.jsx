@@ -1,15 +1,63 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
   IMG_blog_th01,
-  IMG_blog_th02,
-  IMG_blog_th03,
-  IMG_blog_th04,
-  IMG_blog_th05,
+
 } from ".././bloglist/img.jsx";
 //link
-import { Link } from "react-router-dom";
-import  React from "react";
+import React from "react";
+import LastBlogCard from './LastBlogCard';
+
 const LastestBlog = () => {
+
+  const blodData = [
+    {
+      id: 1,
+      img: IMG_blog_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 2,
+      img: IMG_blog_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 3,
+      img: IMG_blog_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 4,
+      img: IMG_blog_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 5,
+      img: IMG_blog_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+    {
+      id: 6,
+      img: IMG_blog_th01,
+      name: "Dr. Ruby Perrin",
+      date: "4 Dec 2019",
+      deatiles: "Doccure – Making your clinic painless visit?",
+      description: "Lorem ipsum dolor sit amet, consectetur em adipiscingelit, sed do eiusmod tempor."
+    },
+  ]
   return (
     <div className="card post-widget">
       <div className="card-header">
@@ -17,81 +65,15 @@ const LastestBlog = () => {
       </div>
       <div className="card-body">
         <ul className="latest-posts">
-          <li>
-            <div className="post-thumb">
-              <Link to="/blog/blog-details">
-                <LazyLoadImage className="img-fluid" src={IMG_blog_th01} alt="" />
-              </Link>
-            </div>
-            <div className="post-info">
-              <h4>
-                <Link to="/blog/blog-details">
-                  Doccure – Making your clinic painless visit?
-                </Link>
-              </h4>
-              <p>4 Dec 2019</p>
-            </div>
-          </li>
-          <li>
-            <div className="post-thumb">
-              <Link to="/blog/blog-details">
-                <LazyLoadImage className="img-fluid" src={IMG_blog_th02} alt="" />
-              </Link>
-            </div>
-            <div className="post-info">
-              <h4>
-                <Link to="/blog/blog-details">
-                  What are the benefits of Online Doctor Booking?{" "}
-                </Link>
-              </h4>
-              <p>3 Dec 2019</p>
-            </div>
-          </li>
-          <li>
-            <div className="post-thumb">
-              <Link to="/blog/blog-details">
-                <LazyLoadImage className="img-fluid" src={IMG_blog_th03} alt="" />
-              </Link>
-            </div>
-            <div className="post-info">
-              <h4>
-                <Link to="/blog/blog-details">
-                  Benefits of consulting with an Online Doctor{" "}
-                </Link>
-              </h4>
-              <p>3 Dec 2019</p>
-            </div>
-          </li>
-          <li>
-            <div className="post-thumb">
-              <Link to="/blog/blog-details">
-                <LazyLoadImage className="img-fluid" src={IMG_blog_th04} alt="" />
-              </Link>
-            </div>
-            <div className="post-info">
-              <h4>
-                <Link to="/blog/blog-details">
-                  5 Great reasons to use an Online Doctor{" "}
-                </Link>
-              </h4>
-              <p>2 Dec 2019</p>
-            </div>
-          </li>
-          <li>
-            <div className="post-thumb">
-              <Link to="/blog/blog-details">
-                <LazyLoadImage className="img-fluid" src={IMG_blog_th05} alt="" />
-              </Link>
-            </div>
-            <div className="post-info">
-              <h4>
-                <Link to="/blog/blog-details">
-                  Online Doctor Appointment Scheduling
-                </Link>
-              </h4>
-              <p>1 Dec 2019</p>
-            </div>
-          </li>
+          {blodData.map((last, index) => {
+            return <LastBlogCard
+              date={last.date}
+              description={last.description}
+              imgSrc={last.img}
+              key={`lastBlog_${index}`}
+            />
+          })
+          }
         </ul>
       </div>
     </div>

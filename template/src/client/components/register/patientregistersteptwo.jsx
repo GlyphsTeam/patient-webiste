@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import React from "react";
+import React, { useState } from "react";
 // import loginBanner from '../../assets/images/login-banner.png';
 import Logo from "../../assets/images/logo.png";
 // import camera from '../../assets/images/icons/camera.svg';
@@ -15,10 +15,86 @@ import {
 } from '../../../store/Register/register';
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-
+import Alert from "../Alert/Alert";
 
 const Patientregistersteptwo = () => {
+
+
+  const [type, setType] = useState("");
+  const [message, setMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const [count, setCount] = useState(0);
   const dispatch = useDispatch();
+
+
+  const handlerRegister = (e) => {
+    e.preventDefault();
+
+    const gender = e.target.gender.value;
+    const weight = e.target.weight.value;
+    const height = e.target.height.value;
+    const age = e.target.age.value;
+    const blood = e.target.blood_group.value;
+    const rate = e.target.heart_rate.value;
+
+    if (rate === "") {
+      setCount(1);
+      setMessage("The rate field is required");
+      setShowAlert(true);
+      setType("warning");
+    }
+    if (blood === "") {
+      setCount(1);
+      setMessage("The blood field is required");
+      setShowAlert(true);
+      setType("warning")
+    }
+    if (age === "") {
+      setCount(1);
+      setMessage("The Age field is required");
+      setShowAlert(true);
+      setType("warning");
+    }
+    if (height === "") {
+      setCount(1);
+      setMessage("The height field is required");
+      setShowAlert(true);
+      setType("warning");
+    }
+    if (weight === "") {
+      setCount(1);
+      setMessage("The weight field is required");
+      setShowAlert(true);
+      setType("warning");
+    }
+    if (gender === "") {
+      setCount(1);
+      setMessage("The gender field is required");
+      setShowAlert(true);
+      setType("warning");
+    }
+
+    if (weight !== "" &&
+      height !== "" &&
+      age !== "" &&
+      blood !== "" &&
+      rate !== "" &&
+      gender !== ""
+    ) {
+
+      dispatch(setGenderRegister(gender));
+      dispatch(setBloodType(blood));
+      dispatch(setAge(age));
+      dispatch(setRate(rate));
+      dispatch(setHeight(height));
+      dispatch(setWeight(weight))
+      console.log("gender>>>", gender, "weight>>>", weight, "height>>", height, "age>>", age, "Blood>>", blood, "rate>>>", rate);
+
+    }
+
+
+  }
+
 
   return (
     <>
@@ -58,7 +134,7 @@ const Patientregistersteptwo = () => {
                           </li>
                         </ul>
                       </div>
-                      <form id="personal_details" encType="multipart/form-data">
+                      <form id="personal_details" encType="multipart/form-data" onSubmit={handlerRegister}>
                         <div className="text-start mt-2">
                           <h4 className="mt-3">Select Your Gender</h4>
                         </div>
@@ -67,12 +143,12 @@ const Patientregistersteptwo = () => {
                             <div className="col-6 pe-0">
                               <input
                                 type="radio"
-                                id="test1"
+                                id="male"
                                 name="gender"
                                 defaultValue="Male"
-                                onChange={(e) => dispatch(setGenderRegister(e.target.value))}
+                              // onChange={(e) => dispatch(setGenderRegister(e.target.value))}
                               />
-                              <label htmlFor="test1">
+                              <label htmlFor="male">
                                 <span className="gender-icon">
                                   <img src={male} alt="" />
                                 </span>
@@ -82,12 +158,12 @@ const Patientregistersteptwo = () => {
                             <div className="col-6 ps-2">
                               <input
                                 type="radio"
-                                id="test2"
+                                id="female"
                                 name="gender"
-                                onChange={(e) => dispatch(setGenderRegister(e.target.value))}
+                                // onChange={(e) => dispatch(setGenderRegister(e.target.value))}
                                 defaultValue="Female"
                               />
-                              <label htmlFor="test2">
+                              <label htmlFor="female">
                                 <span className="gender-icon">
                                   <img src={female} alt="" />
                                 </span>
@@ -152,7 +228,6 @@ const Patientregistersteptwo = () => {
                                   name="weight"
                                   defaultValue="weight"
                                   id="weight"
-                                  onChange={(e) => dispatch(setWeight(e.target.value))}
                                 />
                               </div>
                               <div className="col-5 ps-2">
@@ -174,7 +249,6 @@ const Patientregistersteptwo = () => {
                                   type="text"
                                   className="form-control"
                                   id="height"
-                                  onChange={(e) => dispatch(setHeight(e.target.value))}
                                 />
                               </div>
                               <div className="col-5 ps-2">
@@ -196,7 +270,7 @@ const Patientregistersteptwo = () => {
                             <input
                               type="text"
                               name="age"
-                              onChange={(e) => dispatch(setAge(e.target.value))}
+                              // onChange={(e) => dispatch(setAge(e.target.value))}
                               className="form-control"
                               id="age"
                             />
@@ -208,7 +282,7 @@ const Patientregistersteptwo = () => {
                               id="blood_group"
                               name="blood_group"
                               tabIndex={-1}
-                              onChange={(e) => dispatch(setBloodType(e.target.value))}
+                              // onChange={(e) => dispatch(setBloodType(e.target.value))}
                               aria-hidden="true"
                             >
                               <option value="">Select your blood group</option>
@@ -230,7 +304,6 @@ const Patientregistersteptwo = () => {
                               name="heart_rate"
                               tabIndex={-1}
                               aria-hidden="true"
-                              onChange={(e) => dispatch(setRate(e.target.value))}
                             >
                               <option value="">Select Your Heart Rate</option>
                               <option value={1}>1</option>
@@ -360,12 +433,12 @@ const Patientregistersteptwo = () => {
                           </div>
                         </div>
                         <div className="mt-5">
-                          <Link
-                            to="/patient/patientregisterstep-3"
+                          <button
+
                             className="btn btn-primary w-100 btn-lg login-btn step2_submit"
                           >
                             continue{" "}
-                          </Link>
+                          </button>
                         </div>
                       </form>
                     </div>
@@ -381,6 +454,14 @@ const Patientregistersteptwo = () => {
         </div>
         {/* /Page Content */}
       </>
+      <Alert
+        count={count}
+        message={message}
+        setCount={setCount}
+        setShow={setShowAlert}
+        show={showAlert}
+        type={type}
+      />
     </>
   );
 };

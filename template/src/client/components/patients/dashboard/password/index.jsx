@@ -1,14 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import DashboardSidebar from "../sidebar/sidebar.jsx";
 import StickyBox from "react-sticky-box";
 import Footer from "../../../footer";
 import { Link } from "react-router-dom";
 import Header from "../../../header.jsx";
+import Alert from '../../../Alert/Alert';
 
 const Password = (props) => {
   const oldPassword = useRef(null);
   const newPassword = useRef(null);
   const confirmPassword = useRef(null);
+  const [showAlert, setShowAlert] = useState(false);
+  const [type, setType] = useState("");
+  const [message, setMessage] = useState("");
+  const [count, setCount] = useState(0);
 
   const handlerPassword = (e) => {
     e.preventDefault();
@@ -16,17 +21,45 @@ const Password = (props) => {
     const newPassValue = newPassword.current.value;
     const confirmPassValue = confirmPassword.current.value;
 
-    let formData = new FormData();
+    if (confirmPassValue === "") {
+      setType("warning");
+      setShowAlert(true);
+      setCount(1);
+      setMessage("The Confirm Password is required");
+    }
+
+    if (newPassValue === "") {
+      setType("warning");
+      setShowAlert(true);
+      setCount(1);
+      setMessage("The New Password is required");
+    }
 
 
-    formData.append("oldPassword", oldPassValue);
-    formData.append("newPassword", newPassValue);
-    formData.append("confirmPassword", confirmPassValue);
+    if (oldPassValue === "") {
+      setType("warning");
+      setShowAlert(true);
+      setCount(1);
+      setMessage("The Old Password is required")
+    }
+
+    if (oldPassValue !== ""
+      && newPassValue !== ""
+      && confirmPassValue !== "") {
 
 
-    oldPassword.current.value = "";
-    newPassword.current.value = "";
-    confirmPassword.current.value = "";
+      let formData = new FormData();
+
+
+      formData.append("oldPassword", oldPassValue);
+      formData.append("newPassword", newPassValue);
+      formData.append("confirmPassword", confirmPassValue);
+
+
+      oldPassword.current.value = "";
+      newPassword.current.value = "";
+      confirmPassword.current.value = "";
+    }
 
   }
   return (
@@ -92,6 +125,13 @@ const Password = (props) => {
         </div>
       </div>
       <Footer {...props} />
+      <Alert
+        count={count}
+        message={message}
+        setShow={setShowAlert}
+        setCount={setCount}
+        show={showAlert}
+        type={type} />
     </div>
   );
 };
