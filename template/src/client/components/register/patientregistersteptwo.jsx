@@ -13,7 +13,7 @@ import {
   setBloodType,
   setRate
 } from '../../../store/Register/register';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import Alert from "../Alert/Alert";
 
@@ -25,7 +25,7 @@ const Patientregistersteptwo = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-
+  const history = useHistory();
 
   const handlerRegister = (e) => {
     e.preventDefault();
@@ -36,6 +36,7 @@ const Patientregistersteptwo = () => {
     const age = e.target.age.value;
     const blood = e.target.blood_group.value;
     const rate = e.target.heart_rate.value;
+  
 
     if (rate === "") {
       setCount(1);
@@ -88,8 +89,7 @@ const Patientregistersteptwo = () => {
       dispatch(setRate(rate));
       dispatch(setHeight(height));
       dispatch(setWeight(weight))
-      console.log("gender>>>", gender, "weight>>>", weight, "height>>", height, "age>>", age, "Blood>>", blood, "rate>>>", rate);
-
+      history.push("/patient/patientregisterstep-5")
     }
 
 
@@ -123,14 +123,9 @@ const Patientregistersteptwo = () => {
                               2
                             </Link>
                           </li>
+
                           <li>
                             <Link to="#">3</Link>
-                          </li>
-                          <li>
-                            <Link to="#">4</Link>
-                          </li>
-                          <li>
-                            <Link to="#">5</Link>
                           </li>
                         </ul>
                       </div>
@@ -172,23 +167,7 @@ const Patientregistersteptwo = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="pregnant-col pt-4">
-                          <div>
-                            <div className="remember-me-col d-flex justify-content-between">
-                              <span className="mt-1">Are you Pregnant</span>
-                              <label className="custom_check">
-                                <input
-                                  type="checkbox"
-                                  className=""
-                                  id="is_registered"
-                                  name="pregnant"
-                                  defaultValue={1}
-                                />
-                                <span className="checkmark" />
-                              </label>
-                            </div>
-                          </div>
-                        </div>
+
                         <div className="step-process-col mt-4">
                           <div
                             className="form-group"
@@ -266,6 +245,35 @@ const Patientregistersteptwo = () => {
                             </div>
                           </div>
                           <div className="form-group">
+                            <label>Your Date</label>
+                            <input
+                              type="date"
+                              name="date"
+                              className="form-control"
+                              id="date"
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label>Emergency Contact Number</label>
+                            <input
+                              type="text"
+                              name="emergency"
+                              // onChange={(e) => dispatch(setAge(e.target.value))}
+                              className="form-control"
+                              id="emergency"
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label>Street Address</label>
+                            <input
+                              type="text"
+                              name="address"
+                              // onChange={(e) => dispatch(setAge(e.target.value))}
+                              className="form-control"
+                              id="address"
+                            />
+                          </div>
+                          <div className="form-group">
                             <label>Your Age</label>
                             <input
                               type="text"
@@ -326,45 +334,20 @@ const Patientregistersteptwo = () => {
                               <option value={2}>2</option>
                             </select>
                           </div>
-                          <div className="form-group">
-                            <label>Glucose Level</label>
-                            <select
-                              className="form-select form-control"
-                              id="glucose"
-                              name="glucose"
-                              tabIndex={-1}
-                              aria-hidden="true"
-                            >
-                              <option value="">
-                                Select Your Glucose Level
-                              </option>
-                              <option value={1}>1</option>
-                              <option value={2}>2</option>
-                            </select>
-                          </div>
-                          <div className="form-group">
-                            <label>Allergies</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              defaultValue="allergies"
-                              id="allergies"
-                              name="allergies"
-                            />
-                          </div>
+                
                           <div className="checklist-col pregnant-col">
                             <div className="remember-me-col d-flex justify-content-between">
                               <span className="mt-1">
-                                Do you have any pre-exisiting conditions?
+                                Cardiovascilar Diseases (e.g, hypertension, coronary artery disease)
                               </span>
                               <label className="custom_check">
                                 <input
                                   type="checkbox"
-                                  className=""
-                                  name="cancer"
-                                  id="cancer"
-                                  onClick="show_cancer"
-                                  defaultValue={1}
+
+                                  name="artery"
+                                  id="artery"
+
+
                                 />
                                 <span className="checkmark" />
                               </label>
@@ -389,7 +372,7 @@ const Patientregistersteptwo = () => {
                             </div>
                             <div className="remember-me-col d-flex justify-content-between">
                               <span className="mt-1">
-                                Are you currently taking any medication
+                                Endocrine Disorders (e.g, diabetes, thyroid disorders)
                               </span>
                               <label className="custom_check">
                                 <input
@@ -397,39 +380,147 @@ const Patientregistersteptwo = () => {
                                   className=""
                                   name="medicine"
                                   id="medicine"
-                                  onClick="show_medicine()"
                                   defaultValue={1}
                                 />
                                 <span className="checkmark" />
                               </label>
                             </div>
-                            <div
-                              className="remember-me-col"
-                              id="medicine_div"
-                              style={{ display: "none" }}
-                            >
-                              <div className="medicine_input">
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Allergies and Immunodeficiency (e.g, asthma, immunodeficiency)
+                              </span>
+                              <label className="custom_check">
                                 <input
-                                  type="text"
-                                  id="medicine_name"
-                                  name="medicine_name[]"
-                                  defaultValue="medicine"
-                                  className="form-control"
-                                  placeholder="Enter medicine_name"
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
                                 />
-                                <input
-                                  type="text"
-                                  defaultValue="medicine"
-                                  id="dosage"
-                                  name="dosage[]"
-                                  className="form-control"
-                                  placeholder="Enter dosage"
-                                />
-                              </div>
-                              <Link to="#" className="add_medicine">
-                                <i className="fa fa-plus" />
-                              </Link>
+                                <span className="checkmark" />
+                              </label>
                             </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Kidney Diseases
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Gastrointestinal and liver Diseases (e.g, irritable bowel syndrome, hepatitis)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Respiratory Diseases (e.g asthma, chronic abstructive pulmonary disease)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Blood Disorders (e.g, anemia, leukemia, clotting disorders)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Psychiatric or Neurological Disorders (e.g, depression, epilepsy)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Blood Disordes (e.g, anemia, leukemia, clotting disorders)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Muscular or Joint Disorders (e.g, arthritis, fibromyalgia)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                            <div className="remember-me-col d-flex justify-content-between">
+                              <span className="mt-1">
+                                Reproductive Diseases (e.g, polycystic ovary syndrome, endometriosis)
+                              </span>
+                              <label className="custom_check">
+                                <input
+                                  type="checkbox"
+                                  className=""
+                                  name="medicine"
+                                  id="medicine"
+                                  defaultValue={1}
+                                />
+                                <span className="checkmark" />
+                              </label>
+                            </div>
+                          
                           </div>
                         </div>
                         <div className="mt-5">

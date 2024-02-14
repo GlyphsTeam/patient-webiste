@@ -3,13 +3,16 @@ import { useHistory, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setNameRegister, setPhoneRegister, setPasswordRegister } from '../../../store/Register/register';
 import Alert from '../Alert/Alert';
+import { emailValidation } from '../../../helper/helper';
 
 function FormRegsiter() {
-    const name = useRef(null);
+    const FirstName = useRef(null);
+    const LastName = useRef(null);
     const phoneNumber = useRef(null);
     const password = useRef(null);
     const dispatch = useDispatch();
     const history = useHistory();
+    const emailRef = useRef(null);
 
     const [type, setType] = useState("");
     const [message, setMessage] = useState("");
@@ -29,6 +32,9 @@ function FormRegsiter() {
         const nameValue = name.current?.value;
         const phoneValue = phoneNumber.current?.value;
         const passwordValue = password.current?.value;
+        const emailValue = emailRef.current?.value;
+        const emailTest = emailValidation(emailValue);
+        const lastValue = LastName.current?.value;
 
         if (passwordValue === "") {
             showAlertWithMessage("The  Password field is required.", "warning");
@@ -40,15 +46,32 @@ function FormRegsiter() {
         if (phoneValue === "") {
             showAlertWithMessage("The Phone Number field is required.", "warning");
         }
+        if (emailTest) {
+            showAlertWithMessage("The Email is not valid .", "warning");
 
+        }
+        if (emailValue === "") {
+            showAlertWithMessage("The Email field is required.", "warning");
+
+        }
+
+        if (lastValue === "") {
+            showAlertWithMessage("The  Last Name is required.", "warning");
+
+        }
         if (nameValue === "") {
-            showAlertWithMessage("The  field Name is required.", "warning");
+            showAlertWithMessage("The  First Name is required.", "warning");
         }
 
 
+        
         if (nameValue !== ""
             && phoneValue !== ""
-            && passwordValue !== "") {
+            && passwordValue !== ""
+            && lastValue !== ""
+            && emailValue !== ""
+            && !emailTest
+        ) {
 
             dispatch(setNameRegister(nameValue));
             dispatch(setPhoneRegister(phoneValue));
@@ -61,14 +84,30 @@ function FormRegsiter() {
     }
     return (
         <>
-            <form onSubmit={handlerRegsiter}>
+             <form onSubmit={handlerRegsiter}>
                 <div className="form-group form-focus">
                     <input
-                        ref={name}
+                        ref={FirstName}
                         type="text"
                         className="form-control floating"
                     />
-                    <label className="focus-label">Name</label>
+                    <label className="focus-label">First Name</label>
+                </div>
+                <div className="form-group form-focus">
+                    <input
+                        ref={LastName}
+                        type="text"
+                        className="form-control floating"
+                    />
+                    <label className="focus-label">Last Name</label>
+                </div>
+                <div className="form-group form-focus">
+                    <input
+                        ref={emailRef}
+                        type="email"
+                        className="form-control floating"
+                    />
+                    <label className="focus-label">Email</label>
                 </div>
                 <div className="form-group form-focus">
                     <input

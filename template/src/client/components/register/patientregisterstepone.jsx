@@ -66,12 +66,6 @@ const Patientregisterstepone = () => {
                           <li>
                             <Link to="#">3</Link>
                           </li>
-                          <li>
-                            <Link to="#">4</Link>
-                          </li>
-                          <li>
-                            <Link to="#">5</Link>
-                          </li>
                         </ul>
                       </div>
                       <form id="profile_pic_form" encType="multipart/form-data">

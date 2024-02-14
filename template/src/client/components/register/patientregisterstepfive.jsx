@@ -111,19 +111,10 @@ const Patientregisterstepfive = () =>
                               2
                             </Link>
                           </li>
-                          <li>
-                            <Link to="#" className="active-done">
-                              3
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="#" className="active-done">
-                              4
-                            </Link>
-                          </li>
+                       
                           <li>
                             <Link to="#" className="active">
-                              5
+                              3
                             </Link>
                           </li>
                         </ul>
@@ -160,9 +151,57 @@ const Patientregisterstepfive = () =>
                             <option value={2}>State 2</option>
                           </select>
                         </div>
+                        <div className="form-group">
+                          <label>Select City</label>
+                          <select
+                            className="form-select form-control"
+                            id="city"
+                            name="city"
+                            tabIndex={-1}
+                            aria-hidden="true"
+                          // onChange={(e) => dispatch(setLocation(e.target.value))}
+                          >
+                            <option value="">Select Your City</option>
+                            <option value={1}>City 1</option>
+                            <option value={2}>City 2</option>
+                          </select>
+                        </div>
+                        <div className="form-group">
+                          <label>Are you currently taking any medications? if yes, please list them.</label>
+                          <input
+                           type="text"
+                           name="medication"
+                           id="medication"
+                           className="form-control"
+
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label>Do youhave any known allergies to medications or substances?</label>
+                          <input
+                           type="text"
+                           name="medication"
+                           id="medication"
+                           className="form-control"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label>For female patients: Are you currently pregnant?</label>
+                          <select
+                            className="form-select form-control"
+                            id="city"
+                            name="city"
+                            tabIndex={-1}
+                            aria-hidden="true"
+                          // onChange={(e) => dispatch(setLocation(e.target.value))}
+                          >
+                            <option value="">Select </option>
+                            <option value={1}>Yes</option>
+                            <option value={2}>No</option>
+                          </select>
+                        </div>
                         <div className="mt-5">
                           <button
-
                             className="btn btn-primary w-100 btn-lg login-btn step5_submit"
                           >
                             continue{" "}
