@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Provider } from 'react-redux';
-import store from './store/index';
 
-import AppRouter from "./approuter";
+
+import App from "./App";
 // import * as serviceWorker from './client/serviceWorker';
 
 import "./client/assets/css/bootstrap.min.css";
@@ -52,8 +51,6 @@ require("../src/client/components/customstyleclient.css");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <Provider store={store}>
-      <AppRouter />
-    </Provider>
+      <App />
   </>
 );

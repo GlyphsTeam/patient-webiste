@@ -14,10 +14,10 @@ import Header from "../../header";
 import Footer from "../../footer";
 import ProgressCircle from "../paediatric/scrolltotop";
 function Generalhome(props) {
-  let pathname = props.location.pathname;
-  if (props.location.pathname === "/index") {
-    require("../../../assets/css/feather.css");
-  }
+  // let pathname = props.location.pathname;
+  // if (props.location?.pathname === "/index") {
+  //   require("../../../assets/css/feather.css");
+  // }
   const [faqData, setFqaData] = useState([
     {
       show: false,

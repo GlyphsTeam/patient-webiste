@@ -2,7 +2,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { doctor02, patient3 } from "../pages/aboutus/img";
 import { appimg, devicemessage, googleimg, smartphone } from "../imagepath";
 import Headerconsultation from "./headerconsultation";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 const Consultation = () => {
   return (

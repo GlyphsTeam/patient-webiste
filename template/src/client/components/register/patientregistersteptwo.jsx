@@ -13,7 +13,7 @@ import {
   setBloodType,
   setRate
 } from '../../../store/Register/register';
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import Alert from "../Alert/Alert";
 
@@ -25,7 +25,7 @@ const Patientregistersteptwo = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handlerRegister = (e) => {
     e.preventDefault();
@@ -89,7 +89,7 @@ const Patientregistersteptwo = () => {
       dispatch(setRate(rate));
       dispatch(setHeight(height));
       dispatch(setWeight(weight))
-      history.push("/patient/patientregisterstep-5")
+      navigate("/patient/patientregisterstep-5")
     }
 
 

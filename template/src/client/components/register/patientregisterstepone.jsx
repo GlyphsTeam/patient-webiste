@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import loginBanner from '../../assets/images/login-banner.png';
 import Logo from "../../assets/images/logo.png";
 import camera from "../../assets/images/icons/camera.svg";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { setImgProfile } from '../../../store/Register/register';
 import Alert from '../Alert/Alert';
@@ -10,7 +10,7 @@ import Alert from '../Alert/Alert';
 const Patientregisterstepone = () => {
 
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const registerState = useSelector((state) => state.register);
 
   const [count, setCount] = useState(0);
@@ -22,7 +22,7 @@ const Patientregisterstepone = () => {
   const hanlderRegister = () => {
 
 
-    history.push("/patient/patientregisterstep-2");
+    navigate("/patient/patientregisterstep-2");
   }
   const handlerUploadImage = (e) => {
 

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { useHistory, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setNameRegister, setPhoneRegister, setPasswordRegister } from '../../../store/Register/register';
 import Alert from '../Alert/Alert';
@@ -11,7 +11,7 @@ function FormRegsiter() {
     const phoneNumber = useRef(null);
     const password = useRef(null);
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
     const emailRef = useRef(null);
 
     const [type, setType] = useState("");
@@ -77,7 +77,7 @@ function FormRegsiter() {
             dispatch(setPhoneRegister(phoneValue));
             dispatch(setPasswordRegister(passwordValue));
             
-            history.push("/patient/patientregisterstep-1");
+            navigate("/patient/patientregisterstep-1");
         }
 
 

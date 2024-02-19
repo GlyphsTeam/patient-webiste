@@ -99,7 +99,6 @@ const Header = () => {
     var root = document.getElementsByTagName("html")[0];
     root.classList.add("menu-opened");
   };
-  console.log("isSideMenu>>>>", pathnames)
 
   const onhandleCloseMenu = () => {
     var root = document.getElementsByTagName("html")[0];
@@ -132,44 +131,44 @@ const Header = () => {
 
   return (
     <>
-      {!pathnames.includes("home1") && (
+      {!pathnames?.includes("home1") && (
         <header
-          className={`header ${pathnames.includes("/index-11")
+          className={`header ${pathnames?.includes("/index-11")
             ? "header-fixed header-fourteen header-sixteen"
-            : "" || pathnames.includes("/index-10")
+            : "" || pathnames?.includes("/index-10")
               ? "header-fixed header-fourteen header-fifteen"
-              : "" || pathnames.includes("/index-9")
+              : "" || pathnames?.includes("/index-9")
                 ? "header-fixed header-fourteen"
-                : "" || pathnames.includes("/index-8")
+                : "" || pathnames?.includes("/index-8")
                   ? "header-fixed header-fourteen header-twelve header-thirteen"
-                  : "" || pathnames.includes("/index-7")
+                  : "" || pathnames?.includes("/index-7")
                     ? "header-fixed header-fourteen header-twelve"
-                    : "" || pathnames.includes("/index-6")
+                    : "" || pathnames?.includes("/index-6")
                       ? "header-trans header-eleven"
-                      : "" || pathnames.includes("/index-4")
+                      : "" || pathnames?.includes("/index-4")
                         ? "header-trans custom"
-                        : "" || pathnames.includes("/index-5")
+                        : "" || pathnames?.includes("/index-5")
                           ? "header header-fixed header-ten"
-                          : "" || pathnames.includes("home")
+                          : "" || pathnames?.includes("home")
                             ? "header-trans header-two"
-                            : "" || pathnames.includes("/index-13")
+                            : "" || pathnames?.includes("/index-13")
                               ? "header header-custom header-fixed header-ten home-care-header"
-                              : "" || pathnames.includes("/Pharmacy-index")
+                              : "" || pathnames?.includes("/Pharmacy-index")
                                 ? "header header-one"
                                 : "header-fixed header-one"
             } `}
           style={
-            pathnames.includes("/index-6") && navbar
+            pathnames?.includes("/index-6") && navbar
               ? { background: "rgb(30, 93, 146)" }
-              : { background: "" } && pathnames.includes("/index-10") && navbar
+              : { background: "" } && pathnames?.includes("/index-10") && navbar
                 ? { background: "rgb(255, 255, 255)" }
-                : { background: "" } && pathnames.includes("/index-11") && navbar
+                : { background: "" } && pathnames?.includes("/index-11") && navbar
                   ? { background: "rgb(255, 255, 255)" }
-                  : { background: "" } && pathnames.includes("/index-4") && navbar
+                  : { background: "" } && pathnames?.includes("/index-4") && navbar
                     ? { background: "rgb(43, 108, 203)" }
-                    : { background: "" } && pathnames.includes("/index-9") && navbar
+                    : { background: "" } && pathnames?.includes("/index-9") && navbar
                       ? { background: "rgb(43, 108, 203)" }
-                      : { background: "" } && pathnames.includes("/index-2") && navbar
+                      : { background: "" } && pathnames?.includes("/index-2") && navbar
                         ? { background: "rgb(255, 255, 255)" }
                         : { background: "" }
           }
