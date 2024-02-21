@@ -2,8 +2,9 @@
 import React from "react";
 import { faq_img, smiling_icon } from "../../imagepath";
 import CountUp from "react-countup";
-
+import { useTranslation } from "react-i18next";
 function Faq({ faqData, setFqaData }) {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -16,7 +17,7 @@ function Faq({ faqData, setFqaData }) {
                 data-aos="fade-up"
               >
                 <h5>Get Your Answer</h5>
-                <h2 className="section-title">Frequently Asked Questions</h2>
+                <h2 className="section-title">{t("Frequently Asked Questions")}</h2>
               </div>
             </div>
           </div>

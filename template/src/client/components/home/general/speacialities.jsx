@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   specialities_01,
   specialities_02,
@@ -16,7 +17,7 @@ import { Link } from "react-router-dom";
 
 function Speacialities() {
   //Aos
-
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
@@ -66,7 +67,7 @@ function Speacialities() {
           <div className="row">
             <div className="col-md-6 aos" data-aos="fade-up">
               <div className="section-header-one section-header-slider">
-                <h2 className="section-title">Specialities</h2>
+                <h2 className="section-title">{t("Specialities")}</h2>
               </div>
             </div>
             <div className="col-md-6 aos" data-aos="fade-up">
@@ -152,7 +153,7 @@ function Speacialities() {
           </div>
           <div className="specialities-btn aos" data-aos="fade-up">
             <Link to="/patient/search-doctor1" className="btn">
-              See All Specialities
+              {t("See All Specialities")}
             </Link>
           </div>
         </div>

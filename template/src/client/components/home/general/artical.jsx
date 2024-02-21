@@ -1,7 +1,11 @@
 import React from 'react'
 import { blog_11 } from '../image'
 import ArticalCard from './articalCard';
+import { useTranslation } from 'react-i18next';
+
 function Artical() {
+    const { t } = useTranslation();
+
     const articalData = [
         {
             imgSrc: blog_11,
@@ -39,7 +43,7 @@ function Artical() {
                     <div className="row">
                         <div className="col-md-12 aos" data-aos="fade-up">
                             <div className="section-header-one text-center">
-                                <h2 className="section-title">Latest Articles</h2>
+                                <h2 className="section-title">{t("Latest Articles")}</h2>
                             </div>
                         </div>
                     </div>

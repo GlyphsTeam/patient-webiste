@@ -4,15 +4,15 @@ import { useDispatch } from 'react-redux';
 import { setNameRegister, setPhoneRegister, setPasswordRegister } from '../../../store/Register/register';
 import Alert from '../Alert/Alert';
 import { emailValidation } from '../../../helper/helper';
-
+import { useTranslation } from 'react-i18next';
 function FormRegsiter() {
-    const FirstName = useRef(null);
-    const LastName = useRef(null);
+    const FullName = useRef(null);
     const phoneNumber = useRef(null);
     const password = useRef(null);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const emailRef = useRef(null);
+    const { t } = useTranslation();
 
     const [type, setType] = useState("");
     const [message, setMessage] = useState("");
@@ -29,12 +29,11 @@ function FormRegsiter() {
     const handlerRegsiter = (e) => {
         e.preventDefault();
 
-        const nameValue = name.current?.value;
+        const nameValue = FullName.current?.value;
         const phoneValue = phoneNumber.current?.value;
         const passwordValue = password.current?.value;
         const emailValue = emailRef.current?.value;
         const emailTest = emailValidation(emailValue);
-        const lastValue = LastName.current?.value;
 
         if (passwordValue === "") {
             showAlertWithMessage("The  Password field is required.", "warning");
@@ -55,20 +54,16 @@ function FormRegsiter() {
 
         }
 
-        if (lastValue === "") {
-            showAlertWithMessage("The  Last Name is required.", "warning");
 
-        }
         if (nameValue === "") {
             showAlertWithMessage("The  First Name is required.", "warning");
         }
 
 
-        
+
         if (nameValue !== ""
             && phoneValue !== ""
             && passwordValue !== ""
-            && lastValue !== ""
             && emailValue !== ""
             && !emailTest
         ) {
@@ -76,7 +71,7 @@ function FormRegsiter() {
             dispatch(setNameRegister(nameValue));
             dispatch(setPhoneRegister(phoneValue));
             dispatch(setPasswordRegister(passwordValue));
-            
+
             navigate("/patient/patientregisterstep-1");
         }
 
@@ -84,22 +79,14 @@ function FormRegsiter() {
     }
     return (
         <>
-             <form onSubmit={handlerRegsiter}>
+            <form onSubmit={handlerRegsiter}>
                 <div className="form-group form-focus">
                     <input
-                        ref={FirstName}
+                        ref={FullName}
                         type="text"
                         className="form-control floating"
                     />
-                    <label className="focus-label">First Name</label>
-                </div>
-                <div className="form-group form-focus">
-                    <input
-                        ref={LastName}
-                        type="text"
-                        className="form-control floating"
-                    />
-                    <label className="focus-label">Last Name</label>
+                    <label className="focus-label">{t("Full Name")}</label>
                 </div>
                 <div className="form-group form-focus">
                     <input
@@ -107,7 +94,7 @@ function FormRegsiter() {
                         type="email"
                         className="form-control floating"
                     />
-                    <label className="focus-label">Email</label>
+                    <label className="focus-label">{t("Email")}</label>
                 </div>
                 <div className="form-group form-focus">
                     <input
@@ -115,7 +102,7 @@ function FormRegsiter() {
                         type="text"
                         className="form-control floating"
                     />
-                    <label className="focus-label">Mobile Number</label>
+                    <label className="focus-label">{t("Mobile Number")}</label>
                 </div>
                 <div className="form-group form-focus">
                     <input
@@ -123,11 +110,11 @@ function FormRegsiter() {
                         type="password"
                         className="form-control floating"
                     />
-                    <label className="focus-label">Create Password</label>
+                    <label className="focus-label">{t("Create Password")}</label>
                 </div>
                 <div className="text-end">
                     <Link className="forgot-link" to="/login">
-                        Already have an account?
+                        {t("Already have an account?")}
                     </Link>
                 </div>
                 <button
@@ -135,21 +122,21 @@ function FormRegsiter() {
 
 
                 >
-                    Signup
+                    {t("Signup")}
                 </button>
                 <div className="login-or">
                     <span className="or-line" />
-                    <span className="span-or">or</span>
+                    <span className="span-or">{t("or")}</span>
                 </div>
                 <div className="row form-row social-login">
                     <div className="col-6">
                         <Link to="#" className="btn btn-facebook w-100">
-                            <i className="fab fa-facebook-f me-1" /> Login
+                            <i className="fab fa-facebook-f me-1" /> {t("Login")}
                         </Link>
                     </div>
                     <div className="col-6">
                         <Link to="#" className="btn btn-google w-100">
-                            <i className="fab fa-google me-1" /> Login
+                            <i className="fab fa-google me-1" /> {t("Login")}
                         </Link>
                     </div>
                 </div>

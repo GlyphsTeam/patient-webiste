@@ -11,11 +11,12 @@ import {
   setWeight,
   setAge,
   setBloodType,
-  setRate
+  
 } from '../../../store/Register/register';
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import Alert from "../Alert/Alert";
+import { useTranslation } from "react-i18next";
 
 const Patientregistersteptwo = () => {
 
@@ -26,6 +27,8 @@ const Patientregistersteptwo = () => {
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
 
   const handlerRegister = (e) => {
     e.preventDefault();
@@ -35,15 +38,7 @@ const Patientregistersteptwo = () => {
     const height = e.target.height.value;
     const age = e.target.age.value;
     const blood = e.target.blood_group.value;
-    const rate = e.target.heart_rate.value;
-  
 
-    if (rate === "") {
-      setCount(1);
-      setMessage("The rate field is required");
-      setShowAlert(true);
-      setType("warning");
-    }
     if (blood === "") {
       setCount(1);
       setMessage("The blood field is required");
@@ -79,14 +74,12 @@ const Patientregistersteptwo = () => {
       height !== "" &&
       age !== "" &&
       blood !== "" &&
-      rate !== "" &&
       gender !== ""
     ) {
 
       dispatch(setGenderRegister(gender));
       dispatch(setBloodType(blood));
       dispatch(setAge(age));
-      dispatch(setRate(rate));
       dispatch(setHeight(height));
       dispatch(setWeight(weight))
       navigate("/patient/patientregisterstep-5")
@@ -131,7 +124,7 @@ const Patientregistersteptwo = () => {
                       </div>
                       <form id="personal_details" encType="multipart/form-data" onSubmit={handlerRegister}>
                         <div className="text-start mt-2">
-                          <h4 className="mt-3">Select Your Gender</h4>
+                          <h4 className="mt-3">{t("Select Your Gender")}</h4>
                         </div>
                         <div className="select-gender-col">
                           <div className="row">
@@ -147,7 +140,7 @@ const Patientregistersteptwo = () => {
                                 <span className="gender-icon">
                                   <img src={male} alt="" />
                                 </span>
-                                <span>Male</span>
+                                <span>{t("Male")}</span>
                               </label>
                             </div>
                             <div className="col-6 ps-2">
@@ -162,7 +155,7 @@ const Patientregistersteptwo = () => {
                                 <span className="gender-icon">
                                   <img src={female} alt="" />
                                 </span>
-                                <span>Female</span>
+                                <span>{t("Female")}</span>
                               </label>
                             </div>
                           </div>
@@ -198,7 +191,7 @@ const Patientregistersteptwo = () => {
                             </select>
                           </div>
                           <div className="form-group">
-                            <label>Your Weight</label>
+                            <label>{t("Your Weight")}</label>
                             <div className="row">
                               <div className="col-7 pe-0">
                                 <input
@@ -221,7 +214,7 @@ const Patientregistersteptwo = () => {
                             </div>
                           </div>
                           <div className="form-group">
-                            <label>Your Height</label>
+                            <label>{t("Your Height")}</label>
                             <div className="row">
                               <div className="col-7 pe-0">
                                 <input
@@ -245,7 +238,7 @@ const Patientregistersteptwo = () => {
                             </div>
                           </div>
                           <div className="form-group">
-                            <label>Your Date</label>
+                            <label>{t("Your Date")}</label>
                             <input
                               type="date"
                               name="date"
@@ -254,7 +247,7 @@ const Patientregistersteptwo = () => {
                             />
                           </div>
                           <div className="form-group">
-                            <label>Emergency Contact Number</label>
+                            <label>{t("Emergency Contact Number")}</label>
                             <input
                               type="text"
                               name="emergency"
@@ -264,7 +257,7 @@ const Patientregistersteptwo = () => {
                             />
                           </div>
                           <div className="form-group">
-                            <label>Street Address</label>
+                            <label>{t("Street Address")}</label>
                             <input
                               type="text"
                               name="address"
@@ -274,7 +267,7 @@ const Patientregistersteptwo = () => {
                             />
                           </div>
                           <div className="form-group">
-                            <label>Your Age</label>
+                            <label>{t("Your Age")}</label>
                             <input
                               type="text"
                               name="age"
@@ -284,7 +277,7 @@ const Patientregistersteptwo = () => {
                             />
                           </div>
                           <div className="form-group">
-                            <label>Blood Type</label>
+                            <label>{t("Blood Type")}</label>
                             <select
                               className="form-select form-control"
                               id="blood_group"
@@ -304,37 +297,6 @@ const Patientregistersteptwo = () => {
                               <option value="O+">O+</option>
                             </select>
                           </div>
-                          <div className="form-group">
-                            <label>Heart Rate</label>
-                            <select
-                              className="form-select form-control"
-                              id="heart_rate"
-                              name="heart_rate"
-                              tabIndex={-1}
-                              aria-hidden="true"
-                            >
-                              <option value="">Select Your Heart Rate</option>
-                              <option value={1}>1</option>
-                              <option value={2}>2</option>
-                            </select>
-                          </div>
-                          <div className="form-group">
-                            <label>Blood Pressure</label>
-                            <select
-                              className="form-select form-control"
-                              id="bp"
-                              name="bp"
-                              tabIndex={-1}
-                              aria-hidden="true"
-                            >
-                              <option value="">
-                                Select Your Blood Pressure
-                              </option>
-                              <option value={1}>1</option>
-                              <option value={2}>2</option>
-                            </select>
-                          </div>
-                
                           <div className="checklist-col pregnant-col">
                             <div className="remember-me-col d-flex justify-content-between">
                               <span className="mt-1">
@@ -520,7 +482,7 @@ const Patientregistersteptwo = () => {
                                 <span className="checkmark" />
                               </label>
                             </div>
-                          
+
                           </div>
                         </div>
                         <div className="mt-5">

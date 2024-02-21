@@ -5,8 +5,9 @@ import {
 //link
 import React from "react";
 import LastBlogCard from './LastBlogCard';
-
+import { useTranslation } from "react-i18next";
 const LastestBlog = () => {
+  const { t } = useTranslation();
 
   const blodData = [
     {
@@ -61,7 +62,7 @@ const LastestBlog = () => {
   return (
     <div className="card post-widget">
       <div className="card-header">
-        <h4 className="card-title">Latest Posts</h4>
+        <h4 className="card-title">{t("Latest Posts")}</h4>
       </div>
       <div className="card-body">
         <ul className="latest-posts">

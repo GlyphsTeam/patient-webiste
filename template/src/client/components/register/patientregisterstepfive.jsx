@@ -20,8 +20,8 @@ import {
   setWeight,
 } from '../../../store/Register/register';
 import Alert from "../Alert/Alert";
-const Patientregisterstepfive = () => 
-{
+import { useTranslation } from "react-i18next";
+const Patientregisterstepfive = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const registerState = useSelector((state) => state.register);
@@ -29,6 +29,7 @@ const Patientregisterstepfive = () =>
   const [message, setMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [count, setCount] = useState(0);
+  const { t } = useTranslation();
 
   const hanlderSubmit = (e) => {
     e.preventDefault();
@@ -41,14 +42,14 @@ const Patientregisterstepfive = () =>
       setMessage("The state field is required");
       setShowAlert(true);
     }
-    
+
     if (city === "") {
       setCount(1);
       setType("warning");
       setMessage("The city field is required");
       setShowAlert(true);
     }
-    
+
     if (city !== "" && state !== "") {
 
       let formData = new FormData();
@@ -111,7 +112,7 @@ const Patientregisterstepfive = () =>
                               2
                             </Link>
                           </li>
-                       
+
                           <li>
                             <Link to="#" className="active">
                               3
@@ -120,9 +121,9 @@ const Patientregisterstepfive = () =>
                         </ul>
                       </div>
                       <form onSubmit={hanlderSubmit}>
-                        <h3 className="my-4">Your Location</h3>
+                        <h3 className="my-4">{t("Your Location")}</h3>
                         <div className="form-group">
-                          <label>Select City</label>
+                          <label>{t("Select City")}</label>
                           <select
                             className="form-select form-control"
                             id="city"
@@ -131,13 +132,13 @@ const Patientregisterstepfive = () =>
                             aria-hidden="true"
                           // onChange={(e) => dispatch(setLocation(e.target.value))}
                           >
-                            <option value="">Select Your City</option>
+                            <option value="">{t("Select Your City")}</option>
                             <option value={1}>City 1</option>
                             <option value={2}>City 2</option>
                           </select>
                         </div>
                         <div className="form-group">
-                          <label>Select State</label>
+                          <label>{t("Select State")}</label>
                           <select
                             className="form-select form-control"
                             id="state"
@@ -146,43 +147,29 @@ const Patientregisterstepfive = () =>
                             aria-hidden="true"
                           // onChange={(e) => dispatch(setState(e.target.value))}
                           >
-                            <option value="">Select Your State</option>
+                            <option value="">{t("Select Your State")}</option>
                             <option value={1}>State 1</option>
                             <option value={2}>State 2</option>
                           </select>
                         </div>
-                        <div className="form-group">
-                          <label>Select City</label>
-                          <select
-                            className="form-select form-control"
-                            id="city"
-                            name="city"
-                            tabIndex={-1}
-                            aria-hidden="true"
-                          // onChange={(e) => dispatch(setLocation(e.target.value))}
-                          >
-                            <option value="">Select Your City</option>
-                            <option value={1}>City 1</option>
-                            <option value={2}>City 2</option>
-                          </select>
-                        </div>
+
                         <div className="form-group">
                           <label>Are you currently taking any medications? if yes, please list them.</label>
                           <input
-                           type="text"
-                           name="medication"
-                           id="medication"
-                           className="form-control"
+                            type="text"
+                            name="medication"
+                            id="medication"
+                            className="form-control"
 
                           />
                         </div>
                         <div className="form-group">
                           <label>Do youhave any known allergies to medications or substances?</label>
                           <input
-                           type="text"
-                           name="medication"
-                           id="medication"
-                           className="form-control"
+                            type="text"
+                            name="medication"
+                            id="medication"
+                            className="form-control"
                           />
                         </div>
                         <div className="form-group">
@@ -204,7 +191,7 @@ const Patientregisterstepfive = () =>
                           <button
                             className="btn btn-primary w-100 btn-lg login-btn step5_submit"
                           >
-                            continue{" "}
+                            {t("continue")}
                           </button>
                         </div>
                       </form>

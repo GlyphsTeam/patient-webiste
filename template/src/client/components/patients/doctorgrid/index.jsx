@@ -17,6 +17,7 @@ import {
 } from "./img";
 import Map from "./map";
 import Header from "../../header";
+import { useTranslation } from "react-i18next";
 // import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 // import GoogleMapReact from 'google-map-react';
 
@@ -192,6 +193,8 @@ const data = [
 ];
 
 const DoctorGrid = (props) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     document.body.classList.add("map-page");
 
@@ -288,12 +291,12 @@ const DoctorGrid = (props) => {
                           <Link
                             to="/patient/doctor-profile"
                             className="btn view-btn">
-                            View Profile
+                            {t("View Profile")}
                           </Link>
                         </div>
                         <div className="col-6">
                           <Link to="/patient/booking1" className="btn book-btn">
-                            Book Now
+                            {t("Book Now")}
                           </Link>
                         </div>
                       </div>
@@ -352,12 +355,12 @@ const DoctorGrid = (props) => {
                           <Link
                             to="/patient/doctor-profile"
                             className="btn view-btn">
-                            View Profile
+                            {t("View Profile")}
                           </Link>
                         </div>
                         <div className="col-6">
                           <Link to="/patient/booking1" className="btn book-btn">
-                            Book Now
+                            {t("Book Now")}
                           </Link>
                         </div>
                       </div>
@@ -416,12 +419,12 @@ const DoctorGrid = (props) => {
                           <Link
                             to="/patient/doctor-profile"
                             className="btn view-btn">
-                            View Profile
+                            {t("View Profile")}
                           </Link>
                         </div>
                         <div className="col-6">
                           <Link to="/patient/booking1" className="btn book-btn">
-                            Book Now
+                            {t("Book Now")}
                           </Link>
                         </div>
                       </div>
@@ -481,12 +484,12 @@ const DoctorGrid = (props) => {
                           <Link
                             to="/patient/doctor-profile"
                             className="btn view-btn">
-                            View Profile
+                            {t("View Profile")}
                           </Link>
-                        </div>
+                        </div>s
                         <div className="col-6">
                           <Link to="/patient/booking1" className="btn book-btn">
-                            Book Now
+                            {t("Book Now")}
                           </Link>
                         </div>
                       </div>

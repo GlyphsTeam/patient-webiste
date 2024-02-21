@@ -7,9 +7,12 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
-
+import { useTranslation } from "react-i18next";
 function Doctor() {
   //Aos
+  const { t } = useTranslation();
+
+
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
@@ -59,7 +62,7 @@ function Doctor() {
           <div className="row">
             <div className="col-md-6 aos" data-aos="fade-up">
               <div className="section-header-one section-header-slider">
-                <h2 className="section-title">Best Doctors</h2>
+                <h2 className="section-title">{t("Best Doctors")}</h2>
               </div>
             </div>
             <div className="col-md-6 aos" data-aos="fade-up">

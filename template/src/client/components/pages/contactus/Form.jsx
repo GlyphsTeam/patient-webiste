@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { emailValidation } from '../../../../helper/helper';
 import Alert from '../../Alert/Alert';
+import { useTranslation } from 'react-i18next';
 
 function FormContact() {
     const name = useRef(null);
@@ -12,6 +13,8 @@ function FormContact() {
     const [messageAlert, setMessage] = useState("");
     const [count, setCount] = useState(0);
     const [showAlert, setShowAlert] = useState(false);
+    const { t } = useTranslation();
+
 
     const showAlertWithMessage = (message, alertType) => {
         setCount(1);
@@ -78,7 +81,7 @@ function FormContact() {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="form-group">
-                                        <label>Name</label>
+                                        <label>{t("Name")}</label>
                                         <input
                                             ref={name}
                                             type="text"
@@ -89,7 +92,7 @@ function FormContact() {
                                 </div>
                                 <div className="col-md-6">
                                     <div className="form-group">
-                                        <label>Email Address</label>
+                                        <label>{t("Email Address")}</label>
                                         <input
                                             ref={email}
                                             type="text"
@@ -100,7 +103,7 @@ function FormContact() {
                                 </div>
                                 <div className="col-md-6">
                                     <div className="form-group">
-                                        <label>Phone Number</label>
+                                        <label>{t("Phone Number")}</label>
                                         <input
                                             ref={phoneNumber}
                                             type="text"
@@ -111,7 +114,7 @@ function FormContact() {
                                 </div>
                                 <div className="col-md-6">
                                     <div className="form-group">
-                                        <label>Services</label>
+                                        <label>{t("Services")}</label>
                                         <input
                                             ref={services}
                                             type="text"
@@ -122,7 +125,7 @@ function FormContact() {
                                 </div>
                                 <div className="col-md-12">
                                     <div className="form-group">
-                                        <label>Message</label>
+                                        <label>{t("Message")}</label>
                                         <textarea
                                             ref={message}
                                             className="form-control"
@@ -137,7 +140,7 @@ function FormContact() {
                                             type="submit"
                                             className="btn btn-primary prime-btn"
                                         >
-                                            Send Message
+                                            {t("Send Message")}
                                         </button>
                                     </div>
                                 </div>

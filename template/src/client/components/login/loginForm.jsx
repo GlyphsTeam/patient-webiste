@@ -2,9 +2,11 @@ import React, { useRef, useState } from 'react'
 import { Link } from "react-router-dom";
 import Alert from '../Alert/Alert';
 import { emailValidation } from '../../../helper/helper';
+import { useTranslation } from 'react-i18next';
 function LoginForm() {
     const email = useRef(null);
     const password = useRef(null);
+    const {t} = useTranslation();
     const [type, setType] = useState("");
     const [showAlert, setShowAlert] = useState(false);
     const [message, setMessage] = useState("");
@@ -52,21 +54,21 @@ function LoginForm() {
                         type="email"
                         className="form-control floating"
                     />
-                    <label className="focus-label">Email</label>
+                    <label className="focus-label">{t("Email")}</label>
                 </div>
                 <div className="form-group form-focus">
                     <input
                         type="password"
                         className="form-control floating"
                     />
-                    <label className="focus-label">Password</label>
+                    <label className="focus-label">{t("Password")}</label>
                 </div>
                 <div className="text-end">
                     <Link
                         className="forgot-link"
                         to="/pages/forgot-password"
                     >
-                        Forgot Password ?
+                        {t("Forgot Password ?")}
                     </Link>
                 </div>
 
@@ -75,27 +77,27 @@ function LoginForm() {
                     className="btn btn-primary w-100 btn-lg login-btn"
                     type="submit"
                 >
-                    Login
+                    {t("Login")}
                 </button>
                 <div className="login-or">
                     <span className="or-line" />
-                    <span className="span-or">or</span>
+                <span className="span-or">{t("or")}</span>
                 </div>
                 <div className="row form-row social-login">
                     <div className="col-6">
                         <Link to="/index" className="btn btn-facebook w-100">
-                            <i className="fab fa-facebook-f me-1" /> Login
+                            <i className="fab fa-facebook-f me-1" /> {t("Login")}
                         </Link>
                     </div>
                     <div className="col-6">
                         <Link to="/index" className="btn btn-google w-100">
-                            <i className="fab fa-google me-1" /> Login
+                            <i className="fab fa-google me-1" /> {t("Login")}
                         </Link>
                     </div>
                 </div>
                 <div className="text-center dont-have">
-                    Don’t have an account?{" "}
-                    <Link to="/register">Register</Link>
+                    {t("Don’t have an account?")}
+                    <Link to="/register">{t("Register")}</Link>
                 </div>
             </form>
             <Alert

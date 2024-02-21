@@ -5,10 +5,10 @@ import Header from "../header";
 import Footer from "../footer";
 // const config = "/react/template/";
 import LoginForm from './loginForm';
-
+import { useTranslation } from "react-i18next";
 const LoginContainer = (props) => {
   // const history = useHistory();
-
+  const { t } = useTranslation();
   useEffect(() => {
     document.body.classList.add("account-page");
 
@@ -38,12 +38,10 @@ const LoginContainer = (props) => {
                     <div className="col-md-12 col-lg-6 login-right">
                       <div className="login-header">
                         <h3>
-                          Login <span>Doccure</span>
+                          {t("Login")}
                         </h3>
                       </div>
-
                       <LoginForm />
-
                     </div>
                   </div>
                 </div>

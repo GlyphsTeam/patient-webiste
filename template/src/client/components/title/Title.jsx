@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import { useTranslation } from 'react-i18next';
 function Title({ title, subTitle }) {
+    const {t} = useTranslation()
 
     return (
         <div className="breadcrumb-bar-two">
@@ -13,7 +14,7 @@ function Title({ title, subTitle }) {
                         <nav aria-label="breadcrumb" className="page-breadcrumb">
                             <ol className="breadcrumb">
                                 <li className="breadcrumb-item">
-                                    <Link to="/index-2">Home</Link>
+                                    <Link to="/index-2">{t("Home")}</Link>
                                 </li>
                                 <li className="breadcrumb-item" aria-current="page">
                                     {subTitle}

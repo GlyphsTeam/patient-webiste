@@ -6,12 +6,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { setImgProfile } from '../../../store/Register/register';
 import Alert from '../Alert/Alert';
+import { useTranslation } from "react-i18next";
 
 const Patientregisterstepone = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const registerState = useSelector((state) => state.register);
+  const { t } = useTranslation();
 
   const [count, setCount] = useState(0);
   const [type, setType] = useState("");
@@ -19,7 +21,8 @@ const Patientregisterstepone = () => {
   const [showAlert, setShowAlert] = useState(false);
 
 
-  const hanlderRegister = () => {
+  const hanlderRegister = (e) => {
+    e.preventDefault();
 
 
     navigate("/patient/patientregisterstep-2");
@@ -68,9 +71,9 @@ const Patientregisterstepone = () => {
                           </li>
                         </ul>
                       </div>
-                      <form id="profile_pic_form" encType="multipart/form-data">
+                      <form onSubmit={hanlderRegister} >
                         <div className="profile-pic-col">
-                          <h3>Profile Picture</h3>
+                          <h3>{t("Profile Picture")}</h3>
                           <div className="profile-pic-upload">
                             <div className="cam-col">
                               <img
@@ -80,21 +83,20 @@ const Patientregisterstepone = () => {
                                 className="img-fluid"
                               />
                             </div>
-                            <span>Upload Profile Picture</span>
+                            <span>{t("Upload Profile Picture")}</span>
                             <input
                               type="file"
-                              id="profile_image"
-                              name="profile_image"
+
                               onChange={(e) => handlerUploadImage(e)}
                             />
                           </div>
                         </div>
                         <div className="mt-5">
                           <button
-                            onClick={() => hanlderRegister()}
+
                             className="btn btn-primary w-100 btn-lg login-btn step1_submit"
                           >
-                            continue{" "}
+                            {t("continue")}
                           </button>
                         </div>
                       </form>

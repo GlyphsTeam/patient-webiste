@@ -27,6 +27,7 @@ import Chart from "./patients/dashboard/chart";
 import Notification from "./patients/dashboard/notification";
 import { IMG07 } from "../components/patients/doctorprofile/img";
 import { footer_logo } from "./home/image";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   // const history = useHistory();
@@ -42,6 +43,7 @@ const Header = () => {
 
   const config = "/react/template";
 
+  const { t } = useTranslation();
   //mobile menu
   const [change, setChange] = useState(false);
   const [isSideMenu, setSideMenu] = useState("");
@@ -279,7 +281,7 @@ const Header = () => {
                       onClick={() => setMenu(!menu)}
                       className={`${menu === true ? "submenu " : ""}`}
                     >
-                      Home
+                      {t('Home')}
                     </Link>
                   </li>
                   <li
@@ -295,7 +297,7 @@ const Header = () => {
                         )
                       }
                     >
-                      Doctors
+                      {t("Doctors")}
                     </Link>
                   </li>
 
@@ -313,7 +315,7 @@ const Header = () => {
                         )
                       }
                     >
-                      Contact Us
+                      {t("Contact Us")}
                     </Link>
                     {isSideMenu == "pages" ? (
                       <ul
@@ -360,7 +362,7 @@ const Header = () => {
                         toggleSidebar(isSideMenu == "blog" ? "submenu" : "blog")
                       }
                     >
-                      Blog
+                      {t("Blog")}
                     </Link>
                   </li>
                   <li className={`has-submenu ${pathnames.includes("aboutus") ? "active" : ""}`}>
@@ -374,7 +376,7 @@ const Header = () => {
                         )
                       }
                     >
-                      About Us
+                      {t("About Us")}
                     </Link>
 
                   </li>
@@ -392,7 +394,7 @@ const Header = () => {
                           <div className="input-group">
                             <input type="text" className="form-control" />
                             <button type="submit" className="btn">
-                              Search
+                              {t("Search")}
                             </button>
                           </div>
                         </form>
@@ -432,14 +434,14 @@ const Header = () => {
                             <div className="input-group">
                               <input type="text" className="form-control" />
                               <button type="submit" className="btn">
-                                Search
+                                {t("Search")}
                               </button>
                             </div>
                           </form>
                         </div>
                       </li>
                       <li className="login-link">
-                        <Link to="/login">Login / Signup</Link>
+                        <Link to="/login">{t("Login")} / {t("Signup")}</Link>
                       </li>
                       {!pathnames.includes("/index-13") &&
                         !pathnames.includes("/index-5") &&
@@ -466,7 +468,7 @@ const Header = () => {
                                 <i>
                                   <FeatherIcon icon="user" />
                                 </i>
-                                Register
+                                {t("Register")}
                               </Link>
                             </li>
                             <li className="register-btn">
@@ -477,7 +479,7 @@ const Header = () => {
                                 <i>
                                   <FeatherIcon icon="lock" />
                                 </i>
-                                Login
+                                {t("Login")}
                               </Link>
                             </li>
                           </>
@@ -498,7 +500,7 @@ const Header = () => {
                       <i className="me-2">
                         <FeatherIcon icon="lock" />
                       </i>
-                      Register
+                      {t("Register")}
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -509,7 +511,7 @@ const Header = () => {
                       <i className="me-2">
                         <FeatherIcon icon="user" />
                       </i>
-                      Login
+                      {t("Login")}
                     </Link>
                   </li>
                 </ul>
@@ -529,7 +531,7 @@ const Header = () => {
                         }`}
                       to="/login"
                     >
-                      login / Signup
+                      {t("login")} / {t("Signup")}
                     </Link>
                   </li>
                 </ul>
@@ -553,7 +555,7 @@ const Header = () => {
                           <div className="input-group">
                             <input type="text" className="form-control" />
                             <button type="submit" className="btn btn-primary">
-                              Search
+                              {t("Search")}
                             </button>
                           </div>
                         </form>
@@ -603,7 +605,7 @@ const Header = () => {
                       <i className="me-2">
                         <FeatherIcon icon="user" />
                       </i>
-                      Sign Up
+                      {t("Sign Up")}
                     </Link>
                   </li>
                 </ul>
@@ -646,13 +648,13 @@ const Header = () => {
                             </div>
                           </div>
                           <Link className="dropdown-item" to="/patient/dashboard">
-                            Dashboard
+                            {t("Dashboard")}
                           </Link>
                           <Link className="dropdown-item" to="/patient/profile">
-                            Profile Settings
+                            {t("Profile Settings")}
                           </Link>
                           <Link className="dropdown-item" to="/login">
-                            Logout
+                            {t("Logout")}
                           </Link>
                         </div>
                       </li>

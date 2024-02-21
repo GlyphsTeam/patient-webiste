@@ -13,9 +13,10 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 function Parentssection() {
   //Aos
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
@@ -65,7 +66,7 @@ function Parentssection() {
                 className="section-header-one text-center aos"
                 data-aos="fade-up"
               >
-                <h2 className="section-title">Our Partners</h2>
+                <h2 className="section-title">{t("Our Partners")}</h2>
               </div>
             </div>
           </div>

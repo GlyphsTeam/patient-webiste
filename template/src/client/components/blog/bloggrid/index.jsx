@@ -13,6 +13,7 @@ import Header from "../../header";
 import Footer from "../../footer";
 
 const BlogGrid = (props) => {
+
   const blodData = [
     {
       id: 1,
@@ -72,7 +73,7 @@ const BlogGrid = (props) => {
   return (
     <div>
       <Header {...props} />
-      <Title title="Blog Grid" subTitle="Blog Grid" />
+      <Title title="Blog" subTitle="Blog" />
 
       <div className="content">
         <div className="container">
@@ -80,14 +81,14 @@ const BlogGrid = (props) => {
             <div className="col-lg-8 col-md-12">
               <div className="row blog-grid-row">
                 {blodData.map((blog) => {
-                  return <CardBlog 
-                  blogDetails={blog.deatiles}
-                  date={blog.date}
-                  description={blog.description}
-                  doctorName={blog.name}
-                  imgSrc={blog.img}
-                  imgSrcTwo={blog.img2}
-                  key={blog.id}
+                  return <CardBlog
+                    blogDetails={blog.deatiles}
+                    date={blog.date}
+                    description={blog.description}
+                    doctorName={blog.name}
+                    imgSrc={blog.img}
+                    imgSrcTwo={blog.img2}
+                    key={blog.id}
                   />
                 })}
               </div>

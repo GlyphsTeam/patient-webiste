@@ -1,5 +1,6 @@
 import React, { lazy, useEffect, Suspense } from "react";
 import config from "config";
+import Loading from './client/components/Loading/Loading.jsx'
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 // Navigate
 const LoginContainer = lazy(() => import("./client/components/login/login.jsx"));
@@ -203,7 +204,7 @@ const AppRouters = function () {
     }, []);
 
     return (
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<p><Loading /></p>}>
             <Router basename={`${config.publicPath}`}>
                 <div>
                     <Routes>

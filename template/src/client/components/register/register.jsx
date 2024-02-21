@@ -5,10 +5,11 @@ import loginBanner from "../../assets/images/login-banner.png";
 import Header from "../header";
 import Footer from "../footer";
 import FormRegsiter from "./formRegsiter";
-
+import { useTranslation } from "react-i18next";
 const Register = (props) => {
   // const history = useHistory();
- 
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.body.classList.add("account-page");
@@ -40,9 +41,9 @@ const Register = (props) => {
                     <div className="col-md-12 col-lg-6 login-right">
                       <div className="login-header">
                         <h3>
-                          Patient Register{" "}
+                          {t("Patient Register")}
                           <Link to="/doctor/doctor-register">
-                            Are you a Doctor?
+                            {t("Are you a Doctor?")}
                           </Link>
                         </h3>
                       </div>

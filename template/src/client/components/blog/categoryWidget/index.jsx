@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const CategoryWidget =()=> {
+  const {t} = useTranslation();
 
         return(
             <div className="card category-widget">
             <div className="card-header">
-                <h4 className="card-title">Blog Categories</h4>
+                <h4 className="card-title">{t("Blog Categories")}</h4>
             </div>
             <div className="card-body">
                 <ul className="categories">
